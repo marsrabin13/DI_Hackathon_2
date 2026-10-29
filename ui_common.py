@@ -80,3 +80,65 @@ def draft_tag(label: str, detail: str = "") -> str:
     cls = "live" if label == ai_service.LIVE else "fb"
     extra = f" · {detail}" if detail and label != ai_service.LIVE else ""
     return f"<div class='cf-tag'><span class='{cls}'>{label}</span>{extra}</div>"
+
+
+# ---------------------------------------------------------------- plain-language routing explanation
+CATEGORY_LABEL = {"roads": "Roads & sidewalks", "waste": "Waste & cleanliness",
+                  "lighting": "Street lighting", "noise": "Noise"}
+LOCATION_LABEL = {"valid": "Inside the demo area", "missing": "Not provided",
+                  "outside_bbox": "Outside the demo area (not used on the map)", "invalid": "Not readable"}
+
+
+def reason_text(reason: str, min_score: float, min_margin: float) -> str:
+    if reason == "urgent_phrase_guard":
+        return "Possible danger words were detected, so staff should look at it urgently."
+    if reason == "no_known_vocabulary":
+        return "None of the words matched what the model has learned."
+    if reason.startswith("low_score"):
+        return f"The best match is too weak to route automatically (needs at least {min_score:.2f})."
+    if reason.startswith("low_margin"):
+        return f"Two categories are too close to call (the winner needs a lead of at least {min_margin:.2f})."
+    if reason == "no_department_mapping":
+        return "This city has no department set up for that category."
+    if reason == "citizen_marked_multiple_or_unsure":
+        return "You marked the report as multiple issues / unsure."
+    if reason == "operator_correction":
+        return "A staff member set the category."
+    return reason
+
+
+def render_routing_explanation(r: dict, rep: dict, meta: dict, cfg: dict):
+    """Readable 'How was this routed?' panel: outcome sentence, score bars, reasons, location."""
+    min_score, min_margin = core.thresholds_for(cfg, meta)
+    probs = sorted(r["probs"].items(), key=lambda kv: kv[1], reverse=True)
+    best, runner = probs[0], probs[1]
+    best_lbl, run_lbl = CATEGORY_LABEL.get(best[0], best[0]), CATEGORY_LABEL.get(runner[0], runner[0])
+    state = rep["routing_state"]
+    if state == "routed" and rep.get("category_source") == "operator_correction":
+        st.markdown(f"**Staff set this report to {CATEGORY_LABEL.get(rep['approved_category'])}.**")
+    elif state == "routed":
+        st.markdown(f"**Sent automatically to {rep['proposed_department']}.** The text best matches "
+                    f"*{best_lbl}*, clearly ahead of *{run_lbl}*.")
+    elif state == "urgent_review":
+        st.markdown("**Flagged for urgent staff attention** instead of automatic routing.")
+    else:
+        st.markdown(f"**A staff member will check this one.** The closest match was *{best_lbl}*, "
+                    f"but the model wasn't sure enough to route it on its own.")
+
+    st.markdown("**How well the text matches each category**")
+    for cat, p in probs:
+        c1, c2 = st.columns([2, 5])
+        c1.write(CATEGORY_LABEL.get(cat, cat) + (" ← best" if cat == best[0] else ""))
+        c2.progress(min(max(p, 0.0), 1.0), text=f"{p:.2f}")
+    st.caption(f"Automatic routing needs a best match of at least {min_score:.2f} and a lead of at least "
+               f"{min_margin:.2f} over the next category. This one: {best[1]:.2f}, lead {best[1] - runner[1]:.2f}.")
+
+    if r["reasons"]:
+        st.markdown("**Why it needs a person**")
+        for reason in r["reasons"]:
+            st.markdown(f"- {reason_text(reason, min_score, min_margin)}")
+    st.markdown(f"**Location:** {LOCATION_LABEL.get(rep['location_status'], rep['location_status'])}")
+    if rep.get("attachment_path"):
+        st.markdown("**Photo / clip:** stored for staff review — not analyzed by AI and not used for routing.")
+    st.caption("Match scores come from a text model trained on simulated examples; they are rough "
+               "indicators, not probabilities you can rely on. Department names are illustrative (demo).")

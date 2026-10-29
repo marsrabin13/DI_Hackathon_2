@@ -4,3 +4,4 @@ __pycache__/
 data/cityfix.db
 data/smoke_*.db
 .venv/
+data/uploads/

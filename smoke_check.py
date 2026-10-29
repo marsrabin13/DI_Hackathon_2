@@ -173,6 +173,24 @@ try:
 except KeyError:
     check("correction cannot cross cities", True)
 
+# 6b. attachments: stored, not analyzed --------------------------------------------
+up = Path(tempfile.mkdtemp())
+before_route = core.get_report(conn, "il_tel_aviv", rid)
+core.save_attachment(conn, "il_tel_aviv", rid, "../../evil.PNG", b"\x89PNG fake", upload_dir=up)
+after_att = core.get_report(conn, "il_tel_aviv", rid)
+check("attachment stored under server-chosen name",
+      (up / f"{rid}.png").exists() and after_att["attachment_path"] and "evil" not in after_att["attachment_path"])
+check("attachment does not change routing",
+      all(after_att[k] == before_route[k] for k in ("routing_state", "proposed_department", "approved_category")))
+bad = 0
+for name, data in (("x.exe", b"x"), ("big.jpg", b"0" * (core.MAX_ATTACHMENT_MB * 1024 * 1024 + 1))):
+    try:
+        core.save_attachment(conn, "il_tel_aviv", rid, name, data, upload_dir=up)
+    except ValueError:
+        bad += 1
+check("disallowed type and oversize file rejected", bad == 2)
+check("acknowledgment facts exclude attachment", "attachment_path" not in ai_service.ack_facts(after_att))
+
 # 7. config change route, unchanged model -----------------------------------------
 r_tlv, r_ex = core.route(txt, tlv, model, meta), core.route(txt, ex, model, meta)
 same_model = hashlib.sha256((ROOT / "artifacts/model.joblib").read_bytes()).hexdigest() == model_hash_before

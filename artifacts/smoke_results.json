@@ -1,6 +1,6 @@
 {
-  "passed": 40,
-  "total": 40,
+  "passed": 44,
+  "total": 44,
   "results": [
     {
       "check": "required gpt_ data files present",
@@ -119,6 +119,26 @@
     },
     {
       "check": "correction cannot cross cities",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "attachment stored under server-chosen name",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "attachment does not change routing",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "disallowed type and oversize file rejected",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "acknowledgment facts exclude attachment",
       "pass": true,
       "detail": ""
     },

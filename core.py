@@ -159,7 +159,8 @@ CREATE TABLE IF NOT EXISTS reports (
     routing_reasons TEXT NOT NULL,
     status TEXT NOT NULL DEFAULT 'open',
     data_version TEXT, model_version TEXT, config_version TEXT,
-    dedupe_key TEXT UNIQUE
+    dedupe_key TEXT UNIQUE,
+    attachment_path TEXT
 );
 CREATE INDEX IF NOT EXISTS ix_reports_city_time ON reports(city_id, created_at_utc);
 CREATE TABLE IF NOT EXISTS corrections (
@@ -178,7 +179,37 @@ def connect(db_path: Path = DB_PATH) -> sqlite3.Connection:
     conn = sqlite3.connect(str(db_path), check_same_thread=False)
     conn.row_factory = sqlite3.Row
     conn.executescript(SCHEMA)
+    cols = {r[1] for r in conn.execute("PRAGMA table_info(reports)")}
+    if "attachment_path" not in cols:  # migrate databases created before attachments existed
+        conn.execute("ALTER TABLE reports ADD COLUMN attachment_path TEXT")
+        conn.commit()
     return conn
+
+
+# ---------------------------------------------------------------- attachments (stored, NOT analyzed)
+UPLOAD_DIR = ROOT / "data" / "uploads"
+ALLOWED_ATTACHMENTS = {"jpg", "jpeg", "png", "webp", "mp4", "mov"}
+MAX_ATTACHMENT_MB = 10
+
+
+def save_attachment(conn, city_id: str, report_id: str, filename: str, data: bytes,
+                    upload_dir: Path | None = None) -> str:
+    """Store a photo/clip for staff review. Never used for routing or sent to the LLM."""
+    ext = Path(filename).suffix.lower().lstrip(".")
+    if ext not in ALLOWED_ATTACHMENTS:
+        raise ValueError(f"File type .{ext} not allowed ({', '.join(sorted(ALLOWED_ATTACHMENTS))}).")
+    if len(data) > MAX_ATTACHMENT_MB * 1024 * 1024:
+        raise ValueError(f"File is larger than {MAX_ATTACHMENT_MB} MB.")
+    if get_report(conn, city_id, report_id) is None:
+        raise KeyError(f"Report {report_id} not found in {city_id}")
+    folder = Path(upload_dir or UPLOAD_DIR)
+    folder.mkdir(parents=True, exist_ok=True)
+    path = folder / f"{report_id}.{ext}"  # server-chosen name; the original filename is not used
+    path.write_bytes(data)
+    conn.execute("UPDATE reports SET attachment_path=? WHERE city_id=? AND report_id=?",
+                 (str(path.relative_to(ROOT)) if path.is_relative_to(ROOT) else str(path), city_id, report_id))
+    conn.commit()
+    return str(path)
 
 
 def import_seed(conn, csv_path: Path = DEMO_CSV, city_cfg: dict | None = None, data_version: str = "") -> int:

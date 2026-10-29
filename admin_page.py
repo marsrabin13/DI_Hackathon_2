@@ -98,8 +98,27 @@ with t_review:
     allrep = core.fetch_reports(conn, city_id)
     review = allrep[allrep["routing_state"].isin(["review_required", "urgent_review"]) & (allrep["status"] == "open")]
     st.markdown(f"#### Waiting for staff ({len(review)}, all dates)")
-    st.dataframe(review[["report_id", "created_at_utc", "text", "predicted_category", "predicted_score",
+    review = review.assign(media=review["attachment_path"].notna().map({True: "📎", False: ""}))
+    st.dataframe(review[["report_id", "media", "created_at_utc", "text", "predicted_category", "predicted_score",
                          "routing_state", "routing_reasons"]], hide_index=True, width="stretch")
+
+    with_media = allrep[allrep["attachment_path"].notna()]
+    if len(with_media):
+        with st.expander(f"📎 Reports with a photo or clip ({len(with_media)})"):
+            pick = st.selectbox("Report", with_media["report_id"].tolist(), key="media_pick")
+            row = with_media[with_media["report_id"] == pick].iloc[0]
+            st.write(f"**{row['report_id']}** · {row['routing_state']} · {row['proposed_department']}")
+            st.write(row["text"])
+            path = core.ROOT / row["attachment_path"]
+            if not path.exists():
+                st.warning("File not found on disk.")
+            elif path.suffix.lower() in (".mp4", ".mov"):
+                st.video(str(path))
+            else:
+                st.image(str(path), width=420)
+            st.caption("Stored for staff review only — not analyzed by AI and not used for routing. "
+                       "Roadmap: AI image analysis to suggest a category, after a privacy review and an "
+                       "evaluation on real local photos.")
     with st.form("correct"):
         st.markdown("**Approve or correct a category** — the department is recalculated from the city config; "
                     "the original prediction is kept.")
@@ -161,6 +180,11 @@ with t_model:
             st.caption(f"Policy cases on test: {t['policy_cases_passed']}")
         st.dataframe(pd.DataFrame(rows), hide_index=True, width="stretch")
         st.caption("Synthetic evaluations share generation bias; they don't establish real-city accuracy.")
+        st.markdown("#### Roadmap (not built)")
+        st.markdown("- **AI image analysis:** suggest a category from the resident's photo or clip. Needs a privacy "
+                    "review (faces, car plates), consent wording, and an evaluation on real local photos before use.\n"
+                    "- Multi-issue detection without the resident's checkbox.\n"
+                    "- Real local reports, calibrated scores, and shadow testing beside staff.")
     with c2:
         st.markdown("#### Data")
         if core.PROVENANCE_PATH.exists():

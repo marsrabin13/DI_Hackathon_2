@@ -5,11 +5,14 @@ Turns an English citizen complaint into a **proposed department route**, an **ac
 
 Two pages (top navigation):
 - **Report an issue** — resident chat. Submitting a complaint routes, saves and replies automatically
-  (reference, status, department, acknowledgment).
+  (reference, status, department, acknowledgment). An optional photo or short clip (jpg/png/webp/mp4/mov,
+  max 10 MB) is **stored for staff review only** — not analyzed by AI and not used for routing. Files are
+  saved as `data/uploads/<report_id>.<ext>`. "How was this routed?" explains the outcome in plain language
+  with a match bar per category.
 - **Admin dashboard** — statistics, map & hotspots, review queue with corrections, weekly brief,
   model & data, portability check.
 
-Demo only: no login, no attachments, no geocoding, no dispatch. Saves and drafts stay in a local SQLite file;
+Demo only: no login, no geocoding, no dispatch, no image analysis. Saves and drafts stay in a local SQLite file;
 nothing is sent to a municipality. Department labels are illustrative, not verified municipal ownership.
 
 ## Run on another computer (Git Bash on Windows)
@@ -23,7 +26,7 @@ source .venv/Scripts/activate        # macOS/Linux: source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env                 # optional: add ANTHROPIC_API_KEY for live AI drafts
 python ai_service.py                 # provider access check (never prints the key)
-python smoke_check.py                # 40 focused checks, temporary DB
+python smoke_check.py                # 44 focused checks, temporary DB
 python -m streamlit run app.py       # http://localhost:8501
 ```
 
@@ -103,7 +106,7 @@ Per-class test F1: noise 1.00, waste 0.75, roads 0.73, lighting 0.73.
 Reading: whatever the model routes was correct on both sets, but roughly half of reports need a human. That's
 expected with 254 mostly templated training texts.
 
-**Smoke checks: 40/40 passed** — required files and provenance counts; split isolation; model fitted on
+**Smoke checks: 44/44 passed** — attachments stored under a server-chosen name, never change routing, wrong type/oversize rejected, excluded from AI facts; required files and provenance counts; split isolation; model fitted on
 `gpt_train.csv` (hash); 6 nearby same-category points vs a distant point; category and city separation;
 missing/outside location; duplicate save; idempotent fixture import; fixtures keep IDs, coordinates,
 categories and timestamps; fixtures stored open + routed + seed_fixture; anchor = default window end; planted
@@ -155,6 +158,13 @@ the static notice. Drafts never change routing, counts or the database.
 6. Model & data → Portability check: the same pothole text routes to **Public Works (demo)** in Example City,
    no retraining.
 7. Model & data: show the measured numbers, the 0/24 → 15/24 threshold story, and the multi-issue failure.
+
+## Roadmap (not built)
+
+- **AI image analysis:** suggest a category from the resident's photo/clip. Requires a privacy review (faces,
+  car plates), consent wording, retention rules, and evaluation on real local photos before use.
+- Multi-issue detection without the resident's checkbox (the one failed test policy case).
+- More varied training language for lighting (the weakest class).
 
 ## Pilot path (not done)
 
