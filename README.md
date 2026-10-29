@@ -83,30 +83,22 @@ The language model writes short sentences only. It receives no raw complaint tex
 
 ## Run the app
 
-You need **Python 3.11 or newer** and the complete project folder, including the supplied data and model files. Open the folder in VS Code and use its terminal.
+You need **Python 3.11 or newer** and the complete project folder, including the supplied data and model files. 
 
-**Windows - PowerShell**
+Open the project folder in VS Code, then open a terminal. These commands use **Git Bash on Windows**:
 
-```powershell
+```bash
+cd "/c/path/to/cityfix"
 python -m venv .venv
-.venv\Scripts\Activate.ps1
-```
-
-**Mac - Terminal**
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
-
-**Then, on either system:**
-
-```bash
+source .venv/Scripts/activate
 python -m pip install -r requirements.txt
 python -m streamlit run app.py
 ```
 
-Open [localhost:8501](http://localhost:8501) if the browser does not open automatically. The supplied classifier is already trained.
+Replace the example path with your project folder. On macOS or Linux, activate the environment with `source .venv/bin/activate`. Open [localhost:8501](http://localhost:8501) if the browser does not open automatically.
+
+**Troubleshooting on Windows:** if importing numpy fails with *"An Application Control policy has blocked this file"*, Windows Smart App Control is blocking the package's unsigned files (Windows Security → App & browser control → Smart App Control). In Git Bash, use forward slashes: `source .venv/Scripts/activate`.
+
 
 ### Enable local AI wording
 
