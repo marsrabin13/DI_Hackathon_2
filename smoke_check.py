@@ -191,6 +191,112 @@ for name, data in (("x.exe", b"x"), ("big.jpg", b"0" * (core.MAX_ATTACHMENT_MB *
 check("disallowed type and oversize file rejected", bad == 2)
 check("acknowledgment facts exclude attachment", "attachment_path" not in ai_service.ack_facts(after_att))
 
+# 6c. named area points -------------------------------------------------------------
+a_, b_, c_, d_ = tlv["demo_bbox"]
+check("all named area points inside the demo bbox",
+      all(a_ <= la <= c_ and b_ <= lo <= d_ for la, lo in tlv["map_presets"].values()), len(tlv["map_presets"]))
+check("nearest area: planted roads centre -> Rothschild Boulevard",
+      core.nearest_area(32.068, 34.774, tlv) == "Center · Rothschild Boulevard")
+check("nearest area: far point -> none", core.nearest_area(32.0, 34.5, tlv) == "")
+
+# 6d. case status, resident lookup, history -----------------------------------------
+core.update_status(conn, "il_tel_aviv", rid_v, "in_progress", "A team will check the area.", "smoke-op")
+lk = core.find_by_reference(conn, "il_tel_aviv", rid_v.lower() + "  ")
+tl = core.case_timeline(conn, tlv, lk)
+check("reference lookup is case/space-insensitive and city-scoped",
+      lk and lk["report_id"] == rid_v and core.find_by_reference(conn, "example_city", rid_v) is None)
+check("timeline shows review, staff decision and status note in order",
+      [e["title"] for e in tl] == ["Report received", "Waiting for staff review",
+                                   "Staff assigned it to Sanitation (demo)", "Status: In progress"]
+      and tl[-1]["detail"] == "A team will check the area.", [e["title"] for e in tl])
+check("status change logged with old/new status",
+      core.fetch_status_updates(conn, "il_tel_aviv", rid_v).iloc[-1][["old_status", "new_status"]].tolist()
+      == ["open", "in_progress"])
+for bad_status, bad_note in (("done", ""), ("resolved", "x" * (core.MAX_NOTE + 1))):
+    try:
+        core.update_status(conn, "il_tel_aviv", rid_v, bad_status, bad_note, "x")
+        check(f"invalid status/note rejected ({bad_status})", False)
+    except ValueError:
+        check(f"invalid status/note rejected ({bad_status})", True)
+# resolved cases leave hotspots; in-progress cases stay
+for i in range(5):
+    core.update_status(conn, "il_tel_aviv", f"S-R{i}", "resolved", "", "smoke-op")
+df_r = core.fetch_reports(conn, "il_tel_aviv", now - timedelta(days=7), core.utcnow() + timedelta(minutes=1))
+hs_r, _ = core.compute_hotspots(df_r, tlv)
+check("resolved cases drop out of hotspots", "S-R5" not in ",".join(hs_r.report_ids) if len(hs_r) else True)
+core.update_status(conn, "il_tel_aviv", "S-R0", "in_progress", "", "smoke-op")
+check("simulated fixture recognised; live report not", core.is_simulated(core.get_report(conn, "il_tel_aviv", src.report_id[0]))
+      and not core.is_simulated(lk))
+
+# 6e. combined staff decision + spam ------------------------------------------------
+sp_txt = "I need to renew my passport, which office?"
+sp_id, _ = core.save_report(conn, tlv, sp_txt, None, None, core.route(sp_txt, tlv, model, meta), meta)
+sp, sp_acts = core.staff_decision(conn, tlv, sp_id, core.SPAM, "open", "", "smoke-op")
+check("spam: no department, case closed, default resident note",
+      sp["routing_state"] == "spam" and sp["status"] == "closed" and sp["proposed_department"] == core.SPAM_DEPARTMENT
+      and core.fetch_status_updates(conn, "il_tel_aviv", sp_id).iloc[-1]["resident_note"] == core.SPAM_NOTE, sp_acts)
+check("spam leaves the staff queue and keeps the model prediction",
+      sp["status"] not in core.ACTIVE_STATUSES and sp["predicted_category"] is not None)
+cd_txt = "Something odd near the corner, not sure what."
+cd_id, _ = core.save_report(conn, tlv, cd_txt, None, None, core.route(cd_txt, tlv, model, meta), meta)
+cd, cd_acts = core.staff_decision(conn, tlv, cd_id, "noise", "in_progress", "Checking.", "smoke-op")
+_, again_acts = core.staff_decision(conn, tlv, cd_id, "noise", "in_progress", "", "smoke-op")
+check("one save sets department and status; repeat save changes nothing",
+      cd["proposed_department"] == tlv["departments"]["noise"] and cd["status"] == "in_progress"
+      and len(cd_acts) == 2 and again_acts == [], cd_acts)
+trail = core.staff_actions(conn, "il_tel_aviv", cd_id)
+check("simplified audit trail lists both actions with staff name",
+      trail["action"].tolist() == ["Status → In progress", "Assigned to Environmental Review (demo)"]
+      and set(trail["by"]) == {"smoke-op"}, trail["action"].tolist())
+
+# 6f. shared counts + Weekly Action Brief priorities --------------------------------
+cmx = core.case_metrics(core.fetch_reports(conn, "il_tel_aviv"))
+allx = core.fetch_reports(conn, "il_tel_aviv")
+check("Needs review count == awaiting-review list (one definition)",
+      cmx["awaiting_review"] == len(core.awaiting_review(allx))
+      and all(r in core.ACTIVE_STATUSES for r in core.awaiting_review(allx)["status"]))
+check("spam/decided cases counted as previously reviewed, not waiting",
+      sp_id not in set(core.awaiting_review(allx)["report_id"]) and cmx["previously_reviewed"] >= 2)
+pb = Path(tempfile.mkdtemp()) / "brief.db"
+bconn = core.connect(pb)
+core.import_seed(bconn, core.DEMO_CSV, tlv)
+anc = core.demo_anchor()
+def _prio(c):
+    d = core.fetch_reports(c, "il_tel_aviv", anc - timedelta(days=7), anc)
+    h, _ = core.compute_hotspots(d, tlv)
+    return core.priority_hotspots(d, h, tlv)
+p0 = _prio(bconn)
+check("priorities: up to 3, ranked by active count", [p["active_count"] for p in p0] == [12, 10, 8]
+      and [p["rank"] for p in p0] == [1, 2, 3], [(p["category"], p["active_count"]) for p in p0])
+for r in p0[0]["report_ids"][:3]:
+    core.update_status(bconn, "il_tel_aviv", r, "resolved", "", "t")
+core.update_status(bconn, "il_tel_aviv", p0[0]["report_ids"][3], "closed", "", "t")
+p1 = _prio(bconn)
+roads = [p for p in p1 if p["category"] == "roads"][0]
+check("resolved/closed cases leave priorities; ranking updates",
+      roads["active_count"] == 8 and p1[0]["category"] == "waste"
+      and not set(p0[0]["report_ids"][:4]) & set(roads["report_ids"]), [(p["category"], p["active_count"]) for p in p1])
+check("tie broken by oldest active report", [p["category"] for p in p1 if p["active_count"] == 8] ==
+      [p["category"] for p in sorted([p for p in p1 if p["active_count"] == 8], key=lambda p: p["oldest_utc"])])
+check("priority evidence lists only that hotspot's active reports",
+      all(core.get_report(bconn, "il_tel_aviv", r)["approved_category"] == p1[0]["category"]
+          and core.get_report(bconn, "il_tel_aviv", r)["status"] in core.ACTIVE_STATUSES for r in p1[0]["report_ids"]))
+check("suggested department comes from city config", all(p["department"] == tlv["departments"][p["category"]] for p in p1))
+ctx = {"city": "x", "period": "y", "awaiting_review": 0, "oldest_active_days": 1,
+       "priorities": [{k: p[k] for k in ("evidence_id", "rank", "category", "area", "active_count", "oldest_utc",
+                                         "department")} for p in p1]}
+ho = ai_service.generate_handover(ctx)
+check("handover without AI: template draft keeps every priority + evidence ID",
+      ho["label"] == ai_service.FALLBACK and [i["evidence_id"] for i in ho["items"]] == [p["evidence_id"] for p in p1])
+ai_service._GENERATOR = lambda p: "These reports keep getting worse because of heavy trucks."
+check("handover rejects causes/trends", ai_service.generate_handover(ctx)["label"] == ai_service.FALLBACK)
+ai_service._GENERATOR = lambda p: "Several residents describe the same stretch, so a site visit can confirm it."
+ho2 = ai_service.generate_handover(ctx)
+check("handover accepts bounded text; facts stay with code",
+      ho2["label"] == ai_service.LIVE and all(not re.search(r"\d", i["why"] + i["verify"]) for i in ho2["items"]))
+ai_service._GENERATOR = None
+check("no priorities -> honest empty handover", ai_service.generate_handover({**ctx, "priorities": []})["items"] == [])
+
 # 7. config change route, unchanged model -----------------------------------------
 r_tlv, r_ex = core.route(txt, tlv, model, meta), core.route(txt, ex, model, meta)
 same_model = hashlib.sha256((ROOT / "artifacts/model.joblib").read_bytes()).hexdigest() == model_hash_before
@@ -201,19 +307,44 @@ check("config change: same category, different department, model unchanged",
       f"{r_tlv['proposed_department']} vs {r_ex['proposed_department']}")
 
 # 8. labeled API-failure fallback -------------------------------------------------
-saved_env = {k: os.environ.get(k) for k in ("ANTHROPIC_API_KEY", "ANTHROPIC_BASE_URL")}
+saved_env = {k: os.environ.get(k) for k in ("AI_PROVIDER", "FLAN_T5_MODEL", "ANTHROPIC_API_KEY", "ANTHROPIC_BASE_URL")}
+facts = core.summary_facts(df, hs, tlv, now - timedelta(days=7), now)
+# local FLAN-T5 unavailable (bad model path / not installed) -> labeled fallback
+os.environ["AI_PROVIDER"], os.environ["FLAN_T5_MODEL"] = "flan_t5", "/nonexistent/flan-model"
+ai_service._load_flan.cache_clear()
+a_f, b_f = ai_service.draft_acknowledgment(rep), ai_service.generate_brief(facts)
+check("local model unavailable -> Template fallback (ack + brief)",
+      a_f["label"] == b_f["label"] == ai_service.FALLBACK, a_f["detail"][:60])
+# stand-in generator: checks the FLAN wiring and safety filters without downloading the model
+ai_service._GENERATOR = lambda p: "thank you for letting us know about this"
+a_ok = ai_service.draft_acknowledgment(rep)
+check("local model text accepted -> Live AI draft with code-filled facts",
+      a_ok["label"] == ai_service.LIVE and rep["report_id"] in a_ok["text"]
+      and rep["proposed_department"] in a_ok["text"] and len(a_ok["text"].split()) <= 60, a_ok["text"][:80])
+b_ok = ai_service.generate_brief(facts)
+check("local model brief: Live label, evidence IDs from code, passes validator",
+      b_ok["label"] == ai_service.LIVE and bool(ai_service.validate_brief(b_ok["brief"], facts)), b_ok["detail"])
+ai_service._GENERATOR = lambda p: "It will be fixed by tomorrow by our crew"
+a_bad, b_bad = ai_service.draft_acknowledgment(rep), ai_service.generate_brief(facts)
+check("local model promise/deadline text rejected -> fallback (ack + brief)",
+      a_bad["label"] == b_bad["label"] == ai_service.FALLBACK and "tomorrow" not in a_bad["text"])
+ai_service._GENERATOR = lambda p: "There were 12 complaints in 3 days"
+check("local model numbers rejected", ai_service.generate_brief(facts)["label"] == ai_service.FALLBACK)
+ai_service._GENERATOR = None
+# Claude provider without key / unreachable -> labeled fallback
+os.environ["AI_PROVIDER"] = "anthropic"
 os.environ.pop("ANTHROPIC_API_KEY", None)
 a0 = ai_service.draft_acknowledgment(rep)
-check("no credentials -> Template fallback label", a0["label"] == ai_service.FALLBACK, a0["detail"])
+check("Claude without credentials -> Template fallback label", a0["label"] == ai_service.FALLBACK, a0["detail"])
 os.environ["ANTHROPIC_API_KEY"] = "sk-invalid-smoke"
 os.environ["ANTHROPIC_BASE_URL"] = "http://127.0.0.1:9"
 a1 = ai_service.draft_acknowledgment(rep)
-facts = core.summary_facts(df, hs, tlv, now - timedelta(days=7), now)
 b1 = ai_service.generate_brief(facts)
 check("API failure -> labeled Template fallback (ack)", a1["label"] == ai_service.FALLBACK, a1["detail"][:60])
 check("API failure -> labeled Template fallback (brief)", b1["label"] == ai_service.FALLBACK, b1["detail"][:60])
 for k, v in saved_env.items():
     os.environ.pop(k, None) if v is None else os.environ.__setitem__(k, v)
+ai_service._load_flan.cache_clear()
 
 # 9. no invented route/deadline claims --------------------------------------------
 f_routed = ai_service.ack_facts(rep)

@@ -5,3 +5,4 @@ data/cityfix.db
 data/smoke_*.db
 .venv/
 data/uploads/
+data_picture/

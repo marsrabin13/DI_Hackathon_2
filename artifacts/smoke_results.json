@@ -1,6 +1,6 @@
 {
-  "passed": 44,
-  "total": 44,
+  "passed": 74,
+  "total": 74,
   "results": [
     {
       "check": "required gpt_ data files present",
@@ -143,14 +143,164 @@
       "detail": ""
     },
     {
+      "check": "all named area points inside the demo bbox",
+      "pass": true,
+      "detail": "14"
+    },
+    {
+      "check": "nearest area: planted roads centre -> Rothschild Boulevard",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "nearest area: far point -> none",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "reference lookup is case/space-insensitive and city-scoped",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "timeline shows review, staff decision and status note in order",
+      "pass": true,
+      "detail": "['Report received', 'Waiting for staff review', 'Staff assigned it to Sanitation (demo)', 'Status: In progress']"
+    },
+    {
+      "check": "status change logged with old/new status",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "invalid status/note rejected (done)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "invalid status/note rejected (resolved)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "resolved cases drop out of hotspots",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "simulated fixture recognised; live report not",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "spam: no department, case closed, default resident note",
+      "pass": true,
+      "detail": "['marked as spam', 'status Closed \u2013 not actionable']"
+    },
+    {
+      "check": "spam leaves the staff queue and keeps the model prediction",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "one save sets department and status; repeat save changes nothing",
+      "pass": true,
+      "detail": "['assigned to Environmental Review (demo)', 'status In progress']"
+    },
+    {
+      "check": "simplified audit trail lists both actions with staff name",
+      "pass": true,
+      "detail": "['Status \u2192 In progress', 'Assigned to Environmental Review (demo)']"
+    },
+    {
+      "check": "Needs review count == awaiting-review list (one definition)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "spam/decided cases counted as previously reviewed, not waiting",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "priorities: up to 3, ranked by active count",
+      "pass": true,
+      "detail": "[('roads', 12), ('waste', 10), ('lighting', 8)]"
+    },
+    {
+      "check": "resolved/closed cases leave priorities; ranking updates",
+      "pass": true,
+      "detail": "[('waste', 10), ('lighting', 8), ('roads', 8)]"
+    },
+    {
+      "check": "tie broken by oldest active report",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "priority evidence lists only that hotspot's active reports",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "suggested department comes from city config",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "handover without AI: template draft keeps every priority + evidence ID",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "handover rejects causes/trends",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "handover accepts bounded text; facts stay with code",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no priorities -> honest empty handover",
+      "pass": true,
+      "detail": ""
+    },
+    {
       "check": "config change: same category, different department, model unchanged",
       "pass": true,
       "detail": "Road Maintenance (demo) vs Public Works (demo)"
     },
     {
-      "check": "no credentials -> Template fallback label",
+      "check": "local model unavailable -> Template fallback (ack + brief)",
       "pass": true,
-      "detail": "No ANTHROPIC_API_KEY configured."
+      "detail": "ModuleNotFoundError: No module named 'transformers'"
+    },
+    {
+      "check": "local model text accepted -> Live AI draft with code-filled facts",
+      "pass": true,
+      "detail": "Thank you for letting us know about this. Your report CF-1DD1F5B4 was recorded i"
+    },
+    {
+      "check": "local model brief: Live label, evidence IDs from code, passes validator",
+      "pass": true,
+      "detail": "local /nonexistent/flan-model wrote 2 of 2 hotspot sentences; fact IDs and the rest filled by code"
+    },
+    {
+      "check": "local model promise/deadline text rejected -> fallback (ack + brief)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "local model numbers rejected",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Claude without credentials -> Template fallback label",
+      "pass": true,
+      "detail": "RuntimeError: No ANTHROPIC_API_KEY configured"
     },
     {
       "check": "API failure -> labeled Template fallback (ack)",

@@ -1,0 +1,5 @@
+# Optional: local FLAN-T5-small for AI drafts (no API key). The app works without these
+# (drafts then use the Template fallback). Not installable in the build sandbox - versions
+# are known-compatible ranges, not pinned test results. On Windows, PyPI torch is CPU-only.
+transformers>=4.44,<5
+torch>=2.5

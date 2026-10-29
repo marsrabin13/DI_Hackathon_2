@@ -1,182 +1,172 @@
-# CityFix — Tel Aviv-Yafo demo
+# CityFix
 
-Turns an English citizen complaint into a **proposed department route**, an **acknowledgment draft**, and
-**evidence for geographic investigation**. Badge: **Simulated Tel Aviv reports**.
+An AI-assisted city governance application that is capable of sorting city complaints and spotting recurring issues on a map.
 
-Two pages (top navigation):
-- **Report an issue** — resident chat. Submitting a complaint routes, saves and replies automatically
-  (reference, status, department, acknowledgment). An optional photo or short clip (jpg/png/webp/mp4/mov,
-  max 10 MB) is **stored for staff review only** — not analyzed by AI and not used for routing. Files are
-  saved as `data/uploads/<report_id>.<ext>`. "How was this routed?" explains the outcome in plain language
-  with a match bar per category.
-- **Admin dashboard** — statistics, map & hotspots, review queue with corrections, weekly brief,
-  model & data, portability check.
+CityFix takes an English-language report about roads, waste, street lighting or noise, suggests a department, and prepares an acknowledgment. Staff can review uncertain reports, correct categories, update case status and investigate areas with several similar complaints. Residents can look up their report later by its reference number.
 
-Demo only: no login, no geocoding, no dispatch, no image analysis. Saves and drafts stay in a local SQLite file;
-nothing is sent to a municipality. Department labels are illustrative, not verified municipal ownership.
+**Demo scope:** Tel Aviv-Yafo, using simulated local reports and illustrative department names. Nothing is sent to a municipality.
 
-## Run on another computer (Git Bash on Windows)
+## The problem
 
-Requires Python 3.11+ (tested on 3.13).
+A pothole, an overflowing bin and a broken streetlight can all arrive as free-text complaints. Someone needs to read each one, decide where it belongs and notice whether nearby residents are reporting the same kind of problem.
+
+CityFix explores how much of that first pass can be automated while keeping staff involved when the answer is unclear. The intended value is less time spent sorting reports and better information for deciding where to investigate.
+
+## What it does
+
+- **Report an issue:** a chat. The resident types the complaint and CityFix replies straight away with a compact receipt: the reference (with a copy button), the **routing** result kept separate from **progress** toward resolution, the suggested department, a short reply with an *AI-written reply* or *Template response* badge, and a **Track report** button. An optional panel adds an area (tap it on a small map of 14 named Tel Aviv areas, or pick it from the list), coordinates, a photo or clip, or *Multiple issues / unsure*. "How was this routed?" stays collapsed. **Start new visit** clears the conversation; saved reports stay trackable.
+- **Track a report:** a resident enters their reference number to see the case status and history, including notes from staff. No SMS or email is sent.
+- **For Staff Review:** staff see the cases the system wasn't confident about in a single case card, then make one decision: the category (the department follows from the city's settings; the original prediction is kept) or **Spam / not a city issue**, which routes nowhere and closes the case, plus the case status — *Received, In progress, Resolved* or *Closed – not actionable* — and an optional note for the resident. One **Save decision** step applies both, and every action appears in a simple audit trail (when, action, note, staff name).
+- **Admin dashboard:** filters and summary cards (*Needs review*, *Active cases*, *Resolved*, *Hotspots*) lead, followed by the map beside the review queue, the department queues and the hotspots. Report tables use plain labels (Reference, Issue, Area, Department, Status, Submitted); scores, assignment source and the audit trail sit in an expandable report view. Live reports classified by the model are labeled and counted separately from the simulated history. The routing explanation, thresholds and AI diagnostics are under **Model & data**.
+- **Weekly Action Brief:** opens with what needs attention, computed in Python and useful without AI: a short operational summary, up to three **priority hotspots** (category and area, active report count, oldest active report, suggested department, a specific next step, and **Open related reports** / **View on map** buttons), then the cases waiting for staff review and the oldest active cases with their last update. Priorities are ranked by active report count, ties broken by the oldest active report — a workload ranking, not a danger assessment; resolved and closed cases are excluded. An optional **Draft handover summary** asks the AI only to explain why each priority is on the list and what to verify next; counts, dates, departments and ranking are inserted by code, and causes, trends, schedules, dispatch, promises and danger language are rejected (otherwise a labeled *Template draft* is shown). Evidence and methodology, including the computed facts, sit in a collapsed section.
+- **Try another city configuration:** the same model can use a different department mapping without retraining. Local accuracy would still need separate evaluation.
+
+Residents can attach a photo or short video (jpg, png, webp, mp4 or mov, up to 10 MB). Attachments are saved for staff review; the app does not analyze them or use them to classify a report.
+
+## Run it on your computer
+
+You need the complete project folder, including its supplied data and model files, and Python 3.11 or newer. The build was tested on Python 3.13. Core package versions are pinned in `requirements.txt`.
+
+Open the project folder in VS Code, then open a terminal. These commands use **Git Bash on Windows**:
 
 ```bash
 cd "/c/path/to/cityfix"
 python -m venv .venv
-source .venv/Scripts/activate        # macOS/Linux: source .venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env                 # optional: add ANTHROPIC_API_KEY for live AI drafts
-python ai_service.py                 # provider access check (never prints the key)
-python smoke_check.py                # 44 focused checks, temporary DB
-python -m streamlit run app.py       # http://localhost:8501
+source .venv/Scripts/activate
+python -m pip install -r requirements.txt
+python -m streamlit run app.py
 ```
 
-The model is already trained and the held-out test already evaluated. To reproduce from the supplied data:
+Replace the example path with your project folder. On macOS or Linux, activate the environment with `source .venv/bin/activate`. Open [localhost:8501](http://localhost:8501) if the browser does not open automatically.
+
+**Troubleshooting on Windows:** if importing numpy fails with *"An Application Control policy has blocked this file"*, Windows Smart App Control is blocking the package's unsigned files (Windows Security → App & browser control → Smart App Control). In Git Bash, use forward slashes: `source .venv/Scripts/activate`.
+
+### Enable live AI drafts
+
+The app works without any AI model: residents then see a **Template response** badge (staff see **Template fallback** with the reason). By default the drafts use **FLAN-T5-small**, a small model that runs locally — no API key or Hugging Face account is needed. To install it:
 
 ```bash
-python train.py                      # fit on gpt_train.csv, thresholds chosen on gpt_validation.csv
-python train.py --evaluate-test      # one-time evaluation on gpt_tel_aviv_test.csv
+cp .env.example .env
+python -m pip install -r requirements-ai.txt
+python ai_service.py
+python -m streamlit run app.py
 ```
 
-`train.py` deletes old test results when it retrains; `--evaluate-test` refuses a second run for the same
-model unless `--force` is given. If a required data file is missing, both scripts stop and name it — no
-replacement data is generated.
+`requirements-ai.txt` installs `transformers` and `torch` (a few hundred MB). The first `python ai_service.py` downloads the public model (about 300 MB) and prints a sample sentence. `.env` sets `AI_PROVIDER=flan_t5`; it can also be set to `anthropic` (with an `ANTHROPIC_API_KEY`) or `template`. Keep `.env` out of Git.
 
-## Data (supplied package — not regenerated)
+**Live generation was not verified during the build:** the build environment could not download the model. The integration was tested with a stand-in generator. Before presenting it as a live GenAI demonstration, check **Admin dashboard → Model & data → Run AI check** and confirm residents see the **AI-written reply** badge. When the model is missing or its output is unusable, residents see a **Template response** badge; the technical reason appears only under Model & data.
 
-All files live in `data/`, prefixed `gpt_`. Hashes were verified against `gpt_data_provenance.json`.
+### Check or reproduce the build
 
-| File | Rows | Use |
+```bash
+python smoke_check.py
+```
+
+The supplied model is already trained and its held-out test has been evaluated. To rebuild from the supplied data:
+
+```bash
+python train.py
+python train.py --evaluate-test
+```
+
+Training uses `gpt_train.csv`; routing thresholds are selected using `gpt_validation.csv`. The test file is reserved for final evaluation. Retraining clears old test results, and a second test evaluation for the same model requires `--force`. Missing required files cause the scripts to stop and name the file; they do not generate replacement data.
+
+## The data story
+
+The dataset combines a small amount of NYC 311 source material with synthetic English complaints. The Tel Aviv test examples and map reports are synthetic, so the results describe this demo dataset rather than real municipal performance.
+
+All supplied project data files are in `data/` and start with `gpt_`.
+
+| File | Contents | Purpose |
 | --- | --- | --- |
-| `gpt_train.csv` | 254 | Training only: 240 synthetic complaints (60/category, 12 families × 5 variants) + 14 deduplicated NYC structured details. Roads 64, waste 62, lighting 66, noise 62. |
-| `gpt_validation.csv` | 24 | Validation and threshold selection only (6/category, separately authored, synthetic). |
-| `gpt_tel_aviv_test.csv` | 24 | Final test: 20 in-scope (5/category) + 4 policy cases with blank category. Never used for fitting or tuning. |
-| `gpt_tel_aviv_demo.csv` | 90 | Map/dashboard fixtures only: planted 12 roads, 10 waste, 8 lighting + 60 scattered. Seed 42. |
-| `gpt_data_provenance.json` | — | Sources, counts, generation method, seed, demo anchor `2026-10-29T12:00:00Z`, split/map checks, hashes. |
-| `gpt_nyc_sample.csv`, `gpt_nyc_download_receipt.json`, `gpt_nyc_source_lineage.json` | 600 raw | Retained NYC snapshot and lineage for the 14 training details (provenance only). |
+| `gpt_train.csv` | 254 rows: 240 synthetic complaints and 14 deduplicated NYC structured details | Model training |
+| `gpt_validation.csv` | 24 separately authored synthetic complaints, six per category | Validation and routing threshold selection |
+| `gpt_tel_aviv_test.csv` | 20 in-scope complaints and four routing-policy cases | Final evaluation |
+| `gpt_tel_aviv_demo.csv` | 90 simulated reports with locations and timestamps | Map and dashboard demonstration |
+| `gpt_data_provenance.json` | Sources, generation method, counts, seed and file hashes | Traceability |
+| `gpt_nyc_sample.csv`, `gpt_nyc_download_receipt.json`, `gpt_nyc_source_lineage.json` | A 600-row raw NYC snapshot, download receipt and lineage | Source documentation |
 
-Rules applied: classifier input is `text` only; `category` is the target; `family_id`, `source` and
-`source_key` are kept as metadata. Splits are used as supplied — never merged or re-split. Labels are the
-supplied ones; no pseudo-labels. Policy cases are scored on `expected_status`, separately from classification.
+The 240 synthetic training complaints cover four categories, with 12 scenario families per category and five variants per family. Only complaint text is passed to the classifier. Source fields and family IDs remain metadata.
 
-Independent verification on integration: all file hashes match; schemas match the brief; counts match
-provenance; zero family-ID and normalized-text overlap between train/validation/test; demo IDs unique, all
-inside the demo bbox and within the 7 days ending at the anchor; DBSCAN (250 m, 5 samples) finds exactly
-roads 12, waste 10, lighting 8 and no noise cluster.
+The train, validation and test splits stay separate. Integration checks found no shared family IDs or normalized complaint text across them, and file hashes matched the supplied provenance. The package README, verification report and reproducible `prepare_data.py` are in `data_package/`; the generator was not rerun during app integration.
 
-`data_package/` holds the package's own README, verification report and `prepare_data.py`. That script was
-not run here; it writes to `data_package/data/` by default, so it cannot overwrite the project's `data/`.
+The map data deliberately contains three hotspots: **12 roads reports, 10 waste reports and eight lighting reports**, plus 60 scattered reports. These demonstrate clustering; they are not evidence of actual problems in Tel Aviv. The simulated history ends at the fixture anchor, `2026-10-29T12:00:00Z`. The dashboard's default view, **Sample week + live reports**, shows the seven days before that anchor plus every report entered since; views for live reports only and the sample week only are also available.
 
-Map fixtures are imported as `status=open`, `routing_state=routed`, `category_source=seed_fixture`, keeping
-the supplied report IDs, coordinates, categories, timestamps and `synthetic_demo` source. The stored demo
-anchor is the default admin window end. If an older fixture file was imported before, those fixture rows
-(and their corrections) are replaced automatically on the next start; citizen reports are kept.
+The resident's area list contains 14 approximate points (Jaffa, South, Center, North and East). They are not exact addresses or official boundaries, and there is no geocoding. The three planted hotspots sit near *Rothschild Boulevard*, the *Rabin Square area* and the *Yarkon Park area*.
 
-## Model and policy
+## How it works
 
-`TfidfVectorizer(ngram_range=(1,2), max_features=10000, sublinear_tf=True)` →
-`LogisticRegression(max_iter=1000, class_weight="balanced", random_state=42)`, fitted on `gpt_train.csv` only.
+| Part | Approach | Why it fits this prototype |
+| --- | --- | --- |
+| Complaint classification | TF-IDF text features and Logistic Regression | A small, inspectable model that runs locally on CPU |
+| Routing | Score and margin thresholds, review rules and a city routing table | Lets the app defer uncertain cases to staff; the department comes from configuration, not the model |
+| Hotspots | DBSCAN with haversine distance, per city and category; 250 m neighbour distance and five-report minimum | Finds nearby concentrations of similar reports |
+| Drafting | Local FLAN-T5-small writes the human-sounding sentences; code fills every fact; template fallback | Generates acknowledgments and briefs without an API key and without letting the model invent facts |
+| Interface and storage | Streamlit, pandas, pydeck and SQLite | Supports a local demo with saved reports, decisions and status history |
 
-Policy: urgent phrase guard → `urgent_review` (demo guard, **not** reliable emergency detection); no known
-vocabulary, low score, low margin, missing department mapping or the *Multiple issues / unsure* option →
-`review_required`; otherwise `routed` with the department from the city config.
+TF-IDF uses word unigrams and bigrams, up to 10,000 features and sublinear term frequency. Logistic Regression uses balanced class weights, `max_iter=1000` and `random_state=42`.
 
-**Threshold selection (validation only, once, then frozen):** at the starting 0.65 / 0.15 the model routed
-**0/24** validation cases — Logistic Regression scores on this small 4-class set are compressed (top scores
-mostly 0.3–0.6). The single adjustment chose the highest-coverage pair that kept 100% accepted-route accuracy
-on validation: **min_score 0.40, min_margin 0.05**. Stored in `artifacts/model_metadata.json`. Scores are
-uncalibrated estimates.
+A report can be `routed`, `review_required` or `urgent_review`. Low scores, small gaps between the top two categories, unfamiliar vocabulary, missing department mappings and the resident's **Multiple issues / unsure** selection send a report to review. An urgent-phrase rule shows a static notice; it is not a reliable emergency detector.
 
-## Measured results (synthetic data — not proven Tel Aviv accuracy)
+Routing state is separate from **case status** (*Received → In progress → Resolved*, or *Closed – not actionable*). Received and in-progress cases count as active in queues and hotspots; resolved and closed cases don't. In this demo, anyone with a reference number can view that report's status; a real service would need verification.
 
-| Set | Accuracy | Macro-F1 | Routed | Routed correctly | Policy cases |
-| --- | --- | --- | --- | --- | --- |
-| Validation (24) | 0.792 | 0.765 | 15/24 | 15/15 | — |
-| Held-out test (20 in-scope + 4) | 0.800 | 0.801 | 11/20 | 11/11 | 3/4 |
+The AI drafts text after routing and never changes routing, counts or saved data. FLAN-T5-small writes only the opening sentence of the acknowledgment and the hotspot sentences of the brief; it never sees the complaint text or attachments. Code adds the reference, department, evidence IDs and "recorded in this demo" notice. Each generated sentence is rejected if it contains numbers, promises about dispatch, deadlines or completion, department names or commitments, or isn't plain English. The optional Anthropic provider uses a 12-second timeout and no automatic retries.
 
-Per-class test F1: noise 1.00, waste 0.75, roads 0.73, lighting 0.73.
+## Results and what was learned
 
-**Failures (kept visible, `artifacts/test_failures.csv`):**
-- **Policy failure:** "There is a new pothole beside an overflowing rubbish bin, and both need attention" was
-  **routed to waste** instead of going to review. Nothing detects multiple issues except the citizen's
-  *Multiple issues / unsure* option. Not patched after seeing the test.
-- 9 in-scope cases went to staff review instead of routing; 4 of them were also mis-predicted (missing step
-  tread → lighting; garden trimmings → lighting; spilled refuse → roads; salt-coated lamp → roads).
-- Validation shows the same weakness: lighting had 2/6 correct predictions.
+These are the recorded build results on the supplied synthetic validation and test sets:
 
-Reading: whatever the model routes was correct on both sets, but roughly half of reports need a human. That's
-expected with 254 mostly templated training texts.
+| Measure | Validation | Held-out test |
+| --- | --- | --- |
+| Classification accuracy | 79.2% — 24 complaints | 80.0% — 20 in-scope complaints |
+| Macro-F1 | 0.765 | 0.801 |
+| In-scope reports routed automatically | 15/24 | 11/20 |
+| Correct routes among those accepted | 15/15 | 11/11 |
+| Separate routing-policy cases passed | — | 3/4 |
 
-**Smoke checks: 44/44 passed** — attachments stored under a server-chosen name, never change routing, wrong type/oversize rejected, excluded from AI facts; required files and provenance counts; split isolation; model fitted on
-`gpt_train.csv` (hash); 6 nearby same-category points vs a distant point; category and city separation;
-missing/outside location; duplicate save; idempotent fixture import; fixtures keep IDs, coordinates,
-categories and timestamps; fixtures stored open + routed + seed_fixture; anchor = default window end; planted
-hotspots 12/10/8 with no noise cluster; stale fixture replacement; correction audit with preserved prediction;
-cross-city correction blocked; config-change route with unchanged model; labeled fallback on missing key and
-API failure; rejection of deadline/dispatch claims, unknown evidence IDs and numbers in brief prose;
-known/unclear/unsupported/multi-issue/urgent inputs.
+The classifier and routing policy answer different questions. A prediction can be wrong while the routing policy still sends that report to a person. All accepted in-scope routes were correct in these small sets, but nine of the 20 test complaints needed review. That is too little evidence to claim reliable real-world accuracy.
 
-**Live AI: not verified here.** No `ANTHROPIC_API_KEY` was available in the build environment, so drafts
-produced during the build were **Template fallback**. Add a key to `.env`, run `python ai_service.py`, and
-confirm the **Live AI draft** label in the app before claiming live GenAI.
+**The main challenge was choosing when to defer.** The starting score/margin thresholds of 0.65/0.15 routed none of the 24 validation complaints. Selecting 0.40/0.05 on validation increased coverage to 15/24 while keeping all accepted validation routes correct. Those thresholds were then frozen for the test. Model scores are uncalibrated estimates.
 
-## Files
+**A visible failure:** a report mentioning both a pothole and an overflowing bin was routed to waste instead of review. The app currently depends on the resident selecting **Multiple issues / unsure** to flag this situation. The failure remains documented in `artifacts/test_failures.csv`; the policy was not changed after seeing the test. Lighting was another weakness, with only two of six validation complaints classified correctly; for example, "flickering all night" is routed to noise.
 
-| File | Role |
+The build also recorded **74/74 smoke checks passing**, covering data separation, routing, corrections, spam handling and the combined staff decision, shared case counts, Weekly Action Brief ranking and exclusions, handover text limits, case status and resident lookup, fixture imports, clustering, area names, attachment handling and AI fallback and safety filters. Results are stored in `artifacts/`.
+
+## Business value and next steps
+
+For a city service team, the useful decisions are practical: which department should review a report, which cases need a person, and which areas deserve investigation. A concentration of lighting reports could help staff choose an area to inspect. The weekly brief gives them a short starting point with traceable evidence, and residents can follow their case without calling.
+
+The demo has not measured time savings, cost reduction or service improvement. A pilot would need authorized local reports, agreed department ownership and a fresh local holdout set. Running beside staff would let the team measure triage time, reassignment rate, review rate and accepted-route accuracy.
+
+The next development priorities are automatic multi-issue detection and more varied lighting examples. Further roadmap items: retrieval over the city's responsibility rules and past staff decisions to suggest a department for unclear cases (staff decide); SMS or email updates when a case status changes, which needs contact details and consent; and image analysis, which would need privacy controls and evaluation on local photos. Production use would also require access control, approved city boundaries, case-system integration and monitored model releases. An annual licence plus onboarding is a possible business model, still unvalidated.
+
+## Demo walkthrough
+
+Use these steps for the live portion of the five-minute pitch, leaving time to explain the problem, data and results:
+
+1. In **Report an issue**, enter "There is a deep pothole on our street near the bus stop, cars keep swerving." Select the area **Center · Rothschild Boulevard** and show the reference, proposed route, acknowledgment label and "How was this routed?".
+2. Submit "Please help, it is a problem." to show the review path, and note its reference. "Exposed live wire near the school" demonstrates the urgent notice.
+3. In **Admin dashboard**, point out the cards (*Needs review* matches the review queue) and the live reports on the map, then show the three planted hotspots.
+4. In **For Staff Review**, open the vague report, choose waste and **Resolved** with a short note, and press **Save decision**; show the audit trail. Submitting "I need to renew my passport" and marking it **Spam** shows a message that routes nowhere and closes.
+5. Back in **Report an issue → Track a report** (or the receipt's **Track report** button), show the history and staff note the resident sees.
+6. Open **Weekly Action Brief**: show the ranked priorities, use **Open related reports** and **View on map**, then **Draft handover summary** and point out its label (*AI-written draft* or *Template draft*) and evidence links.
+7. Open **Model & data** to show the results and known failure. Use **Portability check** to show the same pothole report mapped to **Public Works (demo)** in Example City without retraining.
+
+## Project files
+
+| File or folder | Role |
 | --- | --- |
-| `app.py` | Entry point: navigation between the two pages. |
-| `citizen_page.py` | Resident chat page with automatic routing reply. |
-| `admin_page.py` | Admin dashboard (demo, no login). |
-| `ui_common.py` | Shared styling and cached model/DB (`st.cache_resource`). |
-| `core.py` | Data paths, validation, inference, routing policy, SQLite (city-scoped), DBSCAN hotspots, facts. |
-| `ai_service.py` | Anthropic SDK adapter: acknowledgment + weekly brief, validation, template fallback. |
-| `train.py` | Training, validation threshold selection, one-time `--evaluate-test`. |
-| `smoke_check.py` | Focused checks; results in `artifacts/smoke_results.json`. |
-| `config/cities.json` | `il_tel_aviv` + `example_city` (portability: roads → Public Works). |
-| `.streamlit/config.toml` | Navy/teal light theme. |
-| `data/` | Supplied `gpt_` files. `cityfix.db` is created on first app run. |
-| `data_package/` | Data package README, verification report and generator (not run). |
-| `artifacts/` | Model, metadata, validation/test predictions, test metrics/failures, smoke results. |
+| `app.py` | Streamlit entry point and navigation |
+| `citizen_page.py`, `admin_page.py`, `ui_common.py` | Resident page, dashboard and shared UI resources |
+| `core.py` | Validation, classification, routing, storage, case status, clustering and calculated facts |
+| `ai_service.py` | AI drafts (local FLAN-T5-small or Anthropic), provider check, output validation and fallback |
+| `train.py`, `smoke_check.py` | Training, evaluation and build checks |
+| `config/cities.json` | Demo city settings, named areas and department mappings |
+| `requirements.txt`, `requirements-ai.txt` | Core packages (pinned) and optional local-AI packages |
+| `.env.example`, `.streamlit/config.toml` | AI provider settings template and app theme (light-gray background, teal actions, 18 px text), upload limit |
+| `assets/` | CityFix logo and icon shown in the top bar |
+| `data/` | Supplied data; local `cityfix.db` and `uploads/` are created during use |
+| `data_package/` | Data documentation, verification report and generator |
+| `artifacts/` | Trained model, metadata, predictions, metrics and check results |
 
-## AI drafts
-
-Generated automatically when a report is submitted (one per saved report) and by the **Generate weekly
-brief** button; 12 s timeout, `max_retries=0`, bounded tokens, cached in session. The acknowledgment
-receives only reference, routing state, department (routed only), category and whether a location was
-given — never the complaint text. The brief receives only Python-computed facts with IDs. Output is
-rejected (→ Template fallback) for wrong keys/types, >60 words, unknown evidence IDs, numbers in brief prose,
-missing "demo"/"simulated" mention, or obvious deadline/dispatch/completion claims. Urgent cases always show
-the static notice. Drafts never change routing, counts or the database.
-
-## Demo script (≈3 min)
-
-1. Report an issue: "There is a deep pothole on our street near the bus stop, cars keep swerving." + Demo
-   Point A → automatic reply: reference, Routed, Road Maintenance (demo), acknowledgment.
-2. "Please help, it is a problem." → staff review. "Exposed live wire near the school" → urgent notice.
-3. Admin dashboard → Map & hotspots: three planted hotspots (roads 12, waste 10, lighting 8).
-4. Review queue: correct the vague report to `waste` → department recalculated, audit row appears.
-5. Weekly brief → observations and investigations citing fact IDs.
-6. Model & data → Portability check: the same pothole text routes to **Public Works (demo)** in Example City,
-   no retraining.
-7. Model & data: show the measured numbers, the 0/24 → 15/24 threshold story, and the multi-issue failure.
-
-## Roadmap (not built)
-
-- **AI image analysis:** suggest a category from the resident's photo/clip. Requires a privacy review (faces,
-  car plates), consent wording, retention rules, and evaluation on real local photos before use.
-- Multi-issue detection without the resident's checkbox (the one failed test policy case).
-- More varied training language for lighting (the weakest class).
-
-## Pilot path (not done)
-
-Collect authorized local English reports, agree department ownership with city staff, evaluate on a clean
-local holdout, retrain/calibrate, then shadow-test beside staff. Pilot measures: triage time, reassignment
-rate, review rate, accepted-route accuracy. No business improvement is claimed. Production would add tenant
-access control, approved boundaries, case-system integration and monitored model releases. The buyer model
-(annual licence + onboarding) is an unvalidated hypothesis.
-
-## Tested versions
-
-Python 3.13 · streamlit 1.66.1 · pandas 3.0.5 · numpy 2.5.3 · scikit-learn 1.9.1 · joblib 1.6.0 ·
-pydeck 0.9.3 · anthropic 2.3.0 · python-dotenv 1.2.3 (pinned in `requirements.txt`, also recorded in
-`artifacts/model_metadata.json`). If your scikit-learn version can't load `model.joblib`, run
-`python train.py` then `python train.py --evaluate-test` to rebuild — results may differ slightly.
+Department names are shown without the "(demo)" suffix that the configuration and saved history keep. Reports, decisions and status history are saved locally in SQLite; attachments are stored in `data/uploads/`. `.env`, the database, uploads and `data_picture/` are excluded from Git. This prototype has no login, geocoding or municipal dispatch integration.

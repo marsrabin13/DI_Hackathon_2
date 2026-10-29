@@ -6,12 +6,73 @@
     "timezone": "Asia/Jerusalem",
     "language": "en",
     "config_version": "demo-v1",
-    "map_center": [32.0853, 34.7818],
-    "demo_bbox": [32.04, 34.74, 32.15, 34.84],
+    "map_center": [
+      32.0853,
+      34.7818
+    ],
+    "demo_bbox": [
+      32.04,
+      34.74,
+      32.15,
+      34.84
+    ],
     "map_presets": {
-      "Demo Point A": [32.0681, 34.7741],
-      "Demo Point B": [32.0802, 34.7821],
-      "Demo Point C": [32.1031, 34.7921]
+      "Jaffa \u00b7 Old Jaffa": [
+        32.054,
+        34.7525
+      ],
+      "Jaffa \u00b7 Ajami": [
+        32.048,
+        34.753
+      ],
+      "South \u00b7 Florentin": [
+        32.0565,
+        34.769
+      ],
+      "South \u00b7 Neve Tzedek": [
+        32.061,
+        34.7655
+      ],
+      "South \u00b7 Hatikva": [
+        32.052,
+        34.788
+      ],
+      "Center \u00b7 Rothschild Boulevard": [
+        32.0681,
+        34.7741
+      ],
+      "Center \u00b7 Dizengoff Center": [
+        32.0752,
+        34.775
+      ],
+      "Center \u00b7 Rabin Square area": [
+        32.0802,
+        34.7821
+      ],
+      "Center \u00b7 Sarona": [
+        32.072,
+        34.7865
+      ],
+      "North \u00b7 Old North (Basel)": [
+        32.09,
+        34.78
+      ],
+      "North \u00b7 Tel Aviv Port": [
+        32.097,
+        34.774
+      ],
+      "North \u00b7 Yarkon Park area": [
+        32.1031,
+        34.7921
+      ],
+      "North \u00b7 Ramat Aviv": [
+        32.113,
+        34.804
+      ],
+      "East \u00b7 Yad Eliyahu": [
+        32.06,
+        34.796
+      ]
     },
     "departments": {
       "roads": "Road Maintenance (demo)",
@@ -22,7 +83,12 @@
     "review_department": "Service Desk Review (demo)",
     "min_score": 0.65,
     "min_margin": 0.15,
-    "hotspots": {"eps_meters": 250, "min_samples": 5, "window_days": 7}
+    "hotspots": {
+      "eps_meters": 250,
+      "min_samples": 5,
+      "window_days": 7
+    },
+    "map_presets_note": "Approximate area points chosen for the demo, not exact addresses or official boundaries."
   },
   "example_city": {
     "city_id": "example_city",
@@ -31,12 +97,29 @@
     "timezone": "UTC",
     "language": "en",
     "config_version": "demo-v1",
-    "map_center": [32.0853, 34.7818],
-    "demo_bbox": [32.04, 34.74, 32.15, 34.84],
+    "map_center": [
+      32.0853,
+      34.7818
+    ],
+    "demo_bbox": [
+      32.04,
+      34.74,
+      32.15,
+      34.84
+    ],
     "map_presets": {
-      "Demo Point A": [32.0681, 34.7741],
-      "Demo Point B": [32.0802, 34.7821],
-      "Demo Point C": [32.1031, 34.7921]
+      "Demo Point A": [
+        32.0681,
+        34.7741
+      ],
+      "Demo Point B": [
+        32.0802,
+        34.7821
+      ],
+      "Demo Point C": [
+        32.1031,
+        34.7921
+      ]
     },
     "departments": {
       "roads": "Public Works (demo)",
@@ -47,6 +130,10 @@
     "review_department": "Service Desk Review (demo)",
     "min_score": 0.65,
     "min_margin": 0.15,
-    "hotspots": {"eps_meters": 250, "min_samples": 5, "window_days": 7}
+    "hotspots": {
+      "eps_meters": 250,
+      "min_samples": 5,
+      "window_days": 7
+    }
   }
 }
