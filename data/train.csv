@@ -1,0 +1,241 @@
+text,category,family_id,source,source_key
+There is a deep pothole in the middle of the road near the bus stop. Cars keep swerving to avoid it.,roads,tr_roads_01,synthetic,tr_roads_01_v1
+"Hi, I want to report a deep pothole in the middle of the road outside building 14.",roads,tr_roads_01,synthetic,tr_roads_01_v2
+"At the corner by the school, there is a deep pothole in the middle of the road. Cars keep swerving to avoid it. Please look into it.",roads,tr_roads_01,synthetic,tr_roads_01_v3
+For several days now there has been a deep pothole in the middle of the road next to the park entrance. Cars keep swerving to avoid it.,roads,tr_roads_01,synthetic,tr_roads_01_v4
+Complaint: a deep pothole in the middle of the road on our street. cars keep swerving to avoid it.,roads,tr_roads_01,synthetic,tr_roads_01_v5
+There is a long crack running across the asphalt outside building 14. It is getting wider every week.,roads,tr_roads_02,synthetic,tr_roads_02_v1
+"Hi, I want to report a long crack running across the asphalt at the corner by the school.",roads,tr_roads_02,synthetic,tr_roads_02_v2
+"Next to the park entrance, there is a long crack running across the asphalt. It is getting wider every week. Please look into it.",roads,tr_roads_02,synthetic,tr_roads_02_v3
+For several days now there has been a long crack running across the asphalt on our street. It is getting wider every week.,roads,tr_roads_02,synthetic,tr_roads_02_v4
+Complaint: a long crack running across the asphalt near the bus stop. it is getting wider every week.,roads,tr_roads_02,synthetic,tr_roads_02_v5
+There is a manhole cover that is loose and rattles when cars drive over it at the corner by the school. It is loud and looks dangerous.,roads,tr_roads_03,synthetic,tr_roads_03_v1
+"Hi, I want to report a manhole cover that is loose and rattles when cars drive over it next to the park entrance.",roads,tr_roads_03,synthetic,tr_roads_03_v2
+"On our street, there is a manhole cover that is loose and rattles when cars drive over it. It is loud and looks dangerous. Please look into it.",roads,tr_roads_03,synthetic,tr_roads_03_v3
+For several days now there has been a manhole cover that is loose and rattles when cars drive over it near the bus stop. It is loud and looks dangerous.,roads,tr_roads_03,synthetic,tr_roads_03_v4
+Complaint: a manhole cover that is loose and rattles when cars drive over it outside building 14. it is loud and looks dangerous.,roads,tr_roads_03,synthetic,tr_roads_03_v5
+There is a sunken patch of road where the utility work was done next to the park entrance. The repair was never finished properly.,roads,tr_roads_04,synthetic,tr_roads_04_v1
+"Hi, I want to report a sunken patch of road where the utility work was done on our street.",roads,tr_roads_04,synthetic,tr_roads_04_v2
+"Near the bus stop, there is a sunken patch of road where the utility work was done. The repair was never finished properly. Please look into it.",roads,tr_roads_04,synthetic,tr_roads_04_v3
+For several days now there has been a sunken patch of road where the utility work was done outside building 14. The repair was never finished properly.,roads,tr_roads_04,synthetic,tr_roads_04_v4
+Complaint: a sunken patch of road where the utility work was done at the corner by the school. the repair was never finished properly.,roads,tr_roads_04,synthetic,tr_roads_04_v5
+There is a broken curb stone sticking out into the street on our street. Strollers can't get past it.,roads,tr_roads_05,synthetic,tr_roads_05_v1
+"Hi, I want to report a broken curb stone sticking out into the street near the bus stop.",roads,tr_roads_05,synthetic,tr_roads_05_v2
+"Outside building 14, there is a broken curb stone sticking out into the street. Strollers can't get past it. Please look into it.",roads,tr_roads_05,synthetic,tr_roads_05_v3
+For several days now there has been a broken curb stone sticking out into the street at the corner by the school. Strollers can't get past it.,roads,tr_roads_05,synthetic,tr_roads_05_v4
+Complaint: a broken curb stone sticking out into the street next to the park entrance. strollers can't get past it.,roads,tr_roads_05,synthetic,tr_roads_05_v5
+There is raised sidewalk slabs that people trip over near the bus stop. An elderly neighbor fell there.,roads,tr_roads_06,synthetic,tr_roads_06_v1
+"Hi, I want to report raised sidewalk slabs that people trip over outside building 14.",roads,tr_roads_06,synthetic,tr_roads_06_v2
+"At the corner by the school, there is raised sidewalk slabs that people trip over. An elderly neighbor fell there. Please look into it.",roads,tr_roads_06,synthetic,tr_roads_06_v3
+For several days now there has been raised sidewalk slabs that people trip over next to the park entrance. An elderly neighbor fell there.,roads,tr_roads_06,synthetic,tr_roads_06_v4
+Complaint: raised sidewalk slabs that people trip over on our street. an elderly neighbor fell there.,roads,tr_roads_06,synthetic,tr_roads_06_v5
+There is pedestrian crossing paint that has completely faded outside building 14. Drivers don't see the crosswalk.,roads,tr_roads_07,synthetic,tr_roads_07_v1
+"Hi, I want to report pedestrian crossing paint that has completely faded at the corner by the school.",roads,tr_roads_07,synthetic,tr_roads_07_v2
+"Next to the park entrance, there is pedestrian crossing paint that has completely faded. Drivers don't see the crosswalk. Please look into it.",roads,tr_roads_07,synthetic,tr_roads_07_v3
+For several days now there has been pedestrian crossing paint that has completely faded on our street. Drivers don't see the crosswalk.,roads,tr_roads_07,synthetic,tr_roads_07_v4
+Complaint: pedestrian crossing paint that has completely faded near the bus stop. drivers don't see the crosswalk.,roads,tr_roads_07,synthetic,tr_roads_07_v5
+There is loose gravel left on the road after repaving at the corner by the school. Scooters are skidding on it.,roads,tr_roads_08,synthetic,tr_roads_08_v1
+"Hi, I want to report loose gravel left on the road after repaving next to the park entrance.",roads,tr_roads_08,synthetic,tr_roads_08_v2
+"On our street, there is loose gravel left on the road after repaving. Scooters are skidding on it. Please look into it.",roads,tr_roads_08,synthetic,tr_roads_08_v3
+For several days now there has been loose gravel left on the road after repaving near the bus stop. Scooters are skidding on it.,roads,tr_roads_08,synthetic,tr_roads_08_v4
+Complaint: loose gravel left on the road after repaving outside building 14. scooters are skidding on it.,roads,tr_roads_08,synthetic,tr_roads_08_v5
+There is a very bumpy and uneven road surface next to the park entrance. It damages car tires.,roads,tr_roads_09,synthetic,tr_roads_09_v1
+"Hi, I want to report a very bumpy and uneven road surface on our street.",roads,tr_roads_09,synthetic,tr_roads_09_v2
+"Near the bus stop, there is a very bumpy and uneven road surface. It damages car tires. Please look into it.",roads,tr_roads_09,synthetic,tr_roads_09_v3
+For several days now there has been a very bumpy and uneven road surface outside building 14. It damages car tires.,roads,tr_roads_09,synthetic,tr_roads_09_v4
+Complaint: a very bumpy and uneven road surface at the corner by the school. it damages car tires.,roads,tr_roads_09,synthetic,tr_roads_09_v5
+There is a speed bump that is broken and crumbling on our street. Pieces of asphalt are all over the lane.,roads,tr_roads_10,synthetic,tr_roads_10_v1
+"Hi, I want to report a speed bump that is broken and crumbling near the bus stop.",roads,tr_roads_10,synthetic,tr_roads_10_v2
+"Outside building 14, there is a speed bump that is broken and crumbling. Pieces of asphalt are all over the lane. Please look into it.",roads,tr_roads_10,synthetic,tr_roads_10_v3
+For several days now there has been a speed bump that is broken and crumbling at the corner by the school. Pieces of asphalt are all over the lane.,roads,tr_roads_10,synthetic,tr_roads_10_v4
+Complaint: a speed bump that is broken and crumbling next to the park entrance. pieces of asphalt are all over the lane.,roads,tr_roads_10,synthetic,tr_roads_10_v5
+There is the edge of the road collapsing next to the drain near the bus stop. There is a hole forming under the asphalt.,roads,tr_roads_11,synthetic,tr_roads_11_v1
+"Hi, I want to report the edge of the road collapsing next to the drain outside building 14.",roads,tr_roads_11,synthetic,tr_roads_11_v2
+"At the corner by the school, there is the edge of the road collapsing next to the drain. There is a hole forming under the asphalt. Please look into it.",roads,tr_roads_11,synthetic,tr_roads_11_v3
+For several days now there has been the edge of the road collapsing next to the drain next to the park entrance. There is a hole forming under the asphalt.,roads,tr_roads_11,synthetic,tr_roads_11_v4
+Complaint: the edge of the road collapsing next to the drain on our street. there is a hole forming under the asphalt.,roads,tr_roads_11,synthetic,tr_roads_11_v5
+There is broken paving stones on the bike path outside building 14. Cyclists have to ride into traffic.,roads,tr_roads_12,synthetic,tr_roads_12_v1
+"Hi, I want to report broken paving stones on the bike path at the corner by the school.",roads,tr_roads_12,synthetic,tr_roads_12_v2
+"Next to the park entrance, there is broken paving stones on the bike path. Cyclists have to ride into traffic. Please look into it.",roads,tr_roads_12,synthetic,tr_roads_12_v3
+For several days now there has been broken paving stones on the bike path on our street. Cyclists have to ride into traffic.,roads,tr_roads_12,synthetic,tr_roads_12_v4
+Complaint: broken paving stones on the bike path near the bus stop. cyclists have to ride into traffic.,roads,tr_roads_12,synthetic,tr_roads_12_v5
+There is garbage bins overflowing with trash near the bus stop. The bins have not been emptied for days.,waste,tr_waste_01,synthetic,tr_waste_01_v1
+"Hi, I want to report garbage bins overflowing with trash outside building 14.",waste,tr_waste_01,synthetic,tr_waste_01_v2
+"At the corner by the school, there is garbage bins overflowing with trash. The bins have not been emptied for days. Please look into it.",waste,tr_waste_01,synthetic,tr_waste_01_v3
+For several days now there has been garbage bins overflowing with trash next to the park entrance. The bins have not been emptied for days.,waste,tr_waste_01,synthetic,tr_waste_01_v4
+Complaint: garbage bins overflowing with trash on our street. the bins have not been emptied for days.,waste,tr_waste_01,synthetic,tr_waste_01_v5
+There is trash bags piled up on the sidewalk outside building 14. Cats are tearing them open.,waste,tr_waste_02,synthetic,tr_waste_02_v1
+"Hi, I want to report trash bags piled up on the sidewalk at the corner by the school.",waste,tr_waste_02,synthetic,tr_waste_02_v2
+"Next to the park entrance, there is trash bags piled up on the sidewalk. Cats are tearing them open. Please look into it.",waste,tr_waste_02,synthetic,tr_waste_02_v3
+For several days now there has been trash bags piled up on the sidewalk on our street. Cats are tearing them open.,waste,tr_waste_02,synthetic,tr_waste_02_v4
+Complaint: trash bags piled up on the sidewalk near the bus stop. cats are tearing them open.,waste,tr_waste_02,synthetic,tr_waste_02_v5
+There is old furniture illegally dumped by the entrance at the corner by the school. Someone left a sofa and two chairs.,waste,tr_waste_03,synthetic,tr_waste_03_v1
+"Hi, I want to report old furniture illegally dumped by the entrance next to the park entrance.",waste,tr_waste_03,synthetic,tr_waste_03_v2
+"On our street, there is old furniture illegally dumped by the entrance. Someone left a sofa and two chairs. Please look into it.",waste,tr_waste_03,synthetic,tr_waste_03_v3
+For several days now there has been old furniture illegally dumped by the entrance near the bus stop. Someone left a sofa and two chairs.,waste,tr_waste_03,synthetic,tr_waste_03_v4
+Complaint: old furniture illegally dumped by the entrance outside building 14. someone left a sofa and two chairs.,waste,tr_waste_03,synthetic,tr_waste_03_v5
+There is broken glass and litter all over the playground next to the park entrance. Kids can't play there safely.,waste,tr_waste_04,synthetic,tr_waste_04_v1
+"Hi, I want to report broken glass and litter all over the playground on our street.",waste,tr_waste_04,synthetic,tr_waste_04_v2
+"Near the bus stop, there is broken glass and litter all over the playground. Kids can't play there safely. Please look into it.",waste,tr_waste_04,synthetic,tr_waste_04_v3
+For several days now there has been broken glass and litter all over the playground outside building 14. Kids can't play there safely.,waste,tr_waste_04,synthetic,tr_waste_04_v4
+Complaint: broken glass and litter all over the playground at the corner by the school. kids can't play there safely.,waste,tr_waste_04,synthetic,tr_waste_04_v5
+There is a recycling container full and not emptied on our street. Bottles are piling up around it.,waste,tr_waste_05,synthetic,tr_waste_05_v1
+"Hi, I want to report a recycling container full and not emptied near the bus stop.",waste,tr_waste_05,synthetic,tr_waste_05_v2
+"Outside building 14, there is a recycling container full and not emptied. Bottles are piling up around it. Please look into it.",waste,tr_waste_05,synthetic,tr_waste_05_v3
+For several days now there has been a recycling container full and not emptied at the corner by the school. Bottles are piling up around it.,waste,tr_waste_05,synthetic,tr_waste_05_v4
+Complaint: a recycling container full and not emptied next to the park entrance. bottles are piling up around it.,waste,tr_waste_05,synthetic,tr_waste_05_v5
+There is dog poop that nobody cleans up on the pavement near the bus stop. The whole stretch smells.,waste,tr_waste_06,synthetic,tr_waste_06_v1
+"Hi, I want to report dog poop that nobody cleans up on the pavement outside building 14.",waste,tr_waste_06,synthetic,tr_waste_06_v2
+"At the corner by the school, there is dog poop that nobody cleans up on the pavement. The whole stretch smells. Please look into it.",waste,tr_waste_06,synthetic,tr_waste_06_v3
+For several days now there has been dog poop that nobody cleans up on the pavement next to the park entrance. The whole stretch smells.,waste,tr_waste_06,synthetic,tr_waste_06_v4
+Complaint: dog poop that nobody cleans up on the pavement on our street. the whole stretch smells.,waste,tr_waste_06,synthetic,tr_waste_06_v5
+There is construction debris dumped on the empty lot outside building 14. Bags of cement and bricks were left behind.,waste,tr_waste_07,synthetic,tr_waste_07_v1
+"Hi, I want to report construction debris dumped on the empty lot at the corner by the school.",waste,tr_waste_07,synthetic,tr_waste_07_v2
+"Next to the park entrance, there is construction debris dumped on the empty lot. Bags of cement and bricks were left behind. Please look into it.",waste,tr_waste_07,synthetic,tr_waste_07_v3
+For several days now there has been construction debris dumped on the empty lot on our street. Bags of cement and bricks were left behind.,waste,tr_waste_07,synthetic,tr_waste_07_v4
+Complaint: construction debris dumped on the empty lot near the bus stop. bags of cement and bricks were left behind.,waste,tr_waste_07,synthetic,tr_waste_07_v5
+There is a dumpster with rotting food that smells terrible at the corner by the school. Flies are everywhere.,waste,tr_waste_08,synthetic,tr_waste_08_v1
+"Hi, I want to report a dumpster with rotting food that smells terrible next to the park entrance.",waste,tr_waste_08,synthetic,tr_waste_08_v2
+"On our street, there is a dumpster with rotting food that smells terrible. Flies are everywhere. Please look into it.",waste,tr_waste_08,synthetic,tr_waste_08_v3
+For several days now there has been a dumpster with rotting food that smells terrible near the bus stop. Flies are everywhere.,waste,tr_waste_08,synthetic,tr_waste_08_v4
+Complaint: a dumpster with rotting food that smells terrible outside building 14. flies are everywhere.,waste,tr_waste_08,synthetic,tr_waste_08_v5
+There is plastic bottles and wrappers littering the promenade path next to the park entrance. The litter blows onto the beach.,waste,tr_waste_09,synthetic,tr_waste_09_v1
+"Hi, I want to report plastic bottles and wrappers littering the promenade path on our street.",waste,tr_waste_09,synthetic,tr_waste_09_v2
+"Near the bus stop, there is plastic bottles and wrappers littering the promenade path. The litter blows onto the beach. Please look into it.",waste,tr_waste_09,synthetic,tr_waste_09_v3
+For several days now there has been plastic bottles and wrappers littering the promenade path outside building 14. The litter blows onto the beach.,waste,tr_waste_09,synthetic,tr_waste_09_v4
+Complaint: plastic bottles and wrappers littering the promenade path at the corner by the school. the litter blows onto the beach.,waste,tr_waste_09,synthetic,tr_waste_09_v5
+There is a mess of garbage spilled from the collection truck on our street. Nobody came back to clean it.,waste,tr_waste_10,synthetic,tr_waste_10_v1
+"Hi, I want to report a mess of garbage spilled from the collection truck near the bus stop.",waste,tr_waste_10,synthetic,tr_waste_10_v2
+"Outside building 14, there is a mess of garbage spilled from the collection truck. Nobody came back to clean it. Please look into it.",waste,tr_waste_10,synthetic,tr_waste_10_v3
+For several days now there has been a mess of garbage spilled from the collection truck at the corner by the school. Nobody came back to clean it.,waste,tr_waste_10,synthetic,tr_waste_10_v4
+Complaint: a mess of garbage spilled from the collection truck next to the park entrance. nobody came back to clean it.,waste,tr_waste_10,synthetic,tr_waste_10_v5
+There is piles of rubbish left after the street market near the bus stop. Cardboard boxes and rotten vegetables are everywhere.,waste,tr_waste_11,synthetic,tr_waste_11_v1
+"Hi, I want to report piles of rubbish left after the street market outside building 14.",waste,tr_waste_11,synthetic,tr_waste_11_v2
+"At the corner by the school, there is piles of rubbish left after the street market. Cardboard boxes and rotten vegetables are everywhere. Please look into it.",waste,tr_waste_11,synthetic,tr_waste_11_v3
+For several days now there has been piles of rubbish left after the street market next to the park entrance. Cardboard boxes and rotten vegetables are everywhere.,waste,tr_waste_11,synthetic,tr_waste_11_v4
+Complaint: piles of rubbish left after the street market on our street. cardboard boxes and rotten vegetables are everywhere.,waste,tr_waste_11,synthetic,tr_waste_11_v5
+There is an abandoned mattress dumped next to the bins outside building 14. It has been sitting there for a week.,waste,tr_waste_12,synthetic,tr_waste_12_v1
+"Hi, I want to report an abandoned mattress dumped next to the bins at the corner by the school.",waste,tr_waste_12,synthetic,tr_waste_12_v2
+"Next to the park entrance, there is an abandoned mattress dumped next to the bins. It has been sitting there for a week. Please look into it.",waste,tr_waste_12,synthetic,tr_waste_12_v3
+For several days now there has been an abandoned mattress dumped next to the bins on our street. It has been sitting there for a week.,waste,tr_waste_12,synthetic,tr_waste_12_v4
+Complaint: an abandoned mattress dumped next to the bins near the bus stop. it has been sitting there for a week.,waste,tr_waste_12,synthetic,tr_waste_12_v5
+There is a streetlight that is not working near the bus stop. The sidewalk is completely dark at night.,lighting,tr_lighting_01,synthetic,tr_lighting_01_v1
+"Hi, I want to report a streetlight that is not working outside building 14.",lighting,tr_lighting_01,synthetic,tr_lighting_01_v2
+"At the corner by the school, there is a streetlight that is not working. The sidewalk is completely dark at night. Please look into it.",lighting,tr_lighting_01,synthetic,tr_lighting_01_v3
+For several days now there has been a streetlight that is not working next to the park entrance. The sidewalk is completely dark at night.,lighting,tr_lighting_01,synthetic,tr_lighting_01_v4
+Complaint: a streetlight that is not working on our street. the sidewalk is completely dark at night.,lighting,tr_lighting_01,synthetic,tr_lighting_01_v5
+There is a street lamp that keeps flickering on and off outside building 14. It is very distracting for drivers.,lighting,tr_lighting_02,synthetic,tr_lighting_02_v1
+"Hi, I want to report a street lamp that keeps flickering on and off at the corner by the school.",lighting,tr_lighting_02,synthetic,tr_lighting_02_v2
+"Next to the park entrance, there is a street lamp that keeps flickering on and off. It is very distracting for drivers. Please look into it.",lighting,tr_lighting_02,synthetic,tr_lighting_02_v3
+For several days now there has been a street lamp that keeps flickering on and off on our street. It is very distracting for drivers.,lighting,tr_lighting_02,synthetic,tr_lighting_02_v4
+Complaint: a street lamp that keeps flickering on and off near the bus stop. it is very distracting for drivers.,lighting,tr_lighting_02,synthetic,tr_lighting_02_v5
+There is several lamps out so the whole street is dark at the corner by the school. People feel unsafe walking home.,lighting,tr_lighting_03,synthetic,tr_lighting_03_v1
+"Hi, I want to report several lamps out so the whole street is dark next to the park entrance.",lighting,tr_lighting_03,synthetic,tr_lighting_03_v2
+"On our street, there is several lamps out so the whole street is dark. People feel unsafe walking home. Please look into it.",lighting,tr_lighting_03,synthetic,tr_lighting_03_v3
+For several days now there has been several lamps out so the whole street is dark near the bus stop. People feel unsafe walking home.,lighting,tr_lighting_03,synthetic,tr_lighting_03_v4
+Complaint: several lamps out so the whole street is dark outside building 14. people feel unsafe walking home.,lighting,tr_lighting_03,synthetic,tr_lighting_03_v5
+There is a street light that stays on all day next to the park entrance. It is wasting electricity.,lighting,tr_lighting_04,synthetic,tr_lighting_04_v1
+"Hi, I want to report a street light that stays on all day on our street.",lighting,tr_lighting_04,synthetic,tr_lighting_04_v2
+"Near the bus stop, there is a street light that stays on all day. It is wasting electricity. Please look into it.",lighting,tr_lighting_04,synthetic,tr_lighting_04_v3
+For several days now there has been a street light that stays on all day outside building 14. It is wasting electricity.,lighting,tr_lighting_04,synthetic,tr_lighting_04_v4
+Complaint: a street light that stays on all day at the corner by the school. it is wasting electricity.,lighting,tr_lighting_04,synthetic,tr_lighting_04_v5
+There is a lamp fixture with shattered glass on our street. Pieces of the cover fell on the ground.,lighting,tr_lighting_05,synthetic,tr_lighting_05_v1
+"Hi, I want to report a lamp fixture with shattered glass near the bus stop.",lighting,tr_lighting_05,synthetic,tr_lighting_05_v2
+"Outside building 14, there is a lamp fixture with shattered glass. Pieces of the cover fell on the ground. Please look into it.",lighting,tr_lighting_05,synthetic,tr_lighting_05_v3
+For several days now there has been a lamp fixture with shattered glass at the corner by the school. Pieces of the cover fell on the ground.,lighting,tr_lighting_05,synthetic,tr_lighting_05_v4
+Complaint: a lamp fixture with shattered glass next to the park entrance. pieces of the cover fell on the ground.,lighting,tr_lighting_05,synthetic,tr_lighting_05_v5
+There is a light pole leaning to one side near the bus stop. It looks like it might fall over.,lighting,tr_lighting_06,synthetic,tr_lighting_06_v1
+"Hi, I want to report a light pole leaning to one side outside building 14.",lighting,tr_lighting_06,synthetic,tr_lighting_06_v2
+"At the corner by the school, there is a light pole leaning to one side. It looks like it might fall over. Please look into it.",lighting,tr_lighting_06,synthetic,tr_lighting_06_v3
+For several days now there has been a light pole leaning to one side next to the park entrance. It looks like it might fall over.,lighting,tr_lighting_06,synthetic,tr_lighting_06_v4
+Complaint: a light pole leaning to one side on our street. it looks like it might fall over.,lighting,tr_lighting_06,synthetic,tr_lighting_06_v5
+There is the path lights in the park not turning on outside building 14. Joggers can't see where they are going.,lighting,tr_lighting_07,synthetic,tr_lighting_07_v1
+"Hi, I want to report the path lights in the park not turning on at the corner by the school.",lighting,tr_lighting_07,synthetic,tr_lighting_07_v2
+"Next to the park entrance, there is the path lights in the park not turning on. Joggers can't see where they are going. Please look into it.",lighting,tr_lighting_07,synthetic,tr_lighting_07_v3
+For several days now there has been the path lights in the park not turning on on our street. Joggers can't see where they are going.,lighting,tr_lighting_07,synthetic,tr_lighting_07_v4
+Complaint: the path lights in the park not turning on near the bus stop. joggers can't see where they are going.,lighting,tr_lighting_07,synthetic,tr_lighting_07_v5
+There is the light above the crosswalk burned out at the corner by the school. Drivers can't see pedestrians at night.,lighting,tr_lighting_08,synthetic,tr_lighting_08_v1
+"Hi, I want to report the light above the crosswalk burned out next to the park entrance.",lighting,tr_lighting_08,synthetic,tr_lighting_08_v2
+"On our street, there is the light above the crosswalk burned out. Drivers can't see pedestrians at night. Please look into it.",lighting,tr_lighting_08,synthetic,tr_lighting_08_v3
+For several days now there has been the light above the crosswalk burned out near the bus stop. Drivers can't see pedestrians at night.,lighting,tr_lighting_08,synthetic,tr_lighting_08_v4
+Complaint: the light above the crosswalk burned out outside building 14. drivers can't see pedestrians at night.,lighting,tr_lighting_08,synthetic,tr_lighting_08_v5
+There is a street lamp that is extremely dim next to the park entrance. It barely lights up anything.,lighting,tr_lighting_09,synthetic,tr_lighting_09_v1
+"Hi, I want to report a street lamp that is extremely dim on our street.",lighting,tr_lighting_09,synthetic,tr_lighting_09_v2
+"Near the bus stop, there is a street lamp that is extremely dim. It barely lights up anything. Please look into it.",lighting,tr_lighting_09,synthetic,tr_lighting_09_v3
+For several days now there has been a street lamp that is extremely dim outside building 14. It barely lights up anything.,lighting,tr_lighting_09,synthetic,tr_lighting_09_v4
+Complaint: a street lamp that is extremely dim at the corner by the school. it barely lights up anything.,lighting,tr_lighting_09,synthetic,tr_lighting_09_v5
+There is a lamp that buzzes and blinks all night on our street. The bulb seems to be failing.,lighting,tr_lighting_10,synthetic,tr_lighting_10_v1
+"Hi, I want to report a lamp that buzzes and blinks all night near the bus stop.",lighting,tr_lighting_10,synthetic,tr_lighting_10_v2
+"Outside building 14, there is a lamp that buzzes and blinks all night. The bulb seems to be failing. Please look into it.",lighting,tr_lighting_10,synthetic,tr_lighting_10_v3
+For several days now there has been a lamp that buzzes and blinks all night at the corner by the school. The bulb seems to be failing.,lighting,tr_lighting_10,synthetic,tr_lighting_10_v4
+Complaint: a lamp that buzzes and blinks all night next to the park entrance. the bulb seems to be failing.,lighting,tr_lighting_10,synthetic,tr_lighting_10_v5
+There is the lights in the pedestrian underpass are out near the bus stop. It is pitch black inside.,lighting,tr_lighting_11,synthetic,tr_lighting_11_v1
+"Hi, I want to report the lights in the pedestrian underpass are out outside building 14.",lighting,tr_lighting_11,synthetic,tr_lighting_11_v2
+"At the corner by the school, there is the lights in the pedestrian underpass are out. It is pitch black inside. Please look into it.",lighting,tr_lighting_11,synthetic,tr_lighting_11_v3
+For several days now there has been the lights in the pedestrian underpass are out next to the park entrance. It is pitch black inside.,lighting,tr_lighting_11,synthetic,tr_lighting_11_v4
+Complaint: the lights in the pedestrian underpass are out on our street. it is pitch black inside.,lighting,tr_lighting_11,synthetic,tr_lighting_11_v5
+There is a lamp cover hanging loose from the pole outside building 14. It swings in the wind.,lighting,tr_lighting_12,synthetic,tr_lighting_12_v1
+"Hi, I want to report a lamp cover hanging loose from the pole at the corner by the school.",lighting,tr_lighting_12,synthetic,tr_lighting_12_v2
+"Next to the park entrance, there is a lamp cover hanging loose from the pole. It swings in the wind. Please look into it.",lighting,tr_lighting_12,synthetic,tr_lighting_12_v3
+For several days now there has been a lamp cover hanging loose from the pole on our street. It swings in the wind.,lighting,tr_lighting_12,synthetic,tr_lighting_12_v4
+Complaint: a lamp cover hanging loose from the pole near the bus stop. it swings in the wind.,lighting,tr_lighting_12,synthetic,tr_lighting_12_v5
+There is loud music from a neighbor's apartment late at night near the bus stop. It goes on past 2 am.,noise,tr_noise_01,synthetic,tr_noise_01_v1
+"Hi, I want to report loud music from a neighbor's apartment late at night outside building 14.",noise,tr_noise_01,synthetic,tr_noise_01_v2
+"At the corner by the school, there is loud music from a neighbor's apartment late at night. It goes on past 2 am. Please look into it.",noise,tr_noise_01,synthetic,tr_noise_01_v3
+For several days now there has been loud music from a neighbor's apartment late at night next to the park entrance. It goes on past 2 am.,noise,tr_noise_01,synthetic,tr_noise_01_v4
+Complaint: loud music from a neighbor's apartment late at night on our street. it goes on past 2 am.,noise,tr_noise_01,synthetic,tr_noise_01_v5
+There is construction noise starting very early in the morning outside building 14. Drilling starts before 6 am.,noise,tr_noise_02,synthetic,tr_noise_02_v1
+"Hi, I want to report construction noise starting very early in the morning at the corner by the school.",noise,tr_noise_02,synthetic,tr_noise_02_v2
+"Next to the park entrance, there is construction noise starting very early in the morning. Drilling starts before 6 am. Please look into it.",noise,tr_noise_02,synthetic,tr_noise_02_v3
+For several days now there has been construction noise starting very early in the morning on our street. Drilling starts before 6 am.,noise,tr_noise_02,synthetic,tr_noise_02_v4
+Complaint: construction noise starting very early in the morning near the bus stop. drilling starts before 6 am.,noise,tr_noise_02,synthetic,tr_noise_02_v5
+There is a bar playing loud music until late at the corner by the school. The bass shakes our windows.,noise,tr_noise_03,synthetic,tr_noise_03_v1
+"Hi, I want to report a bar playing loud music until late next to the park entrance.",noise,tr_noise_03,synthetic,tr_noise_03_v2
+"On our street, there is a bar playing loud music until late. The bass shakes our windows. Please look into it.",noise,tr_noise_03,synthetic,tr_noise_03_v3
+For several days now there has been a bar playing loud music until late near the bus stop. The bass shakes our windows.,noise,tr_noise_03,synthetic,tr_noise_03_v4
+Complaint: a bar playing loud music until late outside building 14. the bass shakes our windows.,noise,tr_noise_03,synthetic,tr_noise_03_v5
+There is a car alarm going off again and again next to the park entrance. Nobody turns it off.,noise,tr_noise_04,synthetic,tr_noise_04_v1
+"Hi, I want to report a car alarm going off again and again on our street.",noise,tr_noise_04,synthetic,tr_noise_04_v2
+"Near the bus stop, there is a car alarm going off again and again. Nobody turns it off. Please look into it.",noise,tr_noise_04,synthetic,tr_noise_04_v3
+For several days now there has been a car alarm going off again and again outside building 14. Nobody turns it off.,noise,tr_noise_04,synthetic,tr_noise_04_v4
+Complaint: a car alarm going off again and again at the corner by the school. nobody turns it off.,noise,tr_noise_04,synthetic,tr_noise_04_v5
+There is a dog barking all night long on our street. We can't sleep at all.,noise,tr_noise_05,synthetic,tr_noise_05_v1
+"Hi, I want to report a dog barking all night long near the bus stop.",noise,tr_noise_05,synthetic,tr_noise_05_v2
+"Outside building 14, there is a dog barking all night long. We can't sleep at all. Please look into it.",noise,tr_noise_05,synthetic,tr_noise_05_v3
+For several days now there has been a dog barking all night long at the corner by the school. We can't sleep at all.,noise,tr_noise_05,synthetic,tr_noise_05_v4
+Complaint: a dog barking all night long next to the park entrance. we can't sleep at all.,noise,tr_noise_05,synthetic,tr_noise_05_v5
+There is a loud party on the rooftop next door near the bus stop. People are screaming and the music is blasting.,noise,tr_noise_06,synthetic,tr_noise_06_v1
+"Hi, I want to report a loud party on the rooftop next door outside building 14.",noise,tr_noise_06,synthetic,tr_noise_06_v2
+"At the corner by the school, there is a loud party on the rooftop next door. People are screaming and the music is blasting. Please look into it.",noise,tr_noise_06,synthetic,tr_noise_06_v3
+For several days now there has been a loud party on the rooftop next door next to the park entrance. People are screaming and the music is blasting.,noise,tr_noise_06,synthetic,tr_noise_06_v4
+Complaint: a loud party on the rooftop next door on our street. people are screaming and the music is blasting.,noise,tr_noise_06,synthetic,tr_noise_06_v5
+There is motorbikes revving their engines loudly outside building 14. They do it every evening.,noise,tr_noise_07,synthetic,tr_noise_07_v1
+"Hi, I want to report motorbikes revving their engines loudly at the corner by the school.",noise,tr_noise_07,synthetic,tr_noise_07_v2
+"Next to the park entrance, there is motorbikes revving their engines loudly. They do it every evening. Please look into it.",noise,tr_noise_07,synthetic,tr_noise_07_v3
+For several days now there has been motorbikes revving their engines loudly on our street. They do it every evening.,noise,tr_noise_07,synthetic,tr_noise_07_v4
+Complaint: motorbikes revving their engines loudly near the bus stop. they do it every evening.,noise,tr_noise_07,synthetic,tr_noise_07_v5
+There is a street performer with a very loud amplifier at the corner by the school. It goes on for hours.,noise,tr_noise_08,synthetic,tr_noise_08_v1
+"Hi, I want to report a street performer with a very loud amplifier next to the park entrance.",noise,tr_noise_08,synthetic,tr_noise_08_v2
+"On our street, there is a street performer with a very loud amplifier. It goes on for hours. Please look into it.",noise,tr_noise_08,synthetic,tr_noise_08_v3
+For several days now there has been a street performer with a very loud amplifier near the bus stop. It goes on for hours.,noise,tr_noise_08,synthetic,tr_noise_08_v4
+Complaint: a street performer with a very loud amplifier outside building 14. it goes on for hours.,noise,tr_noise_08,synthetic,tr_noise_08_v5
+There is a generator humming loudly day and night next to the park entrance. The noise never stops.,noise,tr_noise_09,synthetic,tr_noise_09_v1
+"Hi, I want to report a generator humming loudly day and night on our street.",noise,tr_noise_09,synthetic,tr_noise_09_v2
+"Near the bus stop, there is a generator humming loudly day and night. The noise never stops. Please look into it.",noise,tr_noise_09,synthetic,tr_noise_09_v3
+For several days now there has been a generator humming loudly day and night outside building 14. The noise never stops.,noise,tr_noise_09,synthetic,tr_noise_09_v4
+Complaint: a generator humming loudly day and night at the corner by the school. the noise never stops.,noise,tr_noise_09,synthetic,tr_noise_09_v5
+There is groups shouting outside the kiosk late at night on our street. It wakes up the whole building.,noise,tr_noise_10,synthetic,tr_noise_10_v1
+"Hi, I want to report groups shouting outside the kiosk late at night near the bus stop.",noise,tr_noise_10,synthetic,tr_noise_10_v2
+"Outside building 14, there is groups shouting outside the kiosk late at night. It wakes up the whole building. Please look into it.",noise,tr_noise_10,synthetic,tr_noise_10_v3
+For several days now there has been groups shouting outside the kiosk late at night at the corner by the school. It wakes up the whole building.,noise,tr_noise_10,synthetic,tr_noise_10_v4
+Complaint: groups shouting outside the kiosk late at night next to the park entrance. it wakes up the whole building.,noise,tr_noise_10,synthetic,tr_noise_10_v5
+There is a leaf blower running very early in the morning near the bus stop. It is incredibly loud.,noise,tr_noise_11,synthetic,tr_noise_11_v1
+"Hi, I want to report a leaf blower running very early in the morning outside building 14.",noise,tr_noise_11,synthetic,tr_noise_11_v2
+"At the corner by the school, there is a leaf blower running very early in the morning. It is incredibly loud. Please look into it.",noise,tr_noise_11,synthetic,tr_noise_11_v3
+For several days now there has been a leaf blower running very early in the morning next to the park entrance. It is incredibly loud.,noise,tr_noise_11,synthetic,tr_noise_11_v4
+Complaint: a leaf blower running very early in the morning on our street. it is incredibly loud.,noise,tr_noise_11,synthetic,tr_noise_11_v5
+There is a noisy air conditioning unit rattling on the wall outside building 14. The rattling is constant.,noise,tr_noise_12,synthetic,tr_noise_12_v1
+"Hi, I want to report a noisy air conditioning unit rattling on the wall at the corner by the school.",noise,tr_noise_12,synthetic,tr_noise_12_v2
+"Next to the park entrance, there is a noisy air conditioning unit rattling on the wall. The rattling is constant. Please look into it.",noise,tr_noise_12,synthetic,tr_noise_12_v3
+For several days now there has been a noisy air conditioning unit rattling on the wall on our street. The rattling is constant.,noise,tr_noise_12,synthetic,tr_noise_12_v4
+Complaint: a noisy air conditioning unit rattling on the wall near the bus stop. the rattling is constant.,noise,tr_noise_12,synthetic,tr_noise_12_v5

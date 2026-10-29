@@ -1,0 +1,25 @@
+text,true_category,predicted_category,score,margin,routing_state,reasons,expected_status,status_ok,category_ok
+"On the Tel Aviv demo cycle route, several fixed lane delineators have snapped off at ground level.",roads,roads,0.366,0.146,review_required,low_score<0.4,routed,False,True
+The cobblestones in the shared street have shifted into an uneven ridge that catches bicycle tyres.,roads,roads,0.311,0.043,review_required,low_score<0.4;low_margin<0.05,routed,False,True
+Old lane arrows remain visible after the road layout changed and are directing drivers into the wrong lane.,roads,roads,0.431,0.221,routed,,routed,True,True
+"A tread is missing from the municipal pedestrian steps, leaving a gap in the staircase.",roads,lighting,0.334,0.099,review_required,low_score<0.4,routed,False,False
+A concrete separator beside the cycle lane has broken apart and is jutting into the riding space.,roads,roads,0.487,0.283,routed,,routed,True,True
+Windblown leaflets now blanket the paved public courtyard; please arrange a sweep.,waste,waste,0.353,0.096,review_required,low_score<0.4,routed,False,True
+Bags of renovation rubble have been dumped on a public verge in the Tel Aviv demo area.,waste,waste,0.457,0.236,routed,,routed,True,True
+A large heap of cut branches and garden trimmings was left on the promenade for removal.,waste,lighting,0.295,0.043,review_required,low_score<0.4;low_margin<0.05,routed,False,False
+"A refuse truck spilled mixed rubbish at the junction, leaving a trail across the carriageway.",waste,roads,0.388,0.111,review_required,low_score<0.4,routed,False,False
+Rotting vegetables have been left beside the public food-sharing cupboard and need to be cleared away.,waste,waste,0.526,0.345,routed,,routed,True,True
+Half the LED panels on the high-mast public light have stopped working while the remaining panels still glow.,lighting,lighting,0.319,0.062,review_required,low_score<0.4,routed,False,True
+"The shade has come off the promenade lamp, so its light spills upwards instead of being contained.",lighting,lighting,0.53,0.316,routed,,routed,True,True
+"The service identification plate is missing from a municipal lighting column, preventing us from identifying the lamp for maintenance.",lighting,lighting,0.408,0.143,routed,,routed,True,True
+The maintenance hatch on the streetlight column is jammed open; the internal wiring remains behind its intact sealed barrier.,lighting,lighting,0.289,0.039,review_required,low_score<0.4;low_margin<0.05,routed,False,True
+A thick white salt coating has formed on the seaside lamp housing and its glass needs specialist cleaning.,lighting,roads,0.29,0.023,review_required,low_score<0.4;low_margin<0.05,routed,False,False
+An alarm clock rings repeatedly in the empty neighbouring flat for hours every morning and wakes us.,noise,noise,0.532,0.352,routed,,routed,True,True
+A neighbour's indoor bedroom fan rattles loudly against our shared wall throughout the night.,noise,noise,0.526,0.349,routed,,routed,True,True
+Late-night gaming in the adjacent apartment includes repeated loud yelling into a headset.,noise,noise,0.673,0.549,routed,,routed,True,True
+"A group practises tap dancing on the pavement beneath our windows at night, making continuous sharp tapping sounds.",noise,noise,0.442,0.206,routed,,routed,True,True
+Singing lessons in the flat opposite are held at amplified volume during our building's quiet evening hours.,noise,noise,0.504,0.316,routed,,routed,True,True
+Something is wrong near my place in Tel Aviv. Can somebody help?,,noise,0.291,0.037,review_required,low_score<0.4;low_margin<0.05,review_required,True,True
+How do I renew my passport and change the name printed in it?,,waste,0.288,0.037,review_required,low_score<0.4;low_margin<0.05,review_required,True,True
+"There is a new pothole beside an overflowing rubbish bin, and both need attention.",,waste,0.403,0.17,routed,,review_required,False,True
+An exposed live wire is sparking from the streetlight pole beside the footpath.,,lighting,0.381,0.102,urgent_review,urgent_phrase_guard,urgent_review,True,True

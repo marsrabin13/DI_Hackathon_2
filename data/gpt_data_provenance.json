@@ -1,0 +1,660 @@
+{
+  "schema_version": "cityfix-data-v1",
+  "mode": "nyc_structured_plus_synthetic",
+  "seed": 42,
+  "demo_anchor_utc": "2026-10-29T12:00:00Z",
+  "demo_default_window_days": 7,
+  "brief": {
+    "filename": "CityFix_02_Tel_Aviv_Claude_Product_and_Architecture_Brief.md",
+    "library_file_id": "libfile_a30ca282a87c8191a091271d57796121",
+    "config_version": "demo-v1"
+  },
+  "sources": {
+    "endpoint": "https://data.cityofnewyork.us/resource/erm2-nwe9.json",
+    "source_label_mapping": {
+      "Street Condition": "roads",
+      "Dirty Condition": "waste",
+      "Street Light Condition": "lighting",
+      "Noise - Residential": "noise",
+      "Noise - Street/Sidewalk": "noise"
+    },
+    "structured_source_used": "bounded_nyc_csv",
+    "uploaded_csv": {
+      "filename": "gpt_nyc_sample.csv",
+      "sha256": "f82e2abdaa8ec4659073ba690e73c7089d678824007ab2defc4daf856728cfd5",
+      "authenticity": "Retained snapshot of the actual recorded API retrieval; receipt hash verified. No new request during replay."
+    },
+    "requested_fields": [
+      "unique_key",
+      "complaint_type",
+      "descriptor",
+      "descriptor_2"
+    ],
+    "raw_rows_retained": 600,
+    "raw_rows_by_category": {
+      "roads": 150,
+      "waste": 150,
+      "lighting": 150,
+      "noise": 150
+    },
+    "original_conversational_complaints_available": false,
+    "nyc_geography_transferred_to_tel_aviv": false
+  },
+  "download": {
+    "status": "complete",
+    "attempts": [
+      {
+        "category": "roads",
+        "parameters": {
+          "$select": "unique_key,complaint_type,descriptor,descriptor_2",
+          "$where": "complaint_type in ('Street Condition') AND descriptor IS NOT NULL AND descriptor != ''",
+          "$limit": "150",
+          "$order": "unique_key DESC"
+        },
+        "encoded_url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=unique_key%2Ccomplaint_type%2Cdescriptor%2Cdescriptor_2&%24where=complaint_type+in+%28%27Street+Condition%27%29+AND+descriptor+IS+NOT+NULL+AND+descriptor+%21%3D+%27%27&%24limit=150&%24order=unique_key+DESC",
+        "returned_rows": 150,
+        "status": "success",
+        "elapsed_seconds": 7.222
+      },
+      {
+        "category": "waste",
+        "parameters": {
+          "$select": "unique_key,complaint_type,descriptor,descriptor_2",
+          "$where": "complaint_type in ('Dirty Condition') AND descriptor IS NOT NULL AND descriptor != ''",
+          "$limit": "150",
+          "$order": "unique_key DESC"
+        },
+        "encoded_url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=unique_key%2Ccomplaint_type%2Cdescriptor%2Cdescriptor_2&%24where=complaint_type+in+%28%27Dirty+Condition%27%29+AND+descriptor+IS+NOT+NULL+AND+descriptor+%21%3D+%27%27&%24limit=150&%24order=unique_key+DESC",
+        "returned_rows": 150,
+        "status": "success",
+        "elapsed_seconds": 6.097
+      },
+      {
+        "category": "lighting",
+        "parameters": {
+          "$select": "unique_key,complaint_type,descriptor,descriptor_2",
+          "$where": "complaint_type in ('Street Light Condition') AND descriptor IS NOT NULL AND descriptor != ''",
+          "$limit": "150",
+          "$order": "unique_key DESC"
+        },
+        "encoded_url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=unique_key%2Ccomplaint_type%2Cdescriptor%2Cdescriptor_2&%24where=complaint_type+in+%28%27Street+Light+Condition%27%29+AND+descriptor+IS+NOT+NULL+AND+descriptor+%21%3D+%27%27&%24limit=150&%24order=unique_key+DESC",
+        "returned_rows": 150,
+        "status": "success",
+        "elapsed_seconds": 5.442
+      },
+      {
+        "category": "noise",
+        "parameters": {
+          "$select": "unique_key,complaint_type,descriptor,descriptor_2",
+          "$where": "complaint_type in ('Noise - Residential','Noise - Street/Sidewalk') AND descriptor IS NOT NULL AND descriptor != ''",
+          "$limit": "150",
+          "$order": "unique_key DESC"
+        },
+        "encoded_url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=unique_key%2Ccomplaint_type%2Cdescriptor%2Cdescriptor_2&%24where=complaint_type+in+%28%27Noise+-+Residential%27%2C%27Noise+-+Street%2FSidewalk%27%29+AND+descriptor+IS+NOT+NULL+AND+descriptor+%21%3D+%27%27&%24limit=150&%24order=unique_key+DESC",
+        "returned_rows": 150,
+        "status": "success",
+        "elapsed_seconds": 5.511
+      }
+    ],
+    "elapsed_seconds": 24.271,
+    "request_timeout_seconds": 10,
+    "total_cutoff_seconds": 180,
+    "retries_per_query": 0,
+    "max_rows_per_canonical_category": 150
+  },
+  "generation": {
+    "method": "Assistant-authored fixed scenario catalog; five deterministic language templates per training family; validation/test authored separately; no external generative or prediction API at runtime.",
+    "synthetic_train_rows": 240,
+    "synthetic_train_per_category": 60,
+    "train_families_per_category": 12,
+    "variants_per_family": 5,
+    "ground_truth": "Canonical category assigned to curated scenarios before rendering text; real details labeled only by exact source-label mapping. No classifier predictions or pseudo-labeling.",
+    "synthetic_from_nyc_rows": 0,
+    "synthetic_from_nyc_reason": "The authored narratives are independent of the downloaded details, so every generated narrative is marked synthetic.",
+    "blank_source_key": "No real source record used for generated rows.",
+    "randomness": "random.Random(42) is used only for map jitter, placement and historical timestamps; catalogs are fixed.",
+    "test_expected_status": "routed is the desired policy outcome for 20 in-scope cases, not a measured model result; 3 review_required and 1 urgent_review policy fixtures have blank category.",
+    "limitations": [
+      "Synthetic evaluation shares authoring and generation bias; it is not an estimate of real Tel Aviv accuracy.",
+      "Illustrative geographic envelope is not an official city boundary; some scattered points may fall outside municipal land.",
+      "Departments, real incidents, live municipal activity and achieved model metrics are not asserted."
+    ]
+  },
+  "actual_counts": {
+    "train": {
+      "rows": 254,
+      "by_category": {
+        "lighting": 66,
+        "noise": 62,
+        "roads": 64,
+        "waste": 62
+      },
+      "by_source": {
+        "nyc_structured": 14,
+        "synthetic": 240
+      },
+      "families": 52
+    },
+    "validation": {
+      "rows": 24,
+      "by_category": {
+        "lighting": 6,
+        "noise": 6,
+        "roads": 6,
+        "waste": 6
+      },
+      "by_source": {
+        "synthetic": 24
+      },
+      "families": 24
+    },
+    "tel_aviv_test": {
+      "rows": 24,
+      "by_category": {
+        "lighting": 5,
+        "noise": 5,
+        "policy_unlabeled": 4,
+        "roads": 5,
+        "waste": 5
+      },
+      "by_source": {
+        "synthetic": 24
+      },
+      "families": 24
+    },
+    "tel_aviv_demo": {
+      "rows": 90,
+      "by_category": {
+        "lighting": 23,
+        "noise": 15,
+        "roads": 27,
+        "waste": 25
+      },
+      "by_source": {
+        "synthetic_demo": 90
+      },
+      "families": null
+    },
+    "nyc_sample_raw_rows": 600
+  },
+  "nyc_cleaning": {
+    "location_metadata_fields_removed": 150,
+    "unreviewed_or_heldout_family_rows_excluded": 280,
+    "repetitive_detail_rows_collapsed": 306,
+    "useful_unique_details": 14,
+    "method": "Group identical primary descriptors regardless of location type; exclude conflicting source labels, generic details, unreviewed source/secondary families and held-out families. Keep one representative real detail per reviewed group.",
+    "reviewed_source_family_membership": {
+      "roads": {
+        "pothole": "train_roads_pothole",
+        "rough pitted or cracked roads": "train_roads_surface_cracks",
+        "failed street repair": "nyc_roads_failed_repair",
+        "blocked construction": "nyc_roads_construction_obstruction"
+      },
+      "waste": {
+        "broken glass": "train_waste_glass_shards",
+        "dog waste": "train_waste_dog_fouling"
+      },
+      "lighting": {
+        "fixture luminaire out of position": "train_lighting_wrong_beam",
+        "multiple street lights out": "train_lighting_row_lamps_out",
+        "street light cycling": "train_lighting_erratic_flicker",
+        "street light out": "train_lighting_single_lamp_out",
+        "street light lamp missing": "nyc_lighting_missing_bulb",
+        "lamppost knocked down": "nyc_lighting_fallen_column"
+      },
+      "noise": {
+        "loud television": "train_noise_tv_volume",
+        "loud music party": "train_noise_apartment_music"
+      }
+    }
+  },
+  "split_checks": {
+    "normalization": "NFKC, casefold, ASCII alphanumeric tokens, collapsed whitespace",
+    "within_split_normalized_duplicates": {
+      "train": 0,
+      "validation": 0,
+      "test": 0
+    },
+    "between_splits": {
+      "train__validation": {
+        "normalized_text_overlap": 0,
+        "family_id_overlap": 0
+      },
+      "train__test": {
+        "normalized_text_overlap": 0,
+        "family_id_overlap": 0
+      },
+      "validation__test": {
+        "normalized_text_overlap": 0,
+        "family_id_overlap": 0
+      }
+    },
+    "family_isolation_scope": "training/validation/test, not map fixtures",
+    "semantic_family_method": "Manually curated scenario leaves: 48 training families; each validation/test case has a separate issue mechanism. Shared category vocabulary is allowed; no source-derived evaluation narratives.",
+    "limitations": "ID/text checks do not prove semantic independence. Synthetic authoring and taxonomy are shared; evaluation is not real-city accuracy.",
+    "training_synthetic_families": 48,
+    "variants_per_training_family": 5,
+    "all_assertions_passed": true
+  },
+  "map_checks": {
+    "all_assertions_passed": true,
+    "fixture_groups": {
+      "planted_roads": 12,
+      "planted_waste": 10,
+      "planted_lighting": 8,
+      "scattered": 60
+    },
+    "max_planted_distance_meters": {
+      "roads": 53.084,
+      "waste": 54.56,
+      "lighting": 55.904
+    },
+    "dense_points_by_category_eps250_min5": {
+      "roads": 12,
+      "waste": 10,
+      "lighting": 8,
+      "noise": 0
+    },
+    "scattered_min_separation_meters": 300,
+    "scattered_distance_from_planted_centers_meters": 600
+  },
+  "demo": {
+    "city_id": "il_tel_aviv",
+    "map_center": [
+      32.0853,
+      34.7818
+    ],
+    "bbox": [
+      32.04,
+      34.74,
+      32.15,
+      34.84
+    ],
+    "fixture_manifest": [
+      {
+        "report_id": "demo_001",
+        "fixture_group": "planted_roads"
+      },
+      {
+        "report_id": "demo_002",
+        "fixture_group": "planted_roads"
+      },
+      {
+        "report_id": "demo_003",
+        "fixture_group": "planted_roads"
+      },
+      {
+        "report_id": "demo_004",
+        "fixture_group": "planted_roads"
+      },
+      {
+        "report_id": "demo_005",
+        "fixture_group": "planted_roads"
+      },
+      {
+        "report_id": "demo_006",
+        "fixture_group": "planted_roads"
+      },
+      {
+        "report_id": "demo_007",
+        "fixture_group": "planted_roads"
+      },
+      {
+        "report_id": "demo_008",
+        "fixture_group": "planted_roads"
+      },
+      {
+        "report_id": "demo_009",
+        "fixture_group": "planted_roads"
+      },
+      {
+        "report_id": "demo_010",
+        "fixture_group": "planted_roads"
+      },
+      {
+        "report_id": "demo_011",
+        "fixture_group": "planted_roads"
+      },
+      {
+        "report_id": "demo_012",
+        "fixture_group": "planted_roads"
+      },
+      {
+        "report_id": "demo_013",
+        "fixture_group": "planted_waste"
+      },
+      {
+        "report_id": "demo_014",
+        "fixture_group": "planted_waste"
+      },
+      {
+        "report_id": "demo_015",
+        "fixture_group": "planted_waste"
+      },
+      {
+        "report_id": "demo_016",
+        "fixture_group": "planted_waste"
+      },
+      {
+        "report_id": "demo_017",
+        "fixture_group": "planted_waste"
+      },
+      {
+        "report_id": "demo_018",
+        "fixture_group": "planted_waste"
+      },
+      {
+        "report_id": "demo_019",
+        "fixture_group": "planted_waste"
+      },
+      {
+        "report_id": "demo_020",
+        "fixture_group": "planted_waste"
+      },
+      {
+        "report_id": "demo_021",
+        "fixture_group": "planted_waste"
+      },
+      {
+        "report_id": "demo_022",
+        "fixture_group": "planted_waste"
+      },
+      {
+        "report_id": "demo_023",
+        "fixture_group": "planted_lighting"
+      },
+      {
+        "report_id": "demo_024",
+        "fixture_group": "planted_lighting"
+      },
+      {
+        "report_id": "demo_025",
+        "fixture_group": "planted_lighting"
+      },
+      {
+        "report_id": "demo_026",
+        "fixture_group": "planted_lighting"
+      },
+      {
+        "report_id": "demo_027",
+        "fixture_group": "planted_lighting"
+      },
+      {
+        "report_id": "demo_028",
+        "fixture_group": "planted_lighting"
+      },
+      {
+        "report_id": "demo_029",
+        "fixture_group": "planted_lighting"
+      },
+      {
+        "report_id": "demo_030",
+        "fixture_group": "planted_lighting"
+      },
+      {
+        "report_id": "demo_031",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_032",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_033",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_034",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_035",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_036",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_037",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_038",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_039",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_040",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_041",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_042",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_043",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_044",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_045",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_046",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_047",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_048",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_049",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_050",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_051",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_052",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_053",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_054",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_055",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_056",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_057",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_058",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_059",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_060",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_061",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_062",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_063",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_064",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_065",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_066",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_067",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_068",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_069",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_070",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_071",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_072",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_073",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_074",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_075",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_076",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_077",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_078",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_079",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_080",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_081",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_082",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_083",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_084",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_085",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_086",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_087",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_088",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_089",
+        "fixture_group": "scattered"
+      },
+      {
+        "report_id": "demo_090",
+        "fixture_group": "scattered"
+      }
+    ],
+    "import_contract": {
+      "status": "open",
+      "routing_state": "routed",
+      "category_source": "seed_fixture"
+    },
+    "never_use_for_training_or_evaluation": true
+  },
+  "classifier_input": "text only; category, family_id, source, source_key and expected_status are metadata/targets, never features",
+  "files_sha256": {
+    "gpt_nyc_download_receipt.json": "f0fe3abcc0500322388cba7415f83eb0bdc67f35e0d1d1cef9ff1e47d378e3af",
+    "gpt_nyc_sample.csv": "f82e2abdaa8ec4659073ba690e73c7089d678824007ab2defc4daf856728cfd5",
+    "gpt_nyc_source_lineage.json": "3cb59320738281355cc106a875273512b0732e525e9eb72d09c16e7dadd42a0c",
+    "gpt_tel_aviv_demo.csv": "e94d9ef09d7b3773d365f80af1287c3ba3aa820898d8685cfde47bd55c12ad19",
+    "gpt_tel_aviv_test.csv": "81411d6531b7b15140f404ea0770795e8b446f5097c487865988586f936d7013",
+    "gpt_train.csv": "32a907e3a0d9df384dd36711b74e1ff9f6ecb9113b3e78b6d2485109bbe88df0",
+    "gpt_validation.csv": "f8f9b2c4545f4d10ac722477d9ff4175bf27282ce5e133015d1c7b2828029de3"
+  },
+  "reproduction": {
+    "python": "3.10+",
+    "dependencies": "standard library only",
+    "offline": "python prepare_data.py",
+    "live": "python prepare_data.py --download-nyc",
+    "replay_real_snapshot": "python prepare_data.py --nyc-csv data/gpt_nyc_sample.csv --output-dir replay",
+    "determinism": "Offline files and provenance are byte-identical across runs. Live timing/status metadata and upstream data may differ; replay recreates CSV bytes from a retained real snapshot."
+  }
+}

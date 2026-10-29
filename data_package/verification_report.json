@@ -1,0 +1,54 @@
+{
+  "offline_runs_byte_identical": true,
+  "snapshot_replay_csv_bytes_identical": true,
+  "all_recorded_file_hashes_match": true,
+  "all_csv_schemas_match_brief": true,
+  "raw_source_rows": 600,
+  "raw_unique_source_keys": 600,
+  "bounded_category_counts_verified": true,
+  "all_real_training_keys_trace_to_actual_raw_rows": true,
+  "actual_sklearn_dbscan_clusters": {
+    "roads": [
+      12
+    ],
+    "waste": [
+      10
+    ],
+    "lighting": [
+      8
+    ],
+    "noise": []
+  },
+  "split_checks": {
+    "normalization": "NFKC, casefold, ASCII alphanumeric tokens, collapsed whitespace",
+    "within_split_normalized_duplicates": {
+      "train": 0,
+      "validation": 0,
+      "test": 0
+    },
+    "between_splits": {
+      "train__validation": {
+        "normalized_text_overlap": 0,
+        "family_id_overlap": 0
+      },
+      "train__test": {
+        "normalized_text_overlap": 0,
+        "family_id_overlap": 0
+      },
+      "validation__test": {
+        "normalized_text_overlap": 0,
+        "family_id_overlap": 0
+      }
+    },
+    "family_isolation_scope": "training/validation/test, not map fixtures",
+    "semantic_family_method": "Manually curated scenario leaves: 48 training families; each validation/test case has a separate issue mechanism. Shared category vocabulary is allowed; no source-derived evaluation narratives.",
+    "limitations": "ID/text checks do not prove semantic independence. Synthetic authoring and taxonomy are shared; evaluation is not real-city accuracy.",
+    "training_synthetic_families": 48,
+    "variants_per_training_family": 5,
+    "all_assertions_passed": true
+  },
+  "python_tested": "3.12.14",
+  "data_filenames_prefixed_gpt": true,
+  "csv_content_unchanged_by_rename": true,
+  "prefixed_snapshot_replay_verified": true
+}

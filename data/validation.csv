@@ -1,0 +1,25 @@
+text,category,family_id,source,source_key
+My scooter wheel got stuck in a gap in the asphalt on Herzl Street.,roads,val_roads_01,synthetic,val_roads_01
+"The lane markings at the roundabout are gone, drivers are confused about where to go.",roads,val_roads_02,synthetic,val_roads_02
+Tree roots have pushed the pavement up and it is cracked all along the block.,roads,val_roads_03,synthetic,val_roads_03
+The drain grate has sunk below the road level and cars bang into it.,roads,val_roads_04,synthetic,val_roads_04
+A steel plate left on the road after the works moves and clanks under every bus.,roads,val_roads_05,synthetic,val_roads_05
+The road has deep ruts from the heavy trucks and water collects in them.,roads,val_roads_06,synthetic,val_roads_06
+Someone emptied a whole bag of household rubbish on the bench in the square.,waste,val_waste_01,synthetic,val_waste_01
+The bins behind the restaurant are always full and spilling onto the alley.,waste,val_waste_02,synthetic,val_waste_02
+Used diapers and food scraps are thrown over the fence into the shared yard.,waste,val_waste_03,synthetic,val_waste_03
+Nobody collected the green waste after the gardeners cut the hedges.,waste,val_waste_04,synthetic,val_waste_04
+There's an old fridge and a broken TV dumped near the parking entrance.,waste,val_waste_05,synthetic,val_waste_05
+Cigarette butts and cans cover the area around the bus shelter.,waste,val_waste_06,synthetic,val_waste_06
+The lamp outside the kindergarten has been dark for two weeks.,lighting,val_lighting_01,synthetic,val_lighting_01
+Half the bulbs on the boulevard went out after the storm.,lighting,val_lighting_02,synthetic,val_lighting_02
+The street light near my building turns off around midnight and never comes back on.,lighting,val_lighting_03,synthetic,val_lighting_03
+One of the poles in the parking lot has no light at all.,lighting,val_lighting_04,synthetic,val_lighting_04
+The lantern on the stairs down to the beach is broken.,lighting,val_lighting_05,synthetic,val_lighting_05
+"Every lamp in our alley is off, we use phone flashlights to get home.",lighting,val_lighting_06,synthetic,val_lighting_06
+The neighbors upstairs have been banging and stomping until three in the morning.,noise,val_noise_01,synthetic,val_noise_01
+A club downstairs blasts techno every weekend night.,noise,val_noise_02,synthetic,val_noise_02
+Workers are jackhammering on a Saturday morning next to our house.,noise,val_noise_03,synthetic,val_noise_03
+Someone plays drums in the building every night after eleven.,noise,val_noise_04,synthetic,val_noise_04
+Delivery trucks unload with loud beeping and shouting at 4 am.,noise,val_noise_05,synthetic,val_noise_05
+There's a karaoke event in the yard with speakers turned all the way up.,noise,val_noise_06,synthetic,val_noise_06

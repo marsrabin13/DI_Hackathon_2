@@ -1,0 +1,52 @@
+{
+  "il_tel_aviv": {
+    "city_id": "il_tel_aviv",
+    "city_name": "Tel Aviv-Yafo",
+    "country_code": "IL",
+    "timezone": "Asia/Jerusalem",
+    "language": "en",
+    "config_version": "demo-v1",
+    "map_center": [32.0853, 34.7818],
+    "demo_bbox": [32.04, 34.74, 32.15, 34.84],
+    "map_presets": {
+      "Demo Point A": [32.0681, 34.7741],
+      "Demo Point B": [32.0802, 34.7821],
+      "Demo Point C": [32.1031, 34.7921]
+    },
+    "departments": {
+      "roads": "Road Maintenance (demo)",
+      "waste": "Sanitation (demo)",
+      "lighting": "Street Lighting (demo)",
+      "noise": "Environmental Review (demo)"
+    },
+    "review_department": "Service Desk Review (demo)",
+    "min_score": 0.65,
+    "min_margin": 0.15,
+    "hotspots": {"eps_meters": 250, "min_samples": 5, "window_days": 7}
+  },
+  "example_city": {
+    "city_id": "example_city",
+    "city_name": "Example City (portability check)",
+    "country_code": "XX",
+    "timezone": "UTC",
+    "language": "en",
+    "config_version": "demo-v1",
+    "map_center": [32.0853, 34.7818],
+    "demo_bbox": [32.04, 34.74, 32.15, 34.84],
+    "map_presets": {
+      "Demo Point A": [32.0681, 34.7741],
+      "Demo Point B": [32.0802, 34.7821],
+      "Demo Point C": [32.1031, 34.7921]
+    },
+    "departments": {
+      "roads": "Public Works (demo)",
+      "waste": "Sanitation (demo)",
+      "lighting": "Street Lighting (demo)",
+      "noise": "Environmental Review (demo)"
+    },
+    "review_department": "Service Desk Review (demo)",
+    "min_score": 0.65,
+    "min_margin": 0.15,
+    "hotspots": {"eps_meters": 250, "min_samples": 5, "window_days": 7}
+  }
+}

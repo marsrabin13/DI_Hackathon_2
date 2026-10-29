@@ -1,0 +1,91 @@
+report_id,city_id,text,category,latitude,longitude,created_at_utc,source
+demo_001,il_tel_aviv,A rough patch of road jolts vehicles at this illustrative location. Simulated report 001.,roads,32.0684191,34.7740784,2026-10-26T03:53:31Z,synthetic_demo
+demo_002,il_tel_aviv,The synthetic street surface has a damaged section needing inspection. Simulated report 002.,roads,32.068168,34.7742382,2026-10-28T06:08:47Z,synthetic_demo
+demo_003,il_tel_aviv,An uneven section of carriageway makes cycling uncomfortable here. Simulated report 003.,roads,32.0683401,34.7736771,2026-10-28T10:40:39Z,synthetic_demo
+demo_004,il_tel_aviv,A rough patch of road jolts vehicles at this illustrative location. Simulated report 004.,roads,32.0683996,34.7740954,2026-10-28T08:42:34Z,synthetic_demo
+demo_005,il_tel_aviv,The synthetic street surface has a damaged section needing inspection. Simulated report 005.,roads,32.067752,34.7739902,2026-10-29T04:16:16Z,synthetic_demo
+demo_006,il_tel_aviv,An uneven section of carriageway makes cycling uncomfortable here. Simulated report 006.,roads,32.0679158,34.7735416,2026-10-22T21:16:28Z,synthetic_demo
+demo_007,il_tel_aviv,A rough patch of road jolts vehicles at this illustrative location. Simulated report 007.,roads,32.0676737,34.7741272,2026-10-26T02:58:16Z,synthetic_demo
+demo_008,il_tel_aviv,The synthetic street surface has a damaged section needing inspection. Simulated report 008.,roads,32.068477,34.774023,2026-10-27T13:29:46Z,synthetic_demo
+demo_009,il_tel_aviv,An uneven section of carriageway makes cycling uncomfortable here. Simulated report 009.,roads,32.0677619,34.7744413,2026-10-27T14:42:48Z,synthetic_demo
+demo_010,il_tel_aviv,A rough patch of road jolts vehicles at this illustrative location. Simulated report 010.,roads,32.0680209,34.7737105,2026-10-28T06:13:45Z,synthetic_demo
+demo_011,il_tel_aviv,The synthetic street surface has a damaged section needing inspection. Simulated report 011.,roads,32.0681327,34.7741089,2026-10-25T07:48:57Z,synthetic_demo
+demo_012,il_tel_aviv,An uneven section of carriageway makes cycling uncomfortable here. Simulated report 012.,roads,32.0681448,34.7735445,2026-10-23T22:10:59Z,synthetic_demo
+demo_013,il_tel_aviv,Litter is accumulating at this illustrative collection area. Simulated report 013.,waste,32.080383,34.7819229,2026-10-24T21:44:38Z,synthetic_demo
+demo_014,il_tel_aviv,Loose refuse needs clearing from this synthetic public space. Simulated report 014.,waste,32.0799601,34.7821694,2026-10-25T02:39:59Z,synthetic_demo
+demo_015,il_tel_aviv,Discarded packaging covers part of this demonstration walkway. Simulated report 015.,waste,32.0798865,34.7815434,2026-10-28T22:39:10Z,synthetic_demo
+demo_016,il_tel_aviv,Litter is accumulating at this illustrative collection area. Simulated report 016.,waste,32.0800623,34.7814961,2026-10-28T12:45:33Z,synthetic_demo
+demo_017,il_tel_aviv,Loose refuse needs clearing from this synthetic public space. Simulated report 017.,waste,32.0803279,34.7815692,2026-10-24T21:16:49Z,synthetic_demo
+demo_018,il_tel_aviv,Discarded packaging covers part of this demonstration walkway. Simulated report 018.,waste,32.0798159,34.7817514,2026-10-25T01:44:06Z,synthetic_demo
+demo_019,il_tel_aviv,Litter is accumulating at this illustrative collection area. Simulated report 019.,waste,32.0798686,34.7821993,2026-10-26T06:14:14Z,synthetic_demo
+demo_020,il_tel_aviv,Loose refuse needs clearing from this synthetic public space. Simulated report 020.,waste,32.0798197,34.7815205,2026-10-28T15:12:10Z,synthetic_demo
+demo_021,il_tel_aviv,Discarded packaging covers part of this demonstration walkway. Simulated report 021.,waste,32.0801969,34.78243,2026-10-26T12:41:38Z,synthetic_demo
+demo_022,il_tel_aviv,Litter is accumulating at this illustrative collection area. Simulated report 022.,waste,32.0798442,34.7821739,2026-10-22T17:46:36Z,synthetic_demo
+demo_023,il_tel_aviv,Public illumination needs inspection at this illustrative location. Simulated report 023.,lighting,32.1028881,34.7922621,2026-10-28T19:42:25Z,synthetic_demo
+demo_024,il_tel_aviv,The synthetic path lighting is not working properly here. Simulated report 024.,lighting,32.1032488,34.7920601,2026-10-25T16:07:04Z,synthetic_demo
+demo_025,il_tel_aviv,A public lamp needs maintenance at this demonstration point. Simulated report 025.,lighting,32.1033074,34.7921603,2026-10-22T14:47:49Z,synthetic_demo
+demo_026,il_tel_aviv,Public illumination needs inspection at this illustrative location. Simulated report 026.,lighting,32.1028037,34.7925386,2026-10-23T10:35:19Z,synthetic_demo
+demo_027,il_tel_aviv,The synthetic path lighting is not working properly here. Simulated report 027.,lighting,32.1032868,34.7917985,2026-10-23T22:20:59Z,synthetic_demo
+demo_028,il_tel_aviv,A public lamp needs maintenance at this demonstration point. Simulated report 028.,lighting,32.1031282,34.7921821,2026-10-22T16:29:23Z,synthetic_demo
+demo_029,il_tel_aviv,Public illumination needs inspection at this illustrative location. Simulated report 029.,lighting,32.1029927,34.7915402,2026-10-24T07:12:35Z,synthetic_demo
+demo_030,il_tel_aviv,The synthetic path lighting is not working properly here. Simulated report 030.,lighting,32.1025944,34.7923507,2026-10-26T20:07:06Z,synthetic_demo
+demo_031,il_tel_aviv,A rough patch of road jolts vehicles at this illustrative location. Simulated report 031.,roads,32.1497058,34.7538332,2026-10-23T12:15:12Z,synthetic_demo
+demo_032,il_tel_aviv,Loose refuse needs clearing from this synthetic public space. Simulated report 032.,waste,32.05,34.7447116,2026-10-28T04:03:45Z,synthetic_demo
+demo_033,il_tel_aviv,A public lamp needs maintenance at this demonstration point. Simulated report 033.,lighting,32.0568125,34.7559982,2026-10-24T09:02:14Z,synthetic_demo
+demo_034,il_tel_aviv,Loud voices are disturbing residents at this illustrative location. Simulated report 034.,noise,32.105605,34.7784767,2026-10-23T19:40:15Z,synthetic_demo
+demo_035,il_tel_aviv,The synthetic street surface has a damaged section needing inspection. Simulated report 035.,roads,32.0982026,34.8371078,2026-10-29T08:39:22Z,synthetic_demo
+demo_036,il_tel_aviv,Discarded packaging covers part of this demonstration walkway. Simulated report 036.,waste,32.1148312,34.7514552,2026-10-22T23:35:46Z,synthetic_demo
+demo_037,il_tel_aviv,Public illumination needs inspection at this illustrative location. Simulated report 037.,lighting,32.1225966,34.8168599,2026-10-25T08:55:01Z,synthetic_demo
+demo_038,il_tel_aviv,Late evening amplified sound is reported at this synthetic point. Simulated report 038.,noise,32.0522707,34.7834765,2026-10-23T23:50:37Z,synthetic_demo
+demo_039,il_tel_aviv,An uneven section of carriageway makes cycling uncomfortable here. Simulated report 039.,roads,32.040357,34.8122092,2026-10-26T07:16:57Z,synthetic_demo
+demo_040,il_tel_aviv,Litter is accumulating at this illustrative collection area. Simulated report 040.,waste,32.1469077,34.8161962,2026-10-23T08:07:38Z,synthetic_demo
+demo_041,il_tel_aviv,The synthetic path lighting is not working properly here. Simulated report 041.,lighting,32.1403891,34.8270519,2026-10-25T21:04:18Z,synthetic_demo
+demo_042,il_tel_aviv,Repeated loud sound interrupts sleep near this demonstration location. Simulated report 042.,noise,32.1325836,34.7907663,2026-10-27T02:03:47Z,synthetic_demo
+demo_043,il_tel_aviv,A rough patch of road jolts vehicles at this illustrative location. Simulated report 043.,roads,32.0568123,34.8162511,2026-10-22T22:53:41Z,synthetic_demo
+demo_044,il_tel_aviv,Loose refuse needs clearing from this synthetic public space. Simulated report 044.,waste,32.144885,34.8322434,2026-10-29T11:50:01Z,synthetic_demo
+demo_045,il_tel_aviv,A public lamp needs maintenance at this demonstration point. Simulated report 045.,lighting,32.0523054,34.7762981,2026-10-25T18:25:49Z,synthetic_demo
+demo_046,il_tel_aviv,Loud voices are disturbing residents at this illustrative location. Simulated report 046.,noise,32.0663398,34.7640872,2026-10-22T14:44:44Z,synthetic_demo
+demo_047,il_tel_aviv,The synthetic street surface has a damaged section needing inspection. Simulated report 047.,roads,32.1441644,34.7485653,2026-10-23T14:26:43Z,synthetic_demo
+demo_048,il_tel_aviv,Discarded packaging covers part of this demonstration walkway. Simulated report 048.,waste,32.1297626,34.8377984,2026-10-23T00:50:18Z,synthetic_demo
+demo_049,il_tel_aviv,Public illumination needs inspection at this illustrative location. Simulated report 049.,lighting,32.1242418,34.7528391,2026-10-23T17:33:51Z,synthetic_demo
+demo_050,il_tel_aviv,Late evening amplified sound is reported at this synthetic point. Simulated report 050.,noise,32.1441534,34.7565127,2026-10-23T02:18:14Z,synthetic_demo
+demo_051,il_tel_aviv,An uneven section of carriageway makes cycling uncomfortable here. Simulated report 051.,roads,32.1359676,34.7823138,2026-10-26T22:18:34Z,synthetic_demo
+demo_052,il_tel_aviv,Litter is accumulating at this illustrative collection area. Simulated report 052.,waste,32.1421805,34.8155265,2026-10-27T01:24:38Z,synthetic_demo
+demo_053,il_tel_aviv,The synthetic path lighting is not working properly here. Simulated report 053.,lighting,32.1184244,34.7798992,2026-10-24T23:14:01Z,synthetic_demo
+demo_054,il_tel_aviv,Repeated loud sound interrupts sleep near this demonstration location. Simulated report 054.,noise,32.088191,34.7917576,2026-10-28T00:45:18Z,synthetic_demo
+demo_055,il_tel_aviv,A rough patch of road jolts vehicles at this illustrative location. Simulated report 055.,roads,32.0672696,34.7464026,2026-10-29T05:52:24Z,synthetic_demo
+demo_056,il_tel_aviv,Loose refuse needs clearing from this synthetic public space. Simulated report 056.,waste,32.104714,34.7630115,2026-10-26T19:51:26Z,synthetic_demo
+demo_057,il_tel_aviv,A public lamp needs maintenance at this demonstration point. Simulated report 057.,lighting,32.0464761,34.74674,2026-10-29T02:51:02Z,synthetic_demo
+demo_058,il_tel_aviv,Loud voices are disturbing residents at this illustrative location. Simulated report 058.,noise,32.1345599,34.7470857,2026-10-26T14:40:35Z,synthetic_demo
+demo_059,il_tel_aviv,The synthetic street surface has a damaged section needing inspection. Simulated report 059.,roads,32.0706325,34.7885414,2026-10-22T22:56:13Z,synthetic_demo
+demo_060,il_tel_aviv,Discarded packaging covers part of this demonstration walkway. Simulated report 060.,waste,32.0545543,34.8335514,2026-10-22T13:40:18Z,synthetic_demo
+demo_061,il_tel_aviv,Public illumination needs inspection at this illustrative location. Simulated report 061.,lighting,32.092027,34.780706,2026-10-28T08:31:33Z,synthetic_demo
+demo_062,il_tel_aviv,Late evening amplified sound is reported at this synthetic point. Simulated report 062.,noise,32.0865936,34.7867025,2026-10-28T20:13:18Z,synthetic_demo
+demo_063,il_tel_aviv,An uneven section of carriageway makes cycling uncomfortable here. Simulated report 063.,roads,32.1140701,34.8384165,2026-10-28T07:20:02Z,synthetic_demo
+demo_064,il_tel_aviv,Litter is accumulating at this illustrative collection area. Simulated report 064.,waste,32.0466674,34.8128214,2026-10-28T04:10:24Z,synthetic_demo
+demo_065,il_tel_aviv,The synthetic path lighting is not working properly here. Simulated report 065.,lighting,32.0673522,34.7590209,2026-10-24T01:19:55Z,synthetic_demo
+demo_066,il_tel_aviv,Repeated loud sound interrupts sleep near this demonstration location. Simulated report 066.,noise,32.0908891,34.8274486,2026-10-28T14:02:34Z,synthetic_demo
+demo_067,il_tel_aviv,A rough patch of road jolts vehicles at this illustrative location. Simulated report 067.,roads,32.1005358,34.7450588,2026-10-22T22:32:33Z,synthetic_demo
+demo_068,il_tel_aviv,Loose refuse needs clearing from this synthetic public space. Simulated report 068.,waste,32.0582942,34.7885641,2026-10-26T21:44:30Z,synthetic_demo
+demo_069,il_tel_aviv,A public lamp needs maintenance at this demonstration point. Simulated report 069.,lighting,32.1351115,34.8302443,2026-10-27T12:02:46Z,synthetic_demo
+demo_070,il_tel_aviv,Loud voices are disturbing residents at this illustrative location. Simulated report 070.,noise,32.081687,34.8385309,2026-10-26T06:45:15Z,synthetic_demo
+demo_071,il_tel_aviv,The synthetic street surface has a damaged section needing inspection. Simulated report 071.,roads,32.0713774,34.8096592,2026-10-22T18:07:15Z,synthetic_demo
+demo_072,il_tel_aviv,Discarded packaging covers part of this demonstration walkway. Simulated report 072.,waste,32.1128058,34.7886671,2026-10-27T04:41:18Z,synthetic_demo
+demo_073,il_tel_aviv,Public illumination needs inspection at this illustrative location. Simulated report 073.,lighting,32.0726379,34.8368709,2026-10-22T22:04:28Z,synthetic_demo
+demo_074,il_tel_aviv,Late evening amplified sound is reported at this synthetic point. Simulated report 074.,noise,32.0467053,34.7713605,2026-10-28T21:23:42Z,synthetic_demo
+demo_075,il_tel_aviv,An uneven section of carriageway makes cycling uncomfortable here. Simulated report 075.,roads,32.1337992,34.7557433,2026-10-23T08:05:04Z,synthetic_demo
+demo_076,il_tel_aviv,Litter is accumulating at this illustrative collection area. Simulated report 076.,waste,32.0488123,34.7585825,2026-10-28T16:12:18Z,synthetic_demo
+demo_077,il_tel_aviv,The synthetic path lighting is not working properly here. Simulated report 077.,lighting,32.1142734,34.7635204,2026-10-28T01:04:50Z,synthetic_demo
+demo_078,il_tel_aviv,Repeated loud sound interrupts sleep near this demonstration location. Simulated report 078.,noise,32.1435756,34.7969675,2026-10-29T00:25:28Z,synthetic_demo
+demo_079,il_tel_aviv,A rough patch of road jolts vehicles at this illustrative location. Simulated report 079.,roads,32.108132,34.7819225,2026-10-22T15:21:57Z,synthetic_demo
+demo_080,il_tel_aviv,Loose refuse needs clearing from this synthetic public space. Simulated report 080.,waste,32.0975061,34.8334706,2026-10-27T00:30:19Z,synthetic_demo
+demo_081,il_tel_aviv,A public lamp needs maintenance at this demonstration point. Simulated report 081.,lighting,32.1136699,34.7714184,2026-10-26T06:38:03Z,synthetic_demo
+demo_082,il_tel_aviv,Loud voices are disturbing residents at this illustrative location. Simulated report 082.,noise,32.0835364,34.807169,2026-10-25T20:37:11Z,synthetic_demo
+demo_083,il_tel_aviv,The synthetic street surface has a damaged section needing inspection. Simulated report 083.,roads,32.0902947,34.8329018,2026-10-28T14:52:14Z,synthetic_demo
+demo_084,il_tel_aviv,Discarded packaging covers part of this demonstration walkway. Simulated report 084.,waste,32.0410247,34.8021159,2026-10-22T16:00:59Z,synthetic_demo
+demo_085,il_tel_aviv,Public illumination needs inspection at this illustrative location. Simulated report 085.,lighting,32.1495706,34.7473261,2026-10-26T21:54:52Z,synthetic_demo
+demo_086,il_tel_aviv,Late evening amplified sound is reported at this synthetic point. Simulated report 086.,noise,32.0956473,34.7532457,2026-10-25T06:20:38Z,synthetic_demo
+demo_087,il_tel_aviv,An uneven section of carriageway makes cycling uncomfortable here. Simulated report 087.,roads,32.080648,34.7557747,2026-10-22T21:46:35Z,synthetic_demo
+demo_088,il_tel_aviv,Litter is accumulating at this illustrative collection area. Simulated report 088.,waste,32.1173894,34.8011678,2026-10-23T01:56:06Z,synthetic_demo
+demo_089,il_tel_aviv,The synthetic path lighting is not working properly here. Simulated report 089.,lighting,32.0408605,34.8217104,2026-10-25T20:47:59Z,synthetic_demo
+demo_090,il_tel_aviv,Repeated loud sound interrupts sleep near this demonstration location. Simulated report 090.,noise,32.136594,34.7664466,2026-10-28T04:49:25Z,synthetic_demo

@@ -1,0 +1,11 @@
+text,true_category,predicted_category,score,margin,routing_state,reasons,expected_status,status_ok,category_ok
+"On the Tel Aviv demo cycle route, several fixed lane delineators have snapped off at ground level.",roads,roads,0.366,0.146,review_required,low_score<0.4,routed,False,True
+The cobblestones in the shared street have shifted into an uneven ridge that catches bicycle tyres.,roads,roads,0.311,0.043,review_required,low_score<0.4;low_margin<0.05,routed,False,True
+"A tread is missing from the municipal pedestrian steps, leaving a gap in the staircase.",roads,lighting,0.334,0.099,review_required,low_score<0.4,routed,False,False
+Windblown leaflets now blanket the paved public courtyard; please arrange a sweep.,waste,waste,0.353,0.096,review_required,low_score<0.4,routed,False,True
+A large heap of cut branches and garden trimmings was left on the promenade for removal.,waste,lighting,0.295,0.043,review_required,low_score<0.4;low_margin<0.05,routed,False,False
+"A refuse truck spilled mixed rubbish at the junction, leaving a trail across the carriageway.",waste,roads,0.388,0.111,review_required,low_score<0.4,routed,False,False
+Half the LED panels on the high-mast public light have stopped working while the remaining panels still glow.,lighting,lighting,0.319,0.062,review_required,low_score<0.4,routed,False,True
+The maintenance hatch on the streetlight column is jammed open; the internal wiring remains behind its intact sealed barrier.,lighting,lighting,0.289,0.039,review_required,low_score<0.4;low_margin<0.05,routed,False,True
+A thick white salt coating has formed on the seaside lamp housing and its glass needs specialist cleaning.,lighting,roads,0.29,0.023,review_required,low_score<0.4;low_margin<0.05,routed,False,False
+"There is a new pothole beside an overflowing rubbish bin, and both need attention.",,waste,0.403,0.17,routed,,review_required,False,True

@@ -1,0 +1,6 @@
+.env
+__pycache__/
+*.pyc
+data/cityfix.db
+data/smoke_*.db
+.venv/

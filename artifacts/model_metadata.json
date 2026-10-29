@@ -1,0 +1,143 @@
+{
+  "model_version": "tfidf-lr-32a907e3",
+  "data_hash": "32a907e3a0d9df38",
+  "thresholds": {
+    "min_score": 0.4,
+    "min_margin": 0.05
+  },
+  "trained_at_utc": "2026-10-29T15:48:51Z",
+  "pipeline": {
+    "tfidf": {
+      "ngram_range": [
+        1,
+        2
+      ],
+      "max_features": 10000,
+      "sublinear_tf": true
+    },
+    "logreg": {
+      "max_iter": 1000,
+      "class_weight": "balanced",
+      "random_state": 42
+    }
+  },
+  "classes": [
+    "lighting",
+    "noise",
+    "roads",
+    "waste"
+  ],
+  "train_counts": {
+    "total": 254,
+    "by_source": {
+      "synthetic": 240,
+      "nyc_structured": 14
+    },
+    "by_category": {
+      "lighting": 66,
+      "roads": 64,
+      "waste": 62,
+      "noise": 62
+    },
+    "families": 52
+  },
+  "validation_counts": {
+    "total": 24
+  },
+  "file_hashes": {
+    "gpt_train.csv": "32a907e3a0d9df38",
+    "gpt_validation.csv": "f8f9b2c4545f4d10"
+  },
+  "data_files": {
+    "train": "gpt_train.csv",
+    "validation": "gpt_validation.csv",
+    "test": "gpt_tel_aviv_test.csv",
+    "demo": "gpt_tel_aviv_demo.csv",
+    "provenance": "gpt_data_provenance.json"
+  },
+  "threshold_decision": "adjusted once on validation: coverage at 0.65/0.15 was 0/24; chose highest coverage with 100% accepted-route accuracy on validation",
+  "validation_at_start_thresholds": {
+    "n_in_scope": 24,
+    "accuracy": 0.7917,
+    "macro_f1": 0.7645,
+    "per_class": {
+      "lighting": {
+        "precision": 0.667,
+        "recall": 0.333,
+        "f1-score": 0.444,
+        "support": 6.0
+      },
+      "noise": {
+        "precision": 0.833,
+        "recall": 0.833,
+        "f1-score": 0.833,
+        "support": 6.0
+      },
+      "roads": {
+        "precision": 0.857,
+        "recall": 1.0,
+        "f1-score": 0.923,
+        "support": 6.0
+      },
+      "waste": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1-score": 0.857,
+        "support": 6.0
+      }
+    },
+    "routing_coverage": "0/24",
+    "routing_coverage_rate": 0.0,
+    "accepted_route_accuracy": "0/0",
+    "accepted_route_accuracy_rate": null
+  },
+  "validation": {
+    "n_in_scope": 24,
+    "accuracy": 0.7917,
+    "macro_f1": 0.7645,
+    "per_class": {
+      "lighting": {
+        "precision": 0.667,
+        "recall": 0.333,
+        "f1-score": 0.444,
+        "support": 6.0
+      },
+      "noise": {
+        "precision": 0.833,
+        "recall": 0.833,
+        "f1-score": 0.833,
+        "support": 6.0
+      },
+      "roads": {
+        "precision": 0.857,
+        "recall": 1.0,
+        "f1-score": 0.923,
+        "support": 6.0
+      },
+      "waste": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1-score": 0.857,
+        "support": 6.0
+      }
+    },
+    "routing_coverage": "15/24",
+    "routing_coverage_rate": 0.625,
+    "accepted_route_accuracy": "15/15",
+    "accepted_route_accuracy_rate": 1.0
+  },
+  "versions": {
+    "python": "3.13.18",
+    "scikit-learn": "1.9.1",
+    "pandas": "3.0.5",
+    "numpy": "2.5.3",
+    "joblib": "1.6.0",
+    "streamlit": "1.66.1",
+    "pydeck": "0.9.3",
+    "anthropic": "2.3.0",
+    "python-dotenv": "1.2.3"
+  },
+  "note": "Model score is an uncalibrated estimate, not a reliability guarantee. Synthetic validation shares generation bias with training.",
+  "test_evaluated": true,
+  "test_file_hash": "81411d6531b7b151"
+}

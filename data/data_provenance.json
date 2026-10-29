@@ -1,0 +1,109 @@
+{
+  "generated_at_utc": "2026-10-29T15:04:44Z",
+  "seed": 42,
+  "nyc_download": {
+    "attempted": true,
+    "queries": [
+      {
+        "target": "roads",
+        "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "target": "waste",
+        "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "target": "lighting",
+        "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "target": "noise",
+        "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>"
+      }
+    ],
+    "rows_downloaded": 0,
+    "succeeded": false,
+    "endpoint": "https://data.cityofnewyork.us/resource/erm2-nwe9.json",
+    "fields": "unique_key,complaint_type,descriptor,descriptor_2",
+    "label_map": {
+      "roads": [
+        "Street Condition"
+      ],
+      "waste": [
+        "Dirty Condition"
+      ],
+      "lighting": [
+        "Street Light Condition"
+      ],
+      "noise": [
+        "Noise - Residential",
+        "Noise - Street/Sidewalk"
+      ]
+    }
+  },
+  "mode": "synthetic_only",
+  "generation_method": {
+    "train": "Template generation: 12 hand-written scenario families per category x 5 framing/location variants (all variants of a family stay in train). Plus deduplicated NYC descriptor text if downloaded.",
+    "validation": "24 hand-written sentences, 6/category, scenario families not used in train.",
+    "test": "20 hand-written in-scope sentences (5/category) + 4 policy cases, separate families; untouched until train.py --evaluate-test.",
+    "demo": "90 simulated Tel Aviv map reports (seed 42): 12 roads near 32.068,34.774; 10 waste near 32.080,34.782; 8 lighting near 32.103,34.792 (jitter <=60 m); 60 scattered. Illustrative points, not verified incident locations. Never used for training/evaluation."
+  },
+  "demo_anchor_utc": "2026-10-28T18:00:00Z",
+  "counts": {
+    "train": {
+      "total": 240,
+      "synthetic": 240,
+      "by_category": {
+        "roads": 60,
+        "waste": 60,
+        "lighting": 60,
+        "noise": 60
+      },
+      "families": 48
+    },
+    "validation": {
+      "total": 24,
+      "by_category": {
+        "roads": 6,
+        "waste": 6,
+        "lighting": 6,
+        "noise": 6
+      }
+    },
+    "test": {
+      "total": 24,
+      "in_scope": 20,
+      "policy_cases": 4
+    },
+    "demo": {
+      "total": 90,
+      "by_category": {
+        "waste": 35,
+        "roads": 26,
+        "lighting": 17,
+        "noise": 12
+      }
+    }
+  },
+  "split_checks": {
+    "train_val_family_overlap": 0,
+    "train_test_family_overlap": 0,
+    "val_test_family_overlap": 0,
+    "train_val_text_overlap": 0,
+    "train_test_text_overlap": 0,
+    "val_test_text_overlap": 0,
+    "demo_vs_supervised_text_overlap": 0,
+    "train_duplicate_texts": 0
+  },
+  "file_hashes": {
+    "train.csv": "cced3aaa37071403",
+    "validation.csv": "c45211a8e55fbf38",
+    "tel_aviv_test.csv": "aaff5f6f4e7a3be2",
+    "tel_aviv_demo.csv": "f8923a6e14054efa"
+  },
+  "caveats": [
+    "Synthetic evaluations share generation bias with training data and do not establish real-city accuracy.",
+    "Raw NYC records stay NYC records; no NYC coordinates are moved to Tel Aviv.",
+    "Classifier input is text only (no complaint_type, agency, category code or city metadata)."
+  ]
+}

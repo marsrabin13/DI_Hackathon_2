@@ -1,0 +1,86 @@
+{
+  "n_in_scope": 20,
+  "accuracy": 0.8,
+  "macro_f1": 0.8011,
+  "per_class": {
+    "lighting": {
+      "precision": 0.667,
+      "recall": 0.8,
+      "f1-score": 0.727,
+      "support": 5.0
+    },
+    "noise": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 5.0
+    },
+    "roads": {
+      "precision": 0.667,
+      "recall": 0.8,
+      "f1-score": 0.727,
+      "support": 5.0
+    },
+    "waste": {
+      "precision": 1.0,
+      "recall": 0.6,
+      "f1-score": 0.75,
+      "support": 5.0
+    }
+  },
+  "routing_coverage": "11/20",
+  "routing_coverage_rate": 0.55,
+  "accepted_route_accuracy": "11/11",
+  "accepted_route_accuracy_rate": 1.0,
+  "policy_cases": [
+    {
+      "text": "Something is wrong near my place in Tel Aviv. Can somebody help?",
+      "expected_status": "review_required",
+      "routing_state": "review_required",
+      "predicted_category": "noise",
+      "score": 0.291,
+      "margin": 0.037,
+      "reasons": "low_score<0.4;low_margin<0.05",
+      "status_ok": true
+    },
+    {
+      "text": "How do I renew my passport and change the name printed in it?",
+      "expected_status": "review_required",
+      "routing_state": "review_required",
+      "predicted_category": "waste",
+      "score": 0.288,
+      "margin": 0.037,
+      "reasons": "low_score<0.4;low_margin<0.05",
+      "status_ok": true
+    },
+    {
+      "text": "There is a new pothole beside an overflowing rubbish bin, and both need attention.",
+      "expected_status": "review_required",
+      "routing_state": "routed",
+      "predicted_category": "waste",
+      "score": 0.403,
+      "margin": 0.17,
+      "reasons": "",
+      "status_ok": false
+    },
+    {
+      "text": "An exposed live wire is sparking from the streetlight pole beside the footpath.",
+      "expected_status": "urgent_review",
+      "routing_state": "urgent_review",
+      "predicted_category": "lighting",
+      "score": 0.381,
+      "margin": 0.102,
+      "reasons": "urgent_phrase_guard",
+      "status_ok": true
+    }
+  ],
+  "policy_cases_passed": "3/4",
+  "status_match_all_24": "14/24",
+  "thresholds_used": {
+    "min_score": 0.4,
+    "min_margin": 0.05
+  },
+  "model_version": "tfidf-lr-32a907e3",
+  "evaluated_at_utc": "2026-10-29T15:49:47Z",
+  "note": "Evaluated once; no tuning on test. Synthetic test - does not establish real-city accuracy."
+}

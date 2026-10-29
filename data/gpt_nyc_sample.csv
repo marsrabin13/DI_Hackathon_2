@@ -1,0 +1,601 @@
+unique_key,complaint_type,descriptor,descriptor_2
+70918672,Street Condition,"Rough, Pitted or Cracked Roads",N/A
+70918671,Street Condition,"Rough, Pitted or Cracked Roads",N/A
+70918471,Street Condition,Plate Condition - Shifted,N/A
+70918467,Street Condition,Cave-in,N/A
+70918466,Street Condition,Defective Hardware,N/A
+70918465,Street Condition,Plate Condition - Noisy,N/A
+70918463,Street Condition,Blocked - Construction,N/A
+70918462,Street Condition,Blocked - Construction,N/A
+70918461,Street Condition,Defective Hardware,N/A
+70918460,Street Condition,Failed Street Repair,N/A
+70918459,Street Condition,Plate Condition - Noisy,N/A
+70918454,Street Condition,Blocked - Construction,N/A
+70918453,Street Condition,Blocked - Construction,N/A
+70918452,Street Condition,Blocked - Construction,N/A
+70918451,Street Condition,Blocked - Construction,N/A
+70918450,Street Condition,Blocked - Construction,N/A
+70918449,Street Condition,Blocked - Construction,N/A
+70918448,Street Condition,Cave-in,N/A
+70918447,Street Condition,Cave-in,N/A
+70918446,Street Condition,Defective Hardware,N/A
+70918445,Street Condition,Failed Street Repair,N/A
+70918443,Street Condition,Line/Marking - Faded,N/A
+70918001,Street Condition,Pothole,
+70918000,Street Condition,Pothole,
+70917999,Street Condition,Pothole,
+70917998,Street Condition,Pothole,
+70917997,Street Condition,Pothole,
+70917996,Street Condition,Pothole,
+70917995,Street Condition,Pothole,
+70917994,Street Condition,Pothole,
+70917993,Street Condition,Pothole,
+70917992,Street Condition,Pothole,
+70917991,Street Condition,Pothole,
+70917990,Street Condition,Pothole,
+70917989,Street Condition,Pothole,
+70917988,Street Condition,Pothole,
+70917136,Street Condition,"Rough, Pitted or Cracked Roads",N/A
+70917135,Street Condition,"Rough, Pitted or Cracked Roads",N/A
+70917134,Street Condition,"Rough, Pitted or Cracked Roads",N/A
+70917133,Street Condition,"Rough, Pitted or Cracked Roads",N/A
+70916940,Street Condition,Blocked - Construction,N/A
+70916938,Street Condition,Blocked - Construction,N/A
+70916937,Street Condition,Defective Hardware,N/A
+70916936,Street Condition,Failed Street Repair,N/A
+70916935,Street Condition,Failed Street Repair,N/A
+70916933,Street Condition,Blocked - Construction,N/A
+70916932,Street Condition,Blocked - Construction,N/A
+70916931,Street Condition,Blocked - Construction,N/A
+70916930,Street Condition,Blocked - Construction,N/A
+70916929,Street Condition,Blocked - Construction,N/A
+70916928,Street Condition,Cave-in,N/A
+70916927,Street Condition,Cave-in,N/A
+70916926,Street Condition,Cave-in,N/A
+70916925,Street Condition,Cave-in,N/A
+70916924,Street Condition,Cave-in,N/A
+70916923,Street Condition,Defective Hardware,N/A
+70916922,Street Condition,Defective Hardware,N/A
+70916921,Street Condition,"Rough, Pitted or Cracked Roads",N/A
+70916920,Street Condition,Blocked - Construction,N/A
+70916442,Street Condition,Pothole,
+70916441,Street Condition,Pothole,
+70916440,Street Condition,Pothole,
+70916439,Street Condition,Pothole,
+70916438,Street Condition,Pothole,
+70916437,Street Condition,Pothole,
+70916436,Street Condition,Pothole,
+70916435,Street Condition,Pothole,
+70916434,Street Condition,Pothole,
+70916433,Street Condition,Pothole,
+70916432,Street Condition,Pothole,
+70916431,Street Condition,Pothole,
+70916430,Street Condition,Pothole,
+70916429,Street Condition,Pothole,
+70916428,Street Condition,Wear & Tear,
+70916427,Street Condition,Pothole,
+70916426,Street Condition,Pothole,
+70915563,Street Condition,"Rough, Pitted or Cracked Roads",N/A
+70915562,Street Condition,"Rough, Pitted or Cracked Roads",N/A
+70915375,Street Condition,Dumpster - Construction Waste,N/A
+70915374,Street Condition,Cave-in,N/A
+70915373,Street Condition,Cave-in,N/A
+70915372,Street Condition,Cave-in,N/A
+70915371,Street Condition,Cave-in,N/A
+70915370,Street Condition,Plate Condition - Noisy,N/A
+70915369,Street Condition,Cave-in,N/A
+70915367,Street Condition,Blocked - Construction,N/A
+70915366,Street Condition,Blocked - Construction,N/A
+70915365,Street Condition,Blocked - Construction,N/A
+70915364,Street Condition,Blocked - Construction,N/A
+70915363,Street Condition,Blocked - Construction,N/A
+70915362,Street Condition,Cave-in,N/A
+70915361,Street Condition,Plate Condition - Noisy,N/A
+70915360,Street Condition,Cave-in,N/A
+70915359,Street Condition,Line/Marking - After Repaving,N/A
+70915358,Street Condition,Line/Marking - After Repaving,N/A
+70915357,Street Condition,Line/Marking - Faded,N/A
+70914899,Street Condition,Pothole,
+70914898,Street Condition,Pothole,
+70914897,Street Condition,Pothole,
+70914896,Street Condition,Pothole,
+70914895,Street Condition,Pothole,
+70914894,Street Condition,Wear & Tear,
+70914893,Street Condition,Wear & Tear,
+70914892,Street Condition,Pothole,
+70914890,Street Condition,Pothole,
+70914024,Street Condition,"Rough, Pitted or Cracked Roads",N/A
+70913803,Street Condition,Failed Street Repair,N/A
+70913801,Street Condition,Cave-in,N/A
+70913800,Street Condition,Defective Hardware,N/A
+70913799,Street Condition,Failed Street Repair,N/A
+70913798,Street Condition,Plate Condition - Noisy,N/A
+70913797,Street Condition,Plate Condition - Noisy,N/A
+70913796,Street Condition,Plate Condition - Noisy,N/A
+70913795,Street Condition,Plate Condition - Noisy,N/A
+70913794,Street Condition,Cave-in,N/A
+70913793,Street Condition,Cave-in,N/A
+70913792,Street Condition,Defective Hardware,N/A
+70913791,Street Condition,Defective Hardware,N/A
+70913789,Street Condition,Blocked - Construction,N/A
+70913788,Street Condition,Blocked - Construction,N/A
+70913787,Street Condition,Cave-in,N/A
+70913786,Street Condition,Cave-in,N/A
+70913785,Street Condition,Defective Hardware,N/A
+70913784,Street Condition,Failed Street Repair,N/A
+70913783,Street Condition,Failed Street Repair,N/A
+70913782,Street Condition,"Rough, Pitted or Cracked Roads",N/A
+70913781,Street Condition,"Rough, Pitted or Cracked Roads",N/A
+70913780,Street Condition,Cave-in,N/A
+70913779,Street Condition,Line/Marking - After Repaving,N/A
+70913778,Street Condition,Line/Marking - Faded,N/A
+70913343,Street Condition,Pothole,
+70913342,Street Condition,Pothole,
+70913341,Street Condition,Pothole,
+70913340,Street Condition,Pothole,
+70913339,Street Condition,Pothole,
+70913338,Street Condition,Pothole,
+70913337,Street Condition,Pothole,
+70913336,Street Condition,Pothole,
+70913335,Street Condition,Pothole,
+70913334,Street Condition,Pothole,
+70913333,Street Condition,Pothole,
+70913332,Street Condition,Pothole,
+70913331,Street Condition,Pothole,
+70913330,Street Condition,Pothole,
+70913329,Street Condition,Pothole,
+70913328,Street Condition,Pothole,
+70913327,Street Condition,Wear & Tear,
+70913326,Street Condition,Pothole,
+70913325,Street Condition,Pothole,
+70913324,Street Condition,Pothole,
+70919498,Dirty Condition,Trash,Littering
+70919497,Dirty Condition,Trash,Littering
+70919496,Dirty Condition,Trash,Littering
+70919495,Dirty Condition,Trash,Littering
+70919494,Dirty Condition,Trash,Littering
+70919493,Dirty Condition,Trash,Littering
+70919492,Dirty Condition,Trash,Littering
+70919491,Dirty Condition,Trash,Littering
+70919490,Dirty Condition,Trash,Littering
+70919489,Dirty Condition,Trash,Littering
+70919488,Dirty Condition,Trash,Not Cleaned by Property Owner
+70919487,Dirty Condition,Trash,Not Cleaned by Property Owner
+70919454,Dirty Condition,Broken Glass,N/A
+70919453,Dirty Condition,Broken Glass,N/A
+70919430,Dirty Condition,Trash,Littering
+70919429,Dirty Condition,Trash,Not Cleaned by Property Owner
+70919428,Dirty Condition,Trash,Not Cleaned by Property Owner
+70919427,Dirty Condition,Trash,Not Cleaned by Property Owner
+70917972,Dirty Condition,Trash,Littering
+70917957,Dirty Condition,Dog Waste,Not Picked Up by Dog Owner
+70917947,Dirty Condition,Trash,Littering
+70917946,Dirty Condition,Trash,Littering
+70917945,Dirty Condition,Trash,Littering
+70917944,Dirty Condition,Trash,Littering
+70917943,Dirty Condition,Trash,Littering
+70917942,Dirty Condition,Trash,Littering
+70917941,Dirty Condition,Trash,Littering
+70917940,Dirty Condition,Trash,Littering
+70917939,Dirty Condition,Trash,Littering
+70917938,Dirty Condition,Trash,Not Cleaned by Property Owner
+70917937,Dirty Condition,Trash,Not Cleaned by Property Owner
+70917936,Dirty Condition,Trash,Not Cleaned by Property Owner
+70917935,Dirty Condition,Trash,Not Cleaned by Property Owner
+70917906,Dirty Condition,Trash,Littering
+70917896,Dirty Condition,Dirt or Gravel,N/A
+70917895,Dirty Condition,Trash,Not Cleaned by Property Owner
+70917894,Dirty Condition,Trash,Not Cleaned by Property Owner
+70917893,Dirty Condition,Trash,Not Cleaned by Property Owner
+70916584,Dirty Condition,Trash,Littering
+70916583,Dirty Condition,Trash,Littering
+70916582,Dirty Condition,Trash,Littering
+70916581,Dirty Condition,Trash,Littering
+70916395,Dirty Condition,Trash,Littering
+70916394,Dirty Condition,Trash,Littering
+70916393,Dirty Condition,Trash,Littering
+70916392,Dirty Condition,Trash,Littering
+70916391,Dirty Condition,Trash,Littering
+70916390,Dirty Condition,Trash,Littering
+70916389,Dirty Condition,Trash,Littering
+70916388,Dirty Condition,Trash,Littering
+70916387,Dirty Condition,Trash,Littering
+70916386,Dirty Condition,Trash,Not Cleaned by Property Owner
+70916385,Dirty Condition,Trash,Not Cleaned by Property Owner
+70916384,Dirty Condition,Trash,Not Cleaned by Property Owner
+70916383,Dirty Condition,Trash,Not Cleaned by Property Owner
+70916382,Dirty Condition,Trash,Not Cleaned by Property Owner
+70916381,Dirty Condition,Trash,Not Cleaned by Property Owner
+70916380,Dirty Condition,Trash,Not Cleaned by Property Owner
+70916340,Dirty Condition,Trash,Not Cleaned by Property Owner
+70916339,Dirty Condition,Trash,Not Cleaned by Property Owner
+70914870,Dirty Condition,Dog Waste,Not Picked Up by Dog Owner
+70914862,Dirty Condition,Trash,Not Cleaned by Property Owner
+70914861,Dirty Condition,Trash,Littering
+70914860,Dirty Condition,Trash,Littering
+70914859,Dirty Condition,Trash,Littering
+70914858,Dirty Condition,Trash,Littering
+70914857,Dirty Condition,Trash,Littering
+70914856,Dirty Condition,Trash,Littering
+70914855,Dirty Condition,Trash,Littering
+70914854,Dirty Condition,Trash,Littering
+70914853,Dirty Condition,Trash,Littering
+70914852,Dirty Condition,Trash,Littering
+70914851,Dirty Condition,Trash,Littering
+70914850,Dirty Condition,Trash,Littering
+70914849,Dirty Condition,Trash,Littering
+70914848,Dirty Condition,Trash,Littering
+70914847,Dirty Condition,Trash,Littering
+70914846,Dirty Condition,Trash,Not Cleaned by Property Owner
+70914845,Dirty Condition,Trash,Not Cleaned by Property Owner
+70914844,Dirty Condition,Trash,Not Cleaned by Property Owner
+70914843,Dirty Condition,Trash,Not Cleaned by Property Owner
+70914810,Dirty Condition,Broken Glass,N/A
+70914785,Dirty Condition,Trash,Littering
+70914784,Dirty Condition,Trash,Not Cleaned by Property Owner
+70914783,Dirty Condition,Trash,Not Cleaned by Property Owner
+70914782,Dirty Condition,Trash,Not Cleaned by Property Owner
+70914781,Dirty Condition,Trash,Not Cleaned by Property Owner
+70914773,Dirty Condition,Trash,Littering
+70913463,Dirty Condition,Trash,Littering
+70913295,Dirty Condition,Dog Waste,Not Cleaned by Property Owner
+70913291,Dirty Condition,Trash,Littering
+70913290,Dirty Condition,Trash,Littering
+70913289,Dirty Condition,Trash,Littering
+70913288,Dirty Condition,Trash,Littering
+70913287,Dirty Condition,Trash,Littering
+70913286,Dirty Condition,Trash,Littering
+70913285,Dirty Condition,Trash,Littering
+70913284,Dirty Condition,Trash,Littering
+70913283,Dirty Condition,Trash,Littering
+70913282,Dirty Condition,Trash,Littering
+70913281,Dirty Condition,Trash,Littering
+70913280,Dirty Condition,Trash,Littering
+70913279,Dirty Condition,Trash,Littering
+70913278,Dirty Condition,Trash,Littering
+70913277,Dirty Condition,Trash,Littering
+70913276,Dirty Condition,Trash,Not Cleaned by Property Owner
+70913275,Dirty Condition,Trash,Not Cleaned by Property Owner
+70913274,Dirty Condition,Trash,Not Cleaned by Property Owner
+70913273,Dirty Condition,Trash,Not Cleaned by Property Owner
+70913246,Dirty Condition,Broken Glass,N/A
+70913245,Dirty Condition,Trash,Littering
+70913235,Dirty Condition,Trash,Not Cleaned by Property Owner
+70913221,Dirty Condition,Broken Glass,N/A
+70913220,Dirty Condition,Trash,Not Cleaned by Property Owner
+70913219,Dirty Condition,Trash,Not Cleaned by Property Owner
+70913218,Dirty Condition,Trash,Not Cleaned by Property Owner
+70911902,Dirty Condition,Trash,Littering
+70911901,Dirty Condition,Trash,Littering
+70911748,Dirty Condition,Trash,Littering
+70911747,Dirty Condition,Trash,Littering
+70911746,Dirty Condition,Trash,Littering
+70911745,Dirty Condition,Trash,Littering
+70911744,Dirty Condition,Trash,Littering
+70911743,Dirty Condition,Trash,Littering
+70911742,Dirty Condition,Trash,Littering
+70911741,Dirty Condition,Trash,Littering
+70911740,Dirty Condition,Trash,Not Cleaned by Property Owner
+70911739,Dirty Condition,Trash,Not Cleaned by Property Owner
+70911738,Dirty Condition,Trash,Not Cleaned by Property Owner
+70911737,Dirty Condition,Trash,Not Cleaned by Property Owner
+70911694,Dirty Condition,Trash,Not Cleaned by Property Owner
+70911667,Dirty Condition,Dirt or Gravel,N/A
+70911666,Dirty Condition,Trash,Not Cleaned by Property Owner
+70911665,Dirty Condition,Trash,Not Cleaned by Property Owner
+70911664,Dirty Condition,Trash,Not Cleaned by Property Owner
+70911663,Dirty Condition,Trash,Not Cleaned by Property Owner
+70910382,Dirty Condition,Trash,Littering
+70910247,Dirty Condition,Dog Waste,Not Cleaned by Property Owner
+70910239,Dirty Condition,Trash,Littering
+70910238,Dirty Condition,Trash,Littering
+70910237,Dirty Condition,Trash,Littering
+70910236,Dirty Condition,Trash,Littering
+70910235,Dirty Condition,Trash,Littering
+70910234,Dirty Condition,Trash,Littering
+70910233,Dirty Condition,Trash,Littering
+70910232,Dirty Condition,Trash,Littering
+70910231,Dirty Condition,Trash,Littering
+70910230,Dirty Condition,Trash,Littering
+70910229,Dirty Condition,Trash,Littering
+70910228,Dirty Condition,Trash,Littering
+70918669,Street Light Condition,Street Light Cycling,Location Type: Intersection
+70918668,Street Light Condition,Multiple Street Lights Out,Location Type: Residential Address
+70918666,Street Light Condition,Street Light Out,Location Type: Residential Address
+70918665,Street Light Condition,Street Light Out,Location Type: Residential Address
+70918664,Street Light Condition,Street Light Out,Location Type: Residential Address
+70918663,Street Light Condition,Street Light Out,Location Type: Residential Address
+70918662,Street Light Condition,Street Light Out,Location Type: Residential Address
+70918661,Street Light Condition,Street Light Out,Location Type: Residential Address
+70918660,Street Light Condition,Street Light Out,Location Type: Residential Address
+70918659,Street Light Condition,Street Light Out,Location Type: Residential Address
+70918658,Street Light Condition,Street Light Out,Location Type: Residential Address
+70918657,Street Light Condition,Street Light Out,Location Type: Residential Address
+70918656,Street Light Condition,Street Light Out,Location Type: Residential Address
+70918655,Street Light Condition,Street Light Out,Location Type: Residential Address
+70918654,Street Light Condition,Street Light Out,Location Type: Residential Address
+70918653,Street Light Condition,Street Light Out,Location Type: Residential Address
+70918652,Street Light Condition,Lamppost Knocked Down,Location Type: Intersection
+70918651,Street Light Condition,Lamppost Knocked Down,Location Type: Intersection
+70918650,Street Light Condition,Multiple Street Lights Out,Location Type: Other
+70918649,Street Light Condition,Street Light Out,Location Type: Highway
+70918648,Street Light Condition,Street Light Out,Location Type: Intersection
+70918647,Street Light Condition,Street Light Out,Location Type: Intersection
+70918646,Street Light Condition,Street Light Out,Location Type: Intersection
+70918645,Street Light Condition,Street Light Out,Location Type: Intersection
+70918644,Street Light Condition,Street Light Out,Location Type: Intersection
+70918643,Street Light Condition,Street Light Out,Location Type: Other
+70917132,Street Light Condition,Fixture/Luminaire Out Of Position,Location Type: Residential Address
+70917131,Street Light Condition,Lamppost Wire Exposed,Location Type: Residential Address
+70917125,Street Light Condition,Street Light Cycling,Location Type: Residential Address
+70917124,Street Light Condition,Street Light Lamp Missing,Location Type: Residential Address
+70917123,Street Light Condition,Street Light Out,Location Type: Residential Address
+70917122,Street Light Condition,Street Light Out,Location Type: Residential Address
+70917121,Street Light Condition,Street Light Out,Location Type: Residential Address
+70917120,Street Light Condition,Multiple Street Lights Out,Location Type: Intersection
+70917119,Street Light Condition,Multiple Street Lights Out,Location Type: Intersection
+70917118,Street Light Condition,Street Light Out,Location Type: Intersection
+70917117,Street Light Condition,Street Light Out,Location Type: Intersection
+70917116,Street Light Condition,Street Light Out,Location Type: Intersection
+70917115,Street Light Condition,Street Light Out,Location Type: Intersection
+70917114,Street Light Condition,Street Light Out,Location Type: Intersection
+70917113,Street Light Condition,Street Light Out,Location Type: Intersection
+70917112,Street Light Condition,Street Light Out,Location Type: Intersection
+70917111,Street Light Condition,Street Light Out,Location Type: Intersection
+70917110,Street Light Condition,Street Light Out,Location Type: Park
+70917109,Street Light Condition,Street Light Out,Location Type: Park
+70917108,Street Light Condition,Lamppost Knocked Down,Location Type: Highway
+70915560,Street Light Condition,Lamppost Missing,Location Type: Residential Address
+70915556,Street Light Condition,Street Light Out,Location Type: Residential Address
+70915555,Street Light Condition,Street Light Out,Location Type: Residential Address
+70915554,Street Light Condition,Street Light Out,Location Type: Residential Address
+70915553,Street Light Condition,Street Light Out,Location Type: Residential Address
+70915552,Street Light Condition,Street Light Out,Location Type: Residential Address
+70915551,Street Light Condition,Street Light Out,Location Type: Residential Address
+70915550,Street Light Condition,Street Light Out,Location Type: Residential Address
+70915549,Street Light Condition,Street Light Out,Location Type: Residential Address
+70915548,Street Light Condition,Street Light Out,Location Type: Residential Address
+70915547,Street Light Condition,Street Light Out,Location Type: Residential Address
+70915546,Street Light Condition,Multiple Street Lights Out,Location Type: Highway
+70915545,Street Light Condition,Street Light Lamp Missing,Location Type: Intersection
+70915544,Street Light Condition,Street Light Out,Location Type: Highway
+70915543,Street Light Condition,Street Light Out,Location Type: Intersection
+70915542,Street Light Condition,Street Light Out,Location Type: Intersection
+70915541,Street Light Condition,Street Light Out,Location Type: Intersection
+70915540,Street Light Condition,Street Light Out,Location Type: Intersection
+70915539,Street Light Condition,Street Light Out,Location Type: Intersection
+70915538,Street Light Condition,Street Light Out,Location Type: Intersection
+70915537,Street Light Condition,Street Light Out,Location Type: Intersection
+70915536,Street Light Condition,Street Light Out,Location Type: Intersection
+70915535,Street Light Condition,Street Light Out,Location Type: Intersection
+70915534,Street Light Condition,Street Light Out,Location Type: Intersection
+70915533,Street Light Condition,Street Light Out,Location Type: Intersection
+70915532,Street Light Condition,Street Light Out,Location Type: Park
+70915531,Street Light Condition,Street Light Out,Location Type: Park
+70914021,Street Light Condition,Street Light Out,Location Type: Residential Address
+70914020,Street Light Condition,Street Light Out,Location Type: Residential Address
+70914019,Street Light Condition,Street Light Out,Location Type: Residential Address
+70914018,Street Light Condition,Street Light Out,Location Type: Residential Address
+70914017,Street Light Condition,Street Light Out,Location Type: Residential Address
+70914016,Street Light Condition,Street Light Out,Location Type: Residential Address
+70914015,Street Light Condition,Street Light Out,Location Type: Residential Address
+70914014,Street Light Condition,Street Light Out,Location Type: Residential Address
+70914013,Street Light Condition,Street Light Out,Location Type: Residential Address
+70914012,Street Light Condition,Multiple Street Lights Out,Location Type: Highway
+70914011,Street Light Condition,Multiple Street Lights Out,Location Type: Other
+70914010,Street Light Condition,Street Light Out,Location Type: Intersection
+70914009,Street Light Condition,Street Light Out,Location Type: Intersection
+70914008,Street Light Condition,Street Light Out,Location Type: Intersection
+70914007,Street Light Condition,Street Light Out,Location Type: Intersection
+70914006,Street Light Condition,Street Light Out,Location Type: Intersection
+70914005,Street Light Condition,Street Light Out,Location Type: Intersection
+70912434,Street Light Condition,Street Light Cycling,Location Type: Intersection
+70912433,Street Light Condition,New Con Ed Service Request,Location Type: Intersection
+70912431,Street Light Condition,Street Light Out,Location Type: Residential Address
+70912430,Street Light Condition,Street Light Out,Location Type: Residential Address
+70912429,Street Light Condition,Street Light Out,Location Type: Residential Address
+70912428,Street Light Condition,Street Light Out,Location Type: Residential Address
+70912427,Street Light Condition,Street Light Out,Location Type: Residential Address
+70912426,Street Light Condition,Multiple Street Lights Out,Location Type: Other
+70912425,Street Light Condition,Street Light Out,Location Type: Intersection
+70912424,Street Light Condition,Street Light Out,Location Type: Intersection
+70912423,Street Light Condition,Street Light Out,Location Type: Intersection
+70912422,Street Light Condition,Street Light Out,Location Type: Intersection
+70912421,Street Light Condition,Street Light Out,Location Type: Intersection
+70912420,Street Light Condition,Street Light Out,Location Type: Intersection
+70912419,Street Light Condition,Street Light Out,Location Type: Intersection
+70912418,Street Light Condition,Street Light Out,Location Type: Intersection
+70912417,Street Light Condition,Street Light Out,Location Type: Intersection
+70912416,Street Light Condition,Street Light Out,Location Type: Other
+70912415,Street Light Condition,Street Light Out,Location Type: Park
+70912414,Street Light Condition,Lamppost Damaged,Location Type: Other
+70912413,Street Light Condition,Lamppost Knocked Down,Location Type: Highway
+70912412,Street Light Condition,Fixture/Luminaire Hanging,Location Type: Intersection
+70910909,Street Light Condition,Street Light Cycling,Location Type: Intersection
+70910908,Street Light Condition,Fixture/Luminaire Damaged,Location Type: Intersection
+70910907,Street Light Condition,Street Light Out,Location Type: Residential Address
+70910906,Street Light Condition,Street Light Out,Location Type: Residential Address
+70910905,Street Light Condition,Street Light Out,Location Type: Residential Address
+70910904,Street Light Condition,Street Light Out,Location Type: Residential Address
+70910903,Street Light Condition,Street Light Out,Location Type: Residential Address
+70910902,Street Light Condition,Street Light Out,Location Type: Residential Address
+70910901,Street Light Condition,Street Light Out,Location Type: Residential Address
+70910900,Street Light Condition,Street Light Out,Location Type: Residential Address
+70910899,Street Light Condition,Street Light Out,Location Type: Residential Address
+70910898,Street Light Condition,Street Light Out,Location Type: Residential Address
+70910897,Street Light Condition,Street Light Out,Location Type: Residential Address
+70910896,Street Light Condition,Street Light Out,Location Type: Residential Address
+70910895,Street Light Condition,Street Light Out,Location Type: Residential Address
+70910894,Street Light Condition,Street Light Out,Location Type: Residential Address
+70910893,Street Light Condition,Multiple Street Lights Out,Location Type: Highway
+70910892,Street Light Condition,Multiple Street Lights Out,Location Type: Other
+70910891,Street Light Condition,Street Light Out,Location Type: Intersection
+70910890,Street Light Condition,Street Light Out,Location Type: Intersection
+70910889,Street Light Condition,Street Light Out,Location Type: Intersection
+70910888,Street Light Condition,Street Light Out,Location Type: Intersection
+70910887,Street Light Condition,Street Light Out,Location Type: Intersection
+70910886,Street Light Condition,Street Light Out,Location Type: Intersection
+70910885,Street Light Condition,Street Light Out,Location Type: Intersection
+70910884,Street Light Condition,Street Light Out,Location Type: Other
+70909398,Street Light Condition,Fixture/Luminaire Hanging,Location Type: Intersection
+70909397,Street Light Condition,Lamppost Leaning,Location Type: Residential Address
+70909391,Street Light Condition,Street Light Lamp Missing,Location Type: Residential Address
+70909390,Street Light Condition,Street Light Out,Location Type: Residential Address
+70909389,Street Light Condition,Street Light Out,Location Type: Residential Address
+70909388,Street Light Condition,Street Light Out,Location Type: Residential Address
+70909387,Street Light Condition,Street Light Out,Location Type: Residential Address
+70909386,Street Light Condition,Street Light Out,Location Type: Residential Address
+70909385,Street Light Condition,Street Light Out,Location Type: Residential Address
+70909384,Street Light Condition,Street Light Out,Location Type: Residential Address
+70909383,Street Light Condition,Street Light Out,Location Type: Residential Address
+70909382,Street Light Condition,Street Light Out,Location Type: Residential Address
+70919385,Noise - Residential,Loud Talking,
+70919384,Noise - Residential,Loud Talking,
+70919378,Noise - Street/Sidewalk,Loud Music/Party,
+70919374,Noise - Street/Sidewalk,Loud Music/Party,
+70919372,Noise - Street/Sidewalk,Loud Talking,
+70919371,Noise - Street/Sidewalk,Loud Talking,
+70919369,Noise - Residential,Banging/Pounding,
+70919367,Noise - Residential,Banging/Pounding,
+70919366,Noise - Street/Sidewalk,Loud Music/Party,
+70919365,Noise - Street/Sidewalk,Loud Talking,
+70919361,Noise - Street/Sidewalk,Loud Music/Party,
+70919358,Noise - Residential,Banging/Pounding,
+70919357,Noise - Residential,Loud Music/Party,
+70919356,Noise - Residential,Loud Music/Party,
+70919354,Noise - Residential,Loud Music/Party,
+70919352,Noise - Residential,Banging/Pounding,
+70919351,Noise - Street/Sidewalk,Loud Talking,
+70919329,Noise - Residential,Banging/Pounding,
+70919328,Noise - Street/Sidewalk,Loud Music/Party,
+70919327,Noise - Street/Sidewalk,Loud Music/Party,
+70919318,Noise - Residential,Banging/Pounding,
+70919317,Noise - Street/Sidewalk,Loud Talking,
+70919312,Noise - Residential,Loud Music/Party,
+70919290,Noise - Street/Sidewalk,Loud Music/Party,
+70919286,Noise - Street/Sidewalk,Loud Talking,
+70919273,Noise - Residential,Banging/Pounding,
+70919272,Noise - Residential,Loud Talking,
+70919266,Noise - Residential,Banging/Pounding,
+70919257,Noise - Residential,Loud Talking,
+70919248,Noise - Street/Sidewalk,Loud Music/Party,
+70919247,Noise - Street/Sidewalk,Loud Talking,
+70919245,Noise - Residential,Loud Music/Party,
+70919226,Noise - Residential,Loud Music/Party,
+70919202,Noise - Residential,Loud Music/Party,
+70919195,Noise - Residential,Loud Talking,
+70919187,Noise - Residential,Loud Music/Party,
+70919186,Noise - Residential,Loud Music/Party,
+70919181,Noise - Residential,Banging/Pounding,
+70919177,Noise - Street/Sidewalk,Loud Music/Party,
+70919176,Noise - Street/Sidewalk,Loud Music/Party,
+70919174,Noise - Residential,Loud Television,
+70919173,Noise - Residential,Banging/Pounding,
+70919171,Noise - Residential,Banging/Pounding,
+70919170,Noise - Residential,Loud Talking,
+70919169,Noise - Street/Sidewalk,Loud Music/Party,
+70919167,Noise - Residential,Banging/Pounding,
+70919166,Noise - Residential,Loud Music/Party,
+70919165,Noise - Residential,Loud Music/Party,
+70919164,Noise - Street/Sidewalk,Loud Music/Party,
+70919163,Noise - Residential,Loud Music/Party,
+70919162,Noise - Residential,Loud Television,
+70919161,Noise - Residential,Loud Music/Party,
+70919160,Noise - Residential,Banging/Pounding,
+70919159,Noise - Residential,Banging/Pounding,
+70919158,Noise - Residential,Banging/Pounding,
+70919157,Noise - Residential,Banging/Pounding,
+70919156,Noise - Residential,Loud Music/Party,
+70919155,Noise - Street/Sidewalk,Loud Music/Party,
+70919154,Noise - Street/Sidewalk,Loud Talking,
+70919153,Noise - Residential,Loud Music/Party,
+70918574,Noise - Street/Sidewalk,Loud Music/Party,
+70918573,Noise - Street/Sidewalk,Loud Music/Party,
+70918565,Noise - Street/Sidewalk,Loud Talking,
+70918557,Noise - Residential,Banging/Pounding,
+70918547,Noise - Street/Sidewalk,Loud Talking,
+70918544,Noise - Residential,Banging/Pounding,
+70918543,Noise - Residential,Loud Talking,
+70918534,Noise - Residential,Banging/Pounding,
+70918533,Noise - Residential,Loud Music/Party,
+70918526,Noise - Residential,Banging/Pounding,
+70918525,Noise - Residential,Banging/Pounding,
+70918524,Noise - Residential,Loud Music/Party,
+70918523,Noise - Residential,Loud Music/Party,
+70918504,Noise - Residential,Banging/Pounding,
+70918503,Noise - Residential,Banging/Pounding,
+70918502,Noise - Residential,Banging/Pounding,
+70918489,Noise - Residential,Banging/Pounding,
+70918488,Noise - Residential,Loud Talking,
+70918480,Noise - Residential,Loud Music/Party,
+70918479,Noise - Street/Sidewalk,Loud Music/Party,
+70918438,Noise - Residential,Banging/Pounding,
+70918437,Noise - Residential,Loud Music/Party,
+70918433,Noise - Residential,Loud Television,
+70918430,Noise - Residential,Loud Music/Party,
+70918429,Noise - Street/Sidewalk,Loud Music/Party,
+70918401,Noise - Residential,Banging/Pounding,
+70918400,Noise - Residential,Banging/Pounding,
+70918399,Noise - Residential,Banging/Pounding,
+70918384,Noise - Residential,Banging/Pounding,
+70918373,Noise - Residential,Banging/Pounding,
+70918372,Noise - Residential,Banging/Pounding,
+70918371,Noise - Residential,Banging/Pounding,
+70918370,Noise - Residential,Banging/Pounding,
+70918369,Noise - Residential,Banging/Pounding,
+70918368,Noise - Residential,Banging/Pounding,
+70918367,Noise - Residential,Banging/Pounding,
+70918366,Noise - Residential,Banging/Pounding,
+70918362,Noise - Residential,Loud Music/Party,
+70918352,Noise - Residential,Banging/Pounding,
+70918351,Noise - Residential,Banging/Pounding,
+70918350,Noise - Residential,Banging/Pounding,
+70918343,Noise - Street/Sidewalk,Loud Music/Party,
+70918336,Noise - Residential,Banging/Pounding,
+70918335,Noise - Residential,Banging/Pounding,
+70918334,Noise - Residential,Loud Music/Party,
+70918333,Noise - Street/Sidewalk,Loud Music/Party,
+70918331,Noise - Residential,Loud Music/Party,
+70918325,Noise - Residential,Banging/Pounding,
+70918324,Noise - Residential,Loud Music/Party,
+70918323,Noise - Residential,Loud Talking,
+70918320,Noise - Residential,Banging/Pounding,
+70918307,Noise - Residential,Loud Talking,
+70918295,Noise - Residential,Banging/Pounding,
+70918294,Noise - Residential,Loud Music/Party,
+70918286,Noise - Residential,Banging/Pounding,
+70918285,Noise - Residential,Loud Music/Party,
+70918284,Noise - Residential,Loud Music/Party,
+70918270,Noise - Street/Sidewalk,Loud Music/Party,
+70918264,Noise - Residential,Banging/Pounding,
+70918263,Noise - Residential,Loud Talking,
+70918262,Noise - Street/Sidewalk,Loud Music/Party,
+70918261,Noise - Street/Sidewalk,Loud Talking,
+70918258,Noise - Residential,Banging/Pounding,
+70918257,Noise - Residential,Loud Music/Party,
+70918251,Noise - Residential,Loud Music/Party,
+70918250,Noise - Residential,Loud Music/Party,
+70918249,Noise - Street/Sidewalk,Loud Music/Party,
+70918246,Noise - Residential,Banging/Pounding,
+70917846,Noise - Residential,Loud Music/Party,
+70917845,Noise - Residential,Loud Music/Party,
+70917844,Noise - Residential,Loud Talking,
+70917839,Noise - Residential,Loud Music/Party,
+70917838,Noise - Street/Sidewalk,Loud Talking,
+70917837,Noise - Street/Sidewalk,Loud Talking,
+70917835,Noise - Street/Sidewalk,Loud Music/Party,
+70917834,Noise - Street/Sidewalk,Loud Music/Party,
+70917832,Noise - Street/Sidewalk,Loud Talking,
+70917829,Noise - Street/Sidewalk,Loud Music/Party,
+70917826,Noise - Residential,Loud Television,
+70917825,Noise - Residential,Loud Music/Party,
+70917824,Noise - Residential,Loud Music/Party,
+70917823,Noise - Street/Sidewalk,Loud Talking,
+70917818,Noise - Residential,Loud Music/Party,
+70917817,Noise - Residential,Loud Music/Party,
+70917810,Noise - Residential,Loud Talking,
+70917809,Noise - Residential,Loud Talking,
+70917804,Noise - Residential,Banging/Pounding,
+70917803,Noise - Street/Sidewalk,Loud Music/Party,
+70917802,Noise - Street/Sidewalk,Loud Music/Party,
+70917791,Noise - Residential,Loud Music/Party,

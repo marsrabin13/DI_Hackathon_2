@@ -1,0 +1,25 @@
+text,category,family_id,source,source_key,expected_status
+"On the Tel Aviv demo cycle route, several fixed lane delineators have snapped off at ground level.",roads,test_roads_damaged_delineators,synthetic,,routed
+The cobblestones in the shared street have shifted into an uneven ridge that catches bicycle tyres.,roads,test_roads_uneven_cobbles,synthetic,,routed
+Old lane arrows remain visible after the road layout changed and are directing drivers into the wrong lane.,roads,test_roads_old_lane_markings,synthetic,,routed
+"A tread is missing from the municipal pedestrian steps, leaving a gap in the staircase.",roads,test_roads_public_steps,synthetic,,routed
+A concrete separator beside the cycle lane has broken apart and is jutting into the riding space.,roads,test_roads_cycle_separator,synthetic,,routed
+Windblown leaflets now blanket the paved public courtyard; please arrange a sweep.,waste,test_waste_paper_in_courtyard,synthetic,,routed
+Bags of renovation rubble have been dumped on a public verge in the Tel Aviv demo area.,waste,test_waste_construction_rubble,synthetic,,routed
+A large heap of cut branches and garden trimmings was left on the promenade for removal.,waste,test_waste_garden_cuttings,synthetic,,routed
+"A refuse truck spilled mixed rubbish at the junction, leaving a trail across the carriageway.",waste,test_waste_truck_spillage,synthetic,,routed
+Rotting vegetables have been left beside the public food-sharing cupboard and need to be cleared away.,waste,test_waste_spoiled_produce,synthetic,,routed
+Half the LED panels on the high-mast public light have stopped working while the remaining panels still glow.,lighting,test_lighting_partial_highmast_panel,synthetic,,routed
+"The shade has come off the promenade lamp, so its light spills upwards instead of being contained.",lighting,test_lighting_detached_shade,synthetic,,routed
+"The service identification plate is missing from a municipal lighting column, preventing us from identifying the lamp for maintenance.",lighting,test_lighting_missing_service_id,synthetic,,routed
+The maintenance hatch on the streetlight column is jammed open; the internal wiring remains behind its intact sealed barrier.,lighting,test_lighting_jammed_service_hatch,synthetic,,routed
+A thick white salt coating has formed on the seaside lamp housing and its glass needs specialist cleaning.,lighting,test_lighting_salt_deposits,synthetic,,routed
+An alarm clock rings repeatedly in the empty neighbouring flat for hours every morning and wakes us.,noise,test_noise_alarm_clock,synthetic,,routed
+A neighbour's indoor bedroom fan rattles loudly against our shared wall throughout the night.,noise,test_noise_bedroom_fan_rattle,synthetic,,routed
+Late-night gaming in the adjacent apartment includes repeated loud yelling into a headset.,noise,test_noise_home_gaming,synthetic,,routed
+"A group practises tap dancing on the pavement beneath our windows at night, making continuous sharp tapping sounds.",noise,test_noise_street_dancing,synthetic,,routed
+Singing lessons in the flat opposite are held at amplified volume during our building's quiet evening hours.,noise,test_noise_home_singing_lessons,synthetic,,routed
+Something is wrong near my place in Tel Aviv. Can somebody help?,,test_policy_vague,synthetic,,review_required
+How do I renew my passport and change the name printed in it?,,test_policy_unsupported_passport,synthetic,,review_required
+"There is a new pothole beside an overflowing rubbish bin, and both need attention.",,test_policy_multiple_issues,synthetic,,review_required
+An exposed live wire is sparking from the streetlight pole beside the footpath.,,test_policy_exposed_live_wire,synthetic,,urgent_review

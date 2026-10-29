@@ -1,0 +1,91 @@
+report_id,city_id,text,category,latitude,longitude,created_at_utc,source
+DEMO-001,il_tel_aviv,Cracked road surface by the crossing.,roads,32.068426,34.77408,2026-10-25T18:40:13Z,synthetic_demo
+DEMO-002,il_tel_aviv,Broken pavement outside the shops.,roads,32.067978,34.773701,2026-10-22T03:09:02Z,synthetic_demo
+DEMO-003,il_tel_aviv,Pothole getting bigger near the junction.,roads,32.06786,34.774088,2026-10-27T14:42:34Z,synthetic_demo
+DEMO-004,il_tel_aviv,Pothole getting bigger near the junction.,roads,32.067748,34.77399,2026-10-21T22:31:32Z,synthetic_demo
+DEMO-005,il_tel_aviv,Broken pavement outside the shops.,roads,32.067859,34.773771,2026-10-23T15:48:22Z,synthetic_demo
+DEMO-006,il_tel_aviv,Pothole getting bigger near the junction.,roads,32.067786,34.773841,2026-10-26T19:29:46Z,synthetic_demo
+DEMO-007,il_tel_aviv,Pothole getting bigger near the junction.,roads,32.067758,34.774448,2026-10-26T03:17:08Z,synthetic_demo
+DEMO-008,il_tel_aviv,Pothole getting bigger near the junction.,roads,32.067727,34.774532,2026-10-24T03:20:18Z,synthetic_demo
+DEMO-009,il_tel_aviv,Broken pavement outside the shops.,roads,32.068096,34.773838,2026-10-25T12:57:10Z,synthetic_demo
+DEMO-010,il_tel_aviv,Broken pavement outside the shops.,roads,32.067939,34.773433,2026-10-27T05:38:31Z,synthetic_demo
+DEMO-011,il_tel_aviv,Broken pavement outside the shops.,roads,32.067616,34.774434,2026-10-25T04:36:21Z,synthetic_demo
+DEMO-012,il_tel_aviv,Cracked road surface by the crossing.,roads,32.067639,34.773607,2026-10-26T09:59:31Z,synthetic_demo
+DEMO-013,il_tel_aviv,Overflowing bins on the corner.,waste,32.080434,34.782152,2026-10-25T05:42:35Z,synthetic_demo
+DEMO-014,il_tel_aviv,Overflowing bins on the corner.,waste,32.080329,34.781502,2026-10-24T03:16:49Z,synthetic_demo
+DEMO-015,il_tel_aviv,Rubbish bags left on the pavement.,waste,32.079813,34.781747,2026-10-26T18:37:25Z,synthetic_demo
+DEMO-016,il_tel_aviv,Rubbish bags left on the pavement.,waste,32.080083,34.782375,2026-10-27T21:12:10Z,synthetic_demo
+DEMO-017,il_tel_aviv,Litter piling up near the benches.,waste,32.0802,34.782437,2026-10-25T18:41:38Z,synthetic_demo
+DEMO-018,il_tel_aviv,Litter piling up near the benches.,waste,32.079842,34.782177,2026-10-21T23:46:36Z,synthetic_demo
+DEMO-019,il_tel_aviv,Overflowing bins on the corner.,waste,32.079886,34.782266,2026-10-25T23:17:06Z,synthetic_demo
+DEMO-020,il_tel_aviv,Rubbish bags left on the pavement.,waste,32.080166,34.781457,2026-10-25T12:00:54Z,synthetic_demo
+DEMO-021,il_tel_aviv,Litter piling up near the benches.,waste,32.080119,34.781915,2026-10-24T22:20:37Z,synthetic_demo
+DEMO-022,il_tel_aviv,Litter piling up near the benches.,waste,32.079751,34.782001,2026-10-23T04:20:59Z,synthetic_demo
+DEMO-023,il_tel_aviv,"Dark stretch, lamps not working.",lighting,32.10313,34.792185,2026-10-21T22:29:23Z,synthetic_demo
+DEMO-024,il_tel_aviv,Lamp flickering all night.,lighting,32.102993,34.791533,2026-10-23T21:39:59Z,synthetic_demo
+DEMO-025,il_tel_aviv,Streetlight out on this block.,lighting,32.103324,34.791994,2026-10-22T13:35:23Z,synthetic_demo
+DEMO-026,il_tel_aviv,Streetlight out on this block.,lighting,32.103014,34.791553,2026-10-26T21:28:55Z,synthetic_demo
+DEMO-027,il_tel_aviv,Lamp flickering all night.,lighting,32.103112,34.791514,2026-10-27T23:29:47Z,synthetic_demo
+DEMO-028,il_tel_aviv,Lamp flickering all night.,lighting,32.102725,34.791776,2026-10-22T07:53:04Z,synthetic_demo
+DEMO-029,il_tel_aviv,Streetlight out on this block.,lighting,32.102745,34.791895,2026-10-27T08:38:04Z,synthetic_demo
+DEMO-030,il_tel_aviv,Lamp flickering all night.,lighting,32.102567,34.791879,2026-10-24T14:55:01Z,synthetic_demo
+DEMO-031,il_tel_aviv,Pothole getting bigger near the junction.,roads,32.07435,34.765127,2026-10-25T13:16:57Z,synthetic_demo
+DEMO-032,il_tel_aviv,Litter piling up near the benches.,waste,32.095768,34.760832,2026-10-25T03:04:18Z,synthetic_demo
+DEMO-033,il_tel_aviv,Litter piling up near the benches.,waste,32.060284,34.815288,2026-10-22T07:31:24Z,synthetic_demo
+DEMO-034,il_tel_aviv,Pothole getting bigger near the junction.,roads,32.104894,34.792554,2026-10-24T08:16:28Z,synthetic_demo
+DEMO-035,il_tel_aviv,"Dark stretch, lamps not working.",lighting,32.068945,34.771992,2026-10-27T19:03:38Z,synthetic_demo
+DEMO-036,il_tel_aviv,Broken pavement outside the shops.,roads,32.118191,34.81973,2026-10-27T05:22:11Z,synthetic_demo
+DEMO-037,il_tel_aviv,Overflowing bins on the corner.,waste,32.110975,34.830588,2026-10-25T12:47:48Z,synthetic_demo
+DEMO-038,il_tel_aviv,Shouting outside at night.,noise,32.141436,34.8291,2026-10-26T07:24:38Z,synthetic_demo
+DEMO-039,il_tel_aviv,Lamp flickering all night.,lighting,32.084899,34.80775,2026-10-23T10:23:39Z,synthetic_demo
+DEMO-040,il_tel_aviv,Construction noise early morning.,noise,32.0571,34.77065,2026-10-28T11:52:24Z,synthetic_demo
+DEMO-041,il_tel_aviv,Litter piling up near the benches.,waste,32.103844,34.752597,2026-10-28T00:51:07Z,synthetic_demo
+DEMO-042,il_tel_aviv,Rubbish bags left on the pavement.,waste,32.05174,34.754607,2026-10-27T21:21:41Z,synthetic_demo
+DEMO-043,il_tel_aviv,Litter piling up near the benches.,waste,32.072848,34.792289,2026-10-27T03:27:41Z,synthetic_demo
+DEMO-044,il_tel_aviv,Construction noise early morning.,noise,32.0693,34.791257,2026-10-26T10:32:21Z,synthetic_demo
+DEMO-045,il_tel_aviv,Cracked road surface by the crossing.,roads,32.054693,34.787777,2026-10-23T18:15:29Z,synthetic_demo
+DEMO-046,il_tel_aviv,Shouting outside at night.,noise,32.131384,34.756496,2026-10-27T13:20:02Z,synthetic_demo
+DEMO-047,il_tel_aviv,Pothole getting bigger near the junction.,roads,32.085262,34.780162,2026-10-25T17:34:25Z,synthetic_demo
+DEMO-048,il_tel_aviv,Rubbish bags left on the pavement.,waste,32.064021,34.789235,2026-10-26T12:33:19Z,synthetic_demo
+DEMO-049,il_tel_aviv,Streetlight out on this block.,lighting,32.091263,34.824582,2026-10-23T08:55:44Z,synthetic_demo
+DEMO-050,il_tel_aviv,Pothole getting bigger near the junction.,roads,32.050059,34.83494,2026-10-27T14:50:07Z,synthetic_demo
+DEMO-051,il_tel_aviv,Overflowing bins on the corner.,waste,32.061631,34.792308,2026-10-23T21:11:19Z,synthetic_demo
+DEMO-052,il_tel_aviv,Cracked road surface by the crossing.,roads,32.061464,34.752179,2026-10-25T12:45:15Z,synthetic_demo
+DEMO-053,il_tel_aviv,Shouting outside at night.,noise,32.073525,34.809817,2026-10-22T00:07:15Z,synthetic_demo
+DEMO-054,il_tel_aviv,Loud music late at night.,noise,32.06048,34.776627,2026-10-22T04:04:28Z,synthetic_demo
+DEMO-055,il_tel_aviv,Broken pavement outside the shops.,roads,32.119798,34.756745,2026-10-22T23:07:32Z,synthetic_demo
+DEMO-056,il_tel_aviv,Overflowing bins on the corner.,waste,32.050688,34.79415,2026-10-27T22:02:31Z,synthetic_demo
+DEMO-057,il_tel_aviv,Pothole getting bigger near the junction.,roads,32.112521,34.771522,2026-10-21T20:04:13Z,synthetic_demo
+DEMO-058,il_tel_aviv,Overflowing bins on the corner.,waste,32.102892,34.755299,2026-10-23T15:53:31Z,synthetic_demo
+DEMO-059,il_tel_aviv,"Dark stretch, lamps not working.",lighting,32.138471,34.768954,2026-10-24T22:29:15Z,synthetic_demo
+DEMO-060,il_tel_aviv,Litter piling up near the benches.,waste,32.071561,34.762863,2026-10-25T02:37:11Z,synthetic_demo
+DEMO-061,il_tel_aviv,Loud music late at night.,noise,32.076618,34.814405,2026-10-28T15:17:13Z,synthetic_demo
+DEMO-062,il_tel_aviv,Loud music late at night.,noise,32.107116,34.798728,2026-10-27T20:39:41Z,synthetic_demo
+DEMO-063,il_tel_aviv,Rubbish bags left on the pavement.,waste,32.095588,34.762994,2026-10-27T21:57:48Z,synthetic_demo
+DEMO-064,il_tel_aviv,Litter piling up near the benches.,waste,32.081953,34.765093,2026-10-25T01:53:08Z,synthetic_demo
+DEMO-065,il_tel_aviv,Broken pavement outside the shops.,roads,32.111786,34.798032,2026-10-27T11:49:42Z,synthetic_demo
+DEMO-066,il_tel_aviv,Litter piling up near the benches.,waste,32.071447,34.825846,2026-10-22T00:51:43Z,synthetic_demo
+DEMO-067,il_tel_aviv,Litter piling up near the benches.,waste,32.072235,34.802201,2026-10-24T14:07:44Z,synthetic_demo
+DEMO-068,il_tel_aviv,Litter piling up near the benches.,waste,32.11375,34.822792,2026-10-22T19:42:18Z,synthetic_demo
+DEMO-069,il_tel_aviv,Streetlight out on this block.,lighting,32.135534,34.822227,2026-10-23T14:37:29Z,synthetic_demo
+DEMO-070,il_tel_aviv,Streetlight out on this block.,lighting,32.049409,34.779685,2026-10-25T13:42:00Z,synthetic_demo
+DEMO-071,il_tel_aviv,Rubbish bags left on the pavement.,waste,32.119123,34.797789,2026-10-21T22:37:27Z,synthetic_demo
+DEMO-072,il_tel_aviv,Broken pavement outside the shops.,roads,32.056187,34.830439,2026-10-26T22:35:06Z,synthetic_demo
+DEMO-073,il_tel_aviv,Pothole getting bigger near the junction.,roads,32.12846,34.800348,2026-10-23T12:48:56Z,synthetic_demo
+DEMO-074,il_tel_aviv,Overflowing bins on the corner.,waste,32.049183,34.782266,2026-10-24T09:46:50Z,synthetic_demo
+DEMO-075,il_tel_aviv,Rubbish bags left on the pavement.,waste,32.113207,34.807355,2026-10-21T22:55:20Z,synthetic_demo
+DEMO-076,il_tel_aviv,Loud music late at night.,noise,32.142384,34.814207,2026-10-26T18:40:05Z,synthetic_demo
+DEMO-077,il_tel_aviv,Litter piling up near the benches.,waste,32.133142,34.754057,2026-10-24T17:14:39Z,synthetic_demo
+DEMO-078,il_tel_aviv,Loud music late at night.,noise,32.125224,34.823717,2026-10-25T12:17:14Z,synthetic_demo
+DEMO-079,il_tel_aviv,Overflowing bins on the corner.,waste,32.123737,34.760972,2026-10-23T00:54:06Z,synthetic_demo
+DEMO-080,il_tel_aviv,Rubbish bags left on the pavement.,waste,32.064957,34.828232,2026-10-25T01:06:25Z,synthetic_demo
+DEMO-081,il_tel_aviv,Rubbish bags left on the pavement.,waste,32.067292,34.806783,2026-10-24T18:23:13Z,synthetic_demo
+DEMO-082,il_tel_aviv,Lamp flickering all night.,lighting,32.131435,34.832252,2026-10-24T11:43:17Z,synthetic_demo
+DEMO-083,il_tel_aviv,Construction noise early morning.,noise,32.112952,34.822024,2026-10-28T09:57:39Z,synthetic_demo
+DEMO-084,il_tel_aviv,Broken pavement outside the shops.,roads,32.132704,34.773681,2026-10-25T12:40:39Z,synthetic_demo
+DEMO-085,il_tel_aviv,Broken pavement outside the shops.,roads,32.05584,34.788069,2026-10-24T22:38:06Z,synthetic_demo
+DEMO-086,il_tel_aviv,Construction noise early morning.,noise,32.105621,34.794448,2026-10-21T18:03:24Z,synthetic_demo
+DEMO-087,il_tel_aviv,Overflowing bins on the corner.,waste,32.070472,34.810829,2026-10-22T10:33:45Z,synthetic_demo
+DEMO-088,il_tel_aviv,Litter piling up near the benches.,waste,32.081422,34.757808,2026-10-24T17:49:21Z,synthetic_demo
+DEMO-089,il_tel_aviv,Lamp flickering all night.,lighting,32.111339,34.762344,2026-10-22T14:17:24Z,synthetic_demo
+DEMO-090,il_tel_aviv,"Dark stretch, lamps not working.",lighting,32.111689,34.779073,2026-10-25T03:53:04Z,synthetic_demo

@@ -1,0 +1,25 @@
+text,true_category,predicted_category,score,margin,routing_state,reasons,expected_status
+The painted pedestrian crossing has almost disappeared; drivers cannot make out its white stripes.,roads,roads,0.401,0.092,routed,,routed
+"A broad section of carriageway has dropped noticeably, leaving the middle of the junction lower than its edges.",roads,roads,0.508,0.274,routed,,routed
+A raised bubble has formed in the road's asphalt coating and is lifting the surface into a dome.,roads,roads,0.612,0.461,routed,,routed
+"The tactile paving tiles at the crossing have broken studs, so the guidance surface is incomplete.",roads,roads,0.404,0.172,routed,,routed
+"A temporary steel road plate has lifted at one end, creating a hard step for passing cars.",roads,roads,0.472,0.272,routed,,routed
+The concrete pedestrian refuge in the middle of the road is chipped away and needs repair.,roads,roads,0.482,0.263,routed,,routed
+"The bottle recycling bank is full to its opening, and more empty containers have been left around it.",waste,waste,0.403,0.177,routed,,routed
+An old television and a broken computer were abandoned beside the communal bins for removal.,waste,waste,0.308,0.047,review_required,low_score<0.4;low_margin<0.05,routed
+Empty produce crates are strewn across the public market after the stalls closed.,waste,waste,0.321,0.08,review_required,low_score<0.4,routed
+White foam packing pieces are scattered over the public square following a delivery.,waste,waste,0.374,0.144,review_required,low_score<0.4,routed
+Sacks of unwanted clothing have been left on the municipal stair landing and need collection.,waste,waste,0.421,0.203,routed,,routed
+"Refuse bags left for pickup have torn open, spilling their contents across the shared collection area.",waste,waste,0.472,0.284,routed,,routed
+The public streetlight shines with such harsh glare into our bedroom that we need its brightness checked.,lighting,noise,0.338,0.102,review_required,low_score<0.4,routed
+"Each time a car passes, its headlights trigger the streetlamp sensor and the pavement light switches off.",lighting,lighting,0.411,0.182,routed,,routed
+Rainwater is collecting inside the streetlight's transparent cover; droplets are visible around the bulb.,lighting,waste,0.311,0.047,review_required,low_score<0.4;low_margin<0.05,routed
+The mounting bracket holding the public lamp is badly corroded and needs inspection.,lighting,waste,0.384,0.031,review_required,low_score<0.4;low_margin<0.05,routed
+The lamp on the public footpath has changed from white to an unusual purple colour.,lighting,lighting,0.329,0.061,review_required,low_score<0.4,routed
+"The base of the lighting column has loose bolts, and the pole wobbles slightly when touched; no wires are visible.",lighting,roads,0.352,0.038,review_required,low_score<0.4;low_margin<0.05,routed
+Piano scales from the next flat continue past midnight at a volume that keeps our child awake.,noise,noise,0.436,0.235,routed,,routed
+Our neighbour makes very loud phone calls beside the shared bedroom wall every night.,noise,noise,0.423,0.183,routed,,routed
+Someone jumps repeatedly on an exercise machine in the apartment above during sleeping hours.,noise,noise,0.475,0.268,routed,,routed
+"Children run and stamp along the residential hallway very early each morning, disturbing the flats.",noise,lighting,0.364,0.117,review_required,low_score<0.4,routed
+A person whistles sharply and repeatedly on the pavement beneath our windows long after midnight.,noise,noise,0.476,0.276,routed,,routed
+A late-night pavement game involves repeated ball bouncing directly outside our sleeping area.,noise,noise,0.44,0.239,routed,,routed

@@ -1,0 +1,65 @@
+{
+  "snapshot_sha256": "f82e2abdaa8ec4659073ba690e73c7089d678824007ab2defc4daf856728cfd5",
+  "download": {
+    "status": "complete",
+    "attempts": [
+      {
+        "category": "roads",
+        "parameters": {
+          "$select": "unique_key,complaint_type,descriptor,descriptor_2",
+          "$where": "complaint_type in ('Street Condition') AND descriptor IS NOT NULL AND descriptor != ''",
+          "$limit": "150",
+          "$order": "unique_key DESC"
+        },
+        "encoded_url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=unique_key%2Ccomplaint_type%2Cdescriptor%2Cdescriptor_2&%24where=complaint_type+in+%28%27Street+Condition%27%29+AND+descriptor+IS+NOT+NULL+AND+descriptor+%21%3D+%27%27&%24limit=150&%24order=unique_key+DESC",
+        "returned_rows": 150,
+        "status": "success",
+        "elapsed_seconds": 7.222
+      },
+      {
+        "category": "waste",
+        "parameters": {
+          "$select": "unique_key,complaint_type,descriptor,descriptor_2",
+          "$where": "complaint_type in ('Dirty Condition') AND descriptor IS NOT NULL AND descriptor != ''",
+          "$limit": "150",
+          "$order": "unique_key DESC"
+        },
+        "encoded_url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=unique_key%2Ccomplaint_type%2Cdescriptor%2Cdescriptor_2&%24where=complaint_type+in+%28%27Dirty+Condition%27%29+AND+descriptor+IS+NOT+NULL+AND+descriptor+%21%3D+%27%27&%24limit=150&%24order=unique_key+DESC",
+        "returned_rows": 150,
+        "status": "success",
+        "elapsed_seconds": 6.097
+      },
+      {
+        "category": "lighting",
+        "parameters": {
+          "$select": "unique_key,complaint_type,descriptor,descriptor_2",
+          "$where": "complaint_type in ('Street Light Condition') AND descriptor IS NOT NULL AND descriptor != ''",
+          "$limit": "150",
+          "$order": "unique_key DESC"
+        },
+        "encoded_url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=unique_key%2Ccomplaint_type%2Cdescriptor%2Cdescriptor_2&%24where=complaint_type+in+%28%27Street+Light+Condition%27%29+AND+descriptor+IS+NOT+NULL+AND+descriptor+%21%3D+%27%27&%24limit=150&%24order=unique_key+DESC",
+        "returned_rows": 150,
+        "status": "success",
+        "elapsed_seconds": 5.442
+      },
+      {
+        "category": "noise",
+        "parameters": {
+          "$select": "unique_key,complaint_type,descriptor,descriptor_2",
+          "$where": "complaint_type in ('Noise - Residential','Noise - Street/Sidewalk') AND descriptor IS NOT NULL AND descriptor != ''",
+          "$limit": "150",
+          "$order": "unique_key DESC"
+        },
+        "encoded_url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=unique_key%2Ccomplaint_type%2Cdescriptor%2Cdescriptor_2&%24where=complaint_type+in+%28%27Noise+-+Residential%27%2C%27Noise+-+Street%2FSidewalk%27%29+AND+descriptor+IS+NOT+NULL+AND+descriptor+%21%3D+%27%27&%24limit=150&%24order=unique_key+DESC",
+        "returned_rows": 150,
+        "status": "success",
+        "elapsed_seconds": 5.511
+      }
+    ],
+    "elapsed_seconds": 24.271,
+    "request_timeout_seconds": 10,
+    "total_cutoff_seconds": 180,
+    "retries_per_query": 0,
+    "max_rows_per_canonical_category": 150
+  }
+}

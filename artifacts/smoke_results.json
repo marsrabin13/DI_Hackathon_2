@@ -1,0 +1,265 @@
+{
+  "passed": 40,
+  "total": 40,
+  "results": [
+    {
+      "check": "required gpt_ data files present",
+      "pass": true,
+      "detail": "all 5"
+    },
+    {
+      "check": "counts match provenance (train/val/test/demo)",
+      "pass": true,
+      "detail": "254/24/24"
+    },
+    {
+      "check": "split isolation (family + normalized text)",
+      "pass": true,
+      "detail": "{'fam_tr_va': 0, 'fam_tr_te': 0, 'fam_va_te': 0, 'txt_tr_va': 0, 'txt_tr_te': 0, 'txt_va_te': 0}"
+    },
+    {
+      "check": "model fitted on gpt_train.csv only (hash in metadata)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "6 nearby same-category points form one hotspot",
+      "pass": true,
+      "detail": "[{'report_count': 6}]"
+    },
+    {
+      "check": "distant point is not in the hotspot",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "3 waste + 3 lighting at one spot do not merge into a hotspot",
+      "pass": true,
+      "detail": "['roads']"
+    },
+    {
+      "check": "other city's 6 points absent from Tel Aviv reads/hotspots",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "other city clusters only its own points",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "missing location does not block routing",
+      "pass": true,
+      "detail": "routed, missing"
+    },
+    {
+      "check": "missing location excluded from clustering with explanation",
+      "pass": true,
+      "detail": "{'not_open_routed': 0, 'no_approved_category': 0, 'missing_location': 1, 'outside_or_invalid': 0}"
+    },
+    {
+      "check": "outside-bbox location flagged",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "duplicate save returns existing report",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "seed import idempotent",
+      "pass": true,
+      "detail": "90 then 0"
+    },
+    {
+      "check": "fixtures stored as category_source=seed_fixture",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "fixtures preserve IDs, coordinates, categories, timestamps",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "fixtures imported open + routed + seed_fixture",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "default window end = provenance demo anchor",
+      "pass": true,
+      "detail": "2026-10-29T12:00:00Z"
+    },
+    {
+      "check": "planted fixture hotspots: roads 12, waste 10, lighting 8, no noise",
+      "pass": true,
+      "detail": "[('roads', 12), ('waste', 10), ('lighting', 8)]"
+    },
+    {
+      "check": "stale fixture version replaced; citizen report kept",
+      "pass": true,
+      "detail": "1"
+    },
+    {
+      "check": "correction recalculates route from config",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "original prediction preserved after correction",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "correction audit row saved",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "correction cannot cross cities",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "config change: same category, different department, model unchanged",
+      "pass": true,
+      "detail": "Road Maintenance (demo) vs Public Works (demo)"
+    },
+    {
+      "check": "no credentials -> Template fallback label",
+      "pass": true,
+      "detail": "No ANTHROPIC_API_KEY configured."
+    },
+    {
+      "check": "API failure -> labeled Template fallback (ack)",
+      "pass": true,
+      "detail": "APIConnectionError: Connection error."
+    },
+    {
+      "check": "API failure -> labeled Template fallback (brief)",
+      "pass": true,
+      "detail": "APIConnectionError: Connection error."
+    },
+    {
+      "check": "deadline/dispatch/completion claims rejected",
+      "pass": true,
+      "detail": "3/3"
+    },
+    {
+      "check": "department not named for non-routed case",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "brief with unknown evidence id or numbers rejected",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "fallback templates contain no promise/deadline claims",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "fallback brief passes its own validator",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "policy: known -> routed",
+      "pass": true,
+      "detail": "lighting 0.45/0.18 routed"
+    },
+    {
+      "check": "policy: unclear -> review_required",
+      "pass": true,
+      "detail": "waste 0.29/0.01 review_required"
+    },
+    {
+      "check": "policy: unsupported -> review_required",
+      "pass": true,
+      "detail": "roads 0.27/0.01 review_required"
+    },
+    {
+      "check": "policy: multi-issue (checkbox) -> review_required",
+      "pass": true,
+      "detail": "lighting 0.34/0.08 review_required"
+    },
+    {
+      "check": "policy: urgent -> urgent_review",
+      "pass": true,
+      "detail": "waste 0.26/0.01 urgent_review"
+    },
+    {
+      "check": "empty text rejected",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": ">1000 chars rejected",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "policy_inputs": [
+    {
+      "case": "known",
+      "predicted": "lighting",
+      "score": 0.449,
+      "margin": 0.177,
+      "state": "routed",
+      "expected": "routed",
+      "reasons": []
+    },
+    {
+      "case": "unclear",
+      "predicted": "waste",
+      "score": 0.29,
+      "margin": 0.014,
+      "state": "review_required",
+      "expected": "review_required",
+      "reasons": [
+        "low_score<0.4",
+        "low_margin<0.05"
+      ]
+    },
+    {
+      "case": "unsupported",
+      "predicted": "roads",
+      "score": 0.269,
+      "margin": 0.012,
+      "state": "review_required",
+      "expected": "review_required",
+      "reasons": [
+        "no_known_vocabulary",
+        "low_score<0.4",
+        "low_margin<0.05"
+      ]
+    },
+    {
+      "case": "multi-issue (checkbox)",
+      "predicted": "lighting",
+      "score": 0.34,
+      "margin": 0.084,
+      "state": "review_required",
+      "expected": "review_required",
+      "reasons": [
+        "low_score<0.4",
+        "citizen_marked_multiple_or_unsure"
+      ]
+    },
+    {
+      "case": "urgent",
+      "predicted": "waste",
+      "score": 0.258,
+      "margin": 0.006,
+      "state": "urgent_review",
+      "expected": "urgent_review",
+      "reasons": [
+        "urgent_phrase_guard"
+      ]
+    }
+  ]
+}
